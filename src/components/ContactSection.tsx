@@ -4,7 +4,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { WhatsApp, Calendar, Send } from 'lucide-react';
+import { MessageSquare, Calendar, Send } from 'lucide-react';
 
 const ContactSection = () => {
   const { t } = useLanguage();
@@ -32,7 +32,7 @@ const ContactSection = () => {
                 className="flex items-center gap-4"
               >
                 <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white">
-                  <WhatsApp size={24} />
+                  <MessageSquare size={24} />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900">{t('contact.whatsapp')}</h3>
