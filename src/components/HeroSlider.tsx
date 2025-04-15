@@ -34,7 +34,7 @@ const HeroSlider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
-    }, 5000);
+    }, 8000); // Changed from 5000 to 8000ms
 
     return () => clearInterval(interval);
   }, []);

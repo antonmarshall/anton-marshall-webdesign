@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { PhoneCall, Code, MessageSquare, CheckCircle, GraduationCap } from 'lucide-react';
@@ -10,18 +11,18 @@ const WorkflowSection = () => {
     <section id="workflow" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         {/* Personal Introduction */}
-        <div className="max-w-4xl mx-auto mb-20 flex flex-col md:flex-row items-center gap-8 bg-gradient-to-r from-primary/5 to-accent/5 p-8 rounded-lg">
-          <Avatar className="w-32 h-32 border-4 border-white shadow-lg">
+        <div className="max-w-4xl mx-auto mb-20 flex flex-col md:flex-row items-center gap-12 bg-gradient-to-r from-primary/5 to-accent/5 p-8 rounded-lg">
+          <Avatar className="w-40 h-40 border-4 border-white shadow-lg">
             <AvatarImage src="/lovable-uploads/ba2b9903-e0ca-4b32-a32e-d600eb99f44a.png" alt="Anton Marshall" />
             <AvatarFallback>AM</AvatarFallback>
           </Avatar>
-          <div>
-            <h3 className="text-2xl font-semibold mb-2 flex items-center gap-2">
+          <div className="flex-1">
+            <h3 className="text-2xl font-semibold mb-4 flex items-center gap-2">
               Anton Marshall
               <GraduationCap className="text-accent" size={24} />
             </h3>
             <p className="text-gray-600 leading-relaxed">
-              22 Jahre alt, studiere Künstliche Intelligenz in Groningen. Mit meiner Kombination aus technischem Know-how und kreativem Design helfe ich Ihnen, Ihre Webseite zum Leben zu erwecken.
+              Mit 22 Jahren studiere ich Künstliche Intelligenz in Groningen und bringe technisches Know-how mit kreativem Design zusammen. Ich liebe es, mit Menschen zu brainstormen und ihre Vision zu verstehen. Jedes Projekt ist für mich eine spannende Reise, bei der ich mit hohen Ansprüchen Ihre digitale Präsenz gestalte.
             </p>
           </div>
         </div>
@@ -37,7 +38,7 @@ const WorkflowSection = () => {
 
         <div className="relative">
           {/* Timeline Line */}
-          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-200 transform -translate-x-1/2"></div>
+          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary/20 via-primary/40 to-accent/40 transform -translate-x-1/2"></div>
           
           <div className="space-y-12 md:space-y-0">
             {/* Step 1 */}
@@ -51,11 +52,11 @@ const WorkflowSection = () => {
                 </p>
               </div>
               <div className="md:w-0 relative flex justify-center">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white z-10">
+                <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-white z-10 shadow-lg">
                   <PhoneCall size={20} />
                 </div>
               </div>
-              <div className="md:w-1/2 md:pl-12 md:text-left">
+              <div className="md:w-1/2 md:pl-12">
                 {/* Empty for layout */}
               </div>
             </div>
@@ -71,7 +72,7 @@ const WorkflowSection = () => {
                 </p>
               </div>
               <div className="md:w-0 relative flex justify-center order-2 md:order-2">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white z-10">
+                <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-white z-10 shadow-lg">
                   <Code size={20} />
                 </div>
               </div>
@@ -91,7 +92,7 @@ const WorkflowSection = () => {
                 </p>
               </div>
               <div className="md:w-0 relative flex justify-center">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white z-10">
+                <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-white z-10 shadow-lg">
                   <MessageSquare size={20} />
                 </div>
               </div>
@@ -111,7 +112,7 @@ const WorkflowSection = () => {
                 </p>
               </div>
               <div className="md:w-0 relative flex justify-center order-2 md:order-2">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white z-10">
+                <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-white z-10 shadow-lg">
                   <CheckCircle size={20} />
                 </div>
               </div>
@@ -123,7 +124,13 @@ const WorkflowSection = () => {
         </div>
 
         <div className="max-w-3xl mx-auto mt-16 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg p-8">
-          <div className="flex flex-col md:flex-row md:justify-between gap-6">
+          <h3 className="text-2xl font-semibold mb-4 text-gray-900">
+            Warum mich wählen?
+          </h3>
+          <p className="text-gray-600 leading-relaxed mb-6">
+            Ich bin der perfekte Partner für alle, die eine professionelle Webpräsenz suchen, aber wenig Zeit haben. Ob Sie eine auffällige oder schlichte Website wünschen - gemeinsam finden wir den passenden Stil für Ihr Unternehmen. Keine klare Vorstellung? Kein Problem! Ich begleite Sie mit kreativen Ideen durch den Prozess, ohne Sie mit technischen Details zu überfordern. Und wenn Sie bereits konkrete Vorstellungen haben, setze ich diese präzise um.
+          </p>
+          <div className="flex flex-col md:flex-row md:justify-between gap-6 mt-8">
             <div className="flex items-center gap-3 text-gray-700">
               <Code size={24} className="text-primary" />
               <span className="font-medium">
@@ -137,15 +144,6 @@ const WorkflowSection = () => {
               </span>
             </div>
           </div>
-        </div>
-
-        <div className="max-w-3xl mx-auto mt-16 bg-white rounded-lg p-8 border border-gray-100">
-          <h3 className="text-2xl font-semibold mb-4 text-gray-900">
-            {t('about.title')}
-          </h3>
-          <p className="text-gray-600 leading-relaxed">
-            {t('about.desc')}
-          </p>
         </div>
       </div>
     </section>
