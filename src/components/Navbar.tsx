@@ -38,7 +38,9 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <div className="text-xl font-bold text-primary">Webseiten-Freund</div>
+        <div className="text-xl font-bold text-primary hover:text-primary/90 transition-colors">
+          Anton Marshall<span className="text-accent"> Webdesign</span>
+        </div>
         
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">

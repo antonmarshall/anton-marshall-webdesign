@@ -1,7 +1,7 @@
-
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { PhoneCall, Code, MessageSquare, CheckCircle } from 'lucide-react';
+import { PhoneCall, Code, MessageSquare, CheckCircle, GraduationCap } from 'lucide-react';
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const WorkflowSection = () => {
   const { t } = useLanguage();
@@ -9,6 +9,23 @@ const WorkflowSection = () => {
   return (
     <section id="workflow" className="py-20 bg-white">
       <div className="container mx-auto px-4">
+        {/* Personal Introduction */}
+        <div className="max-w-4xl mx-auto mb-20 flex flex-col md:flex-row items-center gap-8 bg-gradient-to-r from-primary/5 to-accent/5 p-8 rounded-lg">
+          <Avatar className="w-32 h-32 border-4 border-white shadow-lg">
+            <AvatarImage src="/lovable-uploads/ba2b9903-e0ca-4b32-a32e-d600eb99f44a.png" alt="Anton Marshall" />
+            <AvatarFallback>AM</AvatarFallback>
+          </Avatar>
+          <div>
+            <h3 className="text-2xl font-semibold mb-2 flex items-center gap-2">
+              Anton Marshall
+              <GraduationCap className="text-accent" size={24} />
+            </h3>
+            <p className="text-gray-600 leading-relaxed">
+              22 Jahre alt, studiere Künstliche Intelligenz in Groningen. Mit meiner Kombination aus technischem Know-how und kreativem Design helfe ich Ihnen, Ihre Webseite zum Leben zu erwecken.
+            </p>
+          </div>
+        </div>
+
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
             {t('workflow.title')}
@@ -105,7 +122,7 @@ const WorkflowSection = () => {
           </div>
         </div>
 
-        <div className="max-w-3xl mx-auto mt-16 bg-gray-50 rounded-lg p-8 shadow-sm">
+        <div className="max-w-3xl mx-auto mt-16 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg p-8">
           <div className="flex flex-col md:flex-row md:justify-between gap-6">
             <div className="flex items-center gap-3 text-gray-700">
               <Code size={24} className="text-primary" />
