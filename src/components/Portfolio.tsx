@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent } from '@/components/ui/card';
@@ -45,6 +44,14 @@ const portfolioItems = [
     desc: 'Eleganter Online-Shop für Teeliebhaber',
     url: 'https://example-teaware.com',
   },
+  {
+    id: 'restaurant',
+    title: 'Bella Italia',
+    image: 'https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=80',
+    alt: 'Restaurant Website',
+    desc: 'Authentische italienische Atmosphäre',
+    url: 'https://example-restaurant.com',
+  }
 ];
 
 const Portfolio = () => {

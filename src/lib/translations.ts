@@ -1,4 +1,3 @@
-
 export type Language = 'de' | 'en';
 
 type TranslationKeys = {
@@ -25,11 +24,6 @@ export const translations: Translations = {
     // Portfolio
     'portfolio.title': 'Meine Arbeiten',
     'portfolio.subtitle': 'Eine Auswahl meiner Projekte aus verschiedenen Branchen',
-    'portfolio.psychologist': 'Psychologe',
-    'portfolio.construction': 'Bauunternehmen',
-    'portfolio.gardener': 'Gartenbau',
-    'portfolio.engineer': 'IT-Dienstleistungen',
-    'portfolio.shop': 'Japanisches Teegeschirr',
     'portfolio.view': 'Ansehen',
     
     // Pricing
@@ -39,17 +33,17 @@ export const translations: Translations = {
     
     // Workflow
     'workflow.title': 'Mein Arbeitsprozess',
-    'workflow.subtitle': 'Einfacher und unkomplizierter Ablauf',
+    'workflow.subtitle': 'Ein einfacher und transparenter Ablauf für Ihre Website',
     'workflow.step1.title': 'Erstgespräch',
-    'workflow.step1.desc': 'Wir beginnen mit einem Telefon- oder Videogespräch, um Ihre Bedürfnisse und Wünsche zu verstehen.',
+    'workflow.step1.desc': 'Kurzes kostenloses Kennenlerngespräch',
     'workflow.step2.title': 'Entwicklung',
-    'workflow.step2.desc': 'Innerhalb von zwei Wochen erstelle ich Ihre maßgeschneiderte Webseite.',
+    'workflow.step2.desc': 'Design und Umsetzung Ihrer Website',
     'workflow.step3.title': 'Feedback',
-    'workflow.step3.desc': 'Wir besprechen die erstellte Webseite und sammeln Ihr Feedback für Anpassungen.',
-    'workflow.step4.title': 'Finalisierung',
-    'workflow.step4.desc': 'Maximal 10 Tage später ist Ihre Webseite fertig und ich helfe Ihnen bei günstigen Hosting-Optionen.',
-    'workflow.timeline': 'Gesamtdauer: Maximal 2 Wochen',
-    'workflow.effort': 'Ihr Aufwand: Nur 2-3 kurze Telefonate',
+    'workflow.step3.desc': 'Gemeinsame Abstimmung und Anpassungen',
+    'workflow.step4.title': 'Fertigstellung',
+    'workflow.step4.desc': 'Ihre Website geht online',
+    'workflow.timeline': 'Gesamtdauer: Maximal 3 Wochen',
+    'workflow.effort': 'Ihr Aufwand: Nur 2-3 kurze Gespräche',
     
     // About
     'about.title': 'Warum mich wählen?',
@@ -83,11 +77,6 @@ export const translations: Translations = {
     // Portfolio
     'portfolio.title': 'My Work',
     'portfolio.subtitle': 'A selection of my projects from various industries',
-    'portfolio.psychologist': 'Psychologist',
-    'portfolio.construction': 'Construction Company',
-    'portfolio.gardener': 'Gardening Services',
-    'portfolio.engineer': 'IT Services',
-    'portfolio.shop': 'Japanese Teaware',
     'portfolio.view': 'View',
     
     // Pricing
@@ -96,18 +85,18 @@ export const translations: Translations = {
     'pricing.includes': 'Includes design, development, and adjustments',
     
     // Workflow
-    'workflow.title': 'My Workflow',
-    'workflow.subtitle': 'Simple and straightforward process',
-    'workflow.step1.title': 'Initial Consultation',
-    'workflow.step1.desc': 'We start with a phone or video call to understand your needs and wishes.',
+    'workflow.title': 'My Process',
+    'workflow.subtitle': 'A simple and transparent process for your website',
+    'workflow.step1.title': 'Initial Chat',
+    'workflow.step1.desc': 'Brief free get-to-know conversation',
     'workflow.step2.title': 'Development',
-    'workflow.step2.desc': 'Within two weeks, I create your custom website.',
+    'workflow.step2.desc': 'Design and implementation of your website',
     'workflow.step3.title': 'Feedback',
-    'workflow.step3.desc': 'We discuss the created website and gather your feedback for adjustments.',
-    'workflow.step4.title': 'Finalization',
-    'workflow.step4.desc': 'Maximum 10 days later, your website is ready and I help you with affordable hosting options.',
-    'workflow.timeline': 'Total duration: Maximum 2 weeks',
-    'workflow.effort': 'Your effort: Only 2-3 short phone calls',
+    'workflow.step3.desc': 'Joint review and adjustments',
+    'workflow.step4.title': 'Completion',
+    'workflow.step4.desc': 'Your website goes live',
+    'workflow.timeline': 'Total duration: Maximum 3 weeks',
+    'workflow.effort': 'Your effort: Only 2-3 short calls',
     
     // About
     'about.title': 'Why Choose Me?',
