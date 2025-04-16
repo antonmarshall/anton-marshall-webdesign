@@ -1,11 +1,12 @@
+
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { PhoneCall, Code, MessageSquare, CheckCircle, GraduationCap } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+
 const WorkflowSection = () => {
-  const {
-    t
-  } = useLanguage();
+  const { t } = useLanguage();
+
   const steps = [{
     icon: <PhoneCall size={24} />,
     title: t('workflow.step1.title'),
@@ -27,7 +28,9 @@ const WorkflowSection = () => {
     desc: t('workflow.step4.desc'),
     detail: "Ihre Website geht online und ich stelle sicher, dass alles reibungslos läuft."
   }];
-  return <section id="workflow" className="py-20 bg-white">
+
+  return (
+    <section id="workflow" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         {/* Personal Introduction */}
         <div className="max-w-6xl mx-auto mb-20 flex flex-col md:flex-row items-center gap-12 rounded-lg">
@@ -64,18 +67,20 @@ const WorkflowSection = () => {
             
             {/* Steps */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
-              {steps.map((step, index) => <div key={index} className="group relative">
-                  <div className="bg-white p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 relative z-10">
+              {steps.map((step, index) => (
+                <div key={index} className="group relative h-full">
+                  <div className="bg-white p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 relative z-10 h-full flex flex-col">
                     <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-white mx-auto mb-4">
                       {step.icon}
                     </div>
                     <h3 className="text-lg font-semibold text-center mb-2">{step.title}</h3>
-                    <p className="text-gray-600 text-center text-sm">{step.desc}</p>
+                    <p className="text-gray-600 text-center text-sm flex-1">{step.desc}</p>
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/90 to-accent/90 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                       <p className="text-white text-center p-4">{step.detail}</p>
                     </div>
                   </div>
-                </div>)}
+                </div>
+              ))}
             </div>
           </div>
 
@@ -83,9 +88,12 @@ const WorkflowSection = () => {
             <h3 className="text-2xl font-semibold mb-4 text-gray-900">
               Warum mich wählen?
             </h3>
-            <p className="text-gray-600 leading-relaxed mb-6 font-normal">professionelle Webseiten kosten in der Regel weit über 800€.
-Sie kriegen in kurzer Zeit eine authentische Webseite. Egal, ob Sie eine auffällige oder schlichte Website wünschen.
-Keine klare Vorstellung? Kein Problem! Ich begleite Sie mit kreativen Ideen durch den Prozess, ohne Sie mit technischen Details zu überfordern. Und wenn Sie bereits konkrete Vorstellungen haben, setze ich diese präzise um.</p>
+            <p className="text-gray-600 leading-relaxed mb-6 font-normal">
+              professionelle Webseiten kosten in der Regel weit über 800€.
+              Sie kriegen in kurzer Zeit eine authentische Webseite. Egal, ob Sie eine auffällige oder schlichte Website wünschen.
+              Keine klare Vorstellung? Kein Problem! Ich begleite Sie mit kreativen Ideen durch den Prozess, ohne Sie mit technischen Details zu überfordern. 
+              Und wenn Sie bereits konkrete Vorstellungen haben, setze ich diese präzise um.
+            </p>
             <div className="flex flex-col md:flex-row md:justify-between gap-6 mt-8">
               <div className="flex items-center gap-3 text-gray-700">
                 <Code size={24} className="text-primary" />
@@ -103,6 +111,8 @@ Keine klare Vorstellung? Kein Problem! Ich begleite Sie mit kreativen Ideen durc
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default WorkflowSection;

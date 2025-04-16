@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import LanguageSwitcher from './LanguageSwitcher';
@@ -9,10 +8,24 @@ const Navbar = () => {
   const { t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
+
+      // Update active section based on scroll position
+      const sections = ['home', 'portfolio', 'workflow', 'contact'];
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -28,13 +41,22 @@ const Navbar = () => {
         top: offsetPosition,
         behavior: 'smooth'
       });
+      setActiveSection(id);
     }
+  };
+
+  const getNavItemClass = (section: string) => {
+    return `transition-colors ${
+      activeSection === section 
+      ? 'text-accent font-semibold'
+      : 'text-gray-700 hover:text-primary'
+    }`;
   };
 
   return (
     <nav 
-      className={`fixed w-full z-50 transition-all duration-300 backdrop-blur-md ${
-        isScrolled ? 'bg-white/90 shadow-md py-2' : 'bg-white/70 py-4'
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-white/95 shadow-md py-2' : 'bg-white/90 py-4'
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
@@ -46,25 +68,25 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-8">
           <button 
             onClick={() => scrollToSection('home')} 
-            className="text-gray-700 hover:text-primary transition-colors"
+            className={getNavItemClass('home')}
           >
             {t('home')}
           </button>
           <button 
             onClick={() => scrollToSection('portfolio')} 
-            className="text-gray-700 hover:text-primary transition-colors"
+            className={getNavItemClass('portfolio')}
           >
             {t('portfolio')}
           </button>
           <button 
             onClick={() => scrollToSection('workflow')} 
-            className="text-gray-700 hover:text-primary transition-colors"
+            className={getNavItemClass('workflow')}
           >
             {t('workflow')}
           </button>
           <button 
             onClick={() => scrollToSection('contact')} 
-            className="text-gray-700 hover:text-primary transition-colors"
+            className={getNavItemClass('contact')}
           >
             {t('contact')}
           </button>
@@ -93,29 +115,29 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white w-full shadow-lg">
+        <div className="md:hidden bg-white/95 w-full shadow-lg">
           <div className="flex flex-col py-4 px-6 space-y-4">
             <button 
               onClick={() => scrollToSection('home')} 
-              className="text-gray-700 hover:text-primary py-2 transition-colors"
+              className={getNavItemClass('home')}
             >
               {t('home')}
             </button>
             <button 
               onClick={() => scrollToSection('portfolio')} 
-              className="text-gray-700 hover:text-primary py-2 transition-colors"
+              className={getNavItemClass('portfolio')}
             >
               {t('portfolio')}
             </button>
             <button 
               onClick={() => scrollToSection('workflow')} 
-              className="text-gray-700 hover:text-primary py-2 transition-colors"
+              className={getNavItemClass('workflow')}
             >
               {t('workflow')}
             </button>
             <button 
               onClick={() => scrollToSection('contact')} 
-              className="text-gray-700 hover:text-primary py-2 transition-colors"
+              className={getNavItemClass('contact')}
             >
               {t('contact')}
             </button>
