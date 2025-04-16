@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { LanguageProvider } from '@/contexts/LanguageContext';
 import Navbar from '@/components/Navbar';
 import HeroSlider from '@/components/HeroSlider';
 import Portfolio from '@/components/Portfolio';
@@ -11,17 +10,15 @@ import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <LanguageProvider>
-      <div className="min-h-screen">
-        <Navbar />
-        <HeroSlider />
-        <Portfolio />
-        <WorkflowSection />
-        <PriceSection />
-        <ContactSection />
-        <Footer />
-      </div>
-    </LanguageProvider>
+    <div className="min-h-screen">
+      <Navbar />
+      <HeroSlider />
+      <Portfolio />
+      <WorkflowSection />
+      <PriceSection />
+      <ContactSection />
+      <Footer />
+    </div>
   );
 };
 
