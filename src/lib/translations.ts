@@ -14,6 +14,7 @@ export const translations: Translations = {
     'home': 'Startseite',
     'portfolio': 'Portfolio',
     'workflow': 'Ablauf',
+    'price': 'Preis',
     'contact': 'Kontakt',
     
     // Hero
@@ -73,6 +74,7 @@ export const translations: Translations = {
     'home': 'Home',
     'portfolio': 'Portfolio',
     'workflow': 'Process',
+    'price': 'Price',
     'contact': 'Contact',
     
     // Hero

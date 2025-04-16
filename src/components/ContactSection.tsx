@@ -4,10 +4,15 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { MessageSquare, Calendar, Send } from 'lucide-react';
+import { MessageSquare, Calendar, Send, Mail } from 'lucide-react';
 
 const ContactSection = () => {
   const { t } = useLanguage();
+
+  const handleCalendarClick = () => {
+    // Open Calendly in a new tab
+    window.open('https://calendly.com/anton-marshall-webdesign', '_blank');
+  };
 
   return (
     <section id="contact" className="py-20 bg-gray-50">
@@ -42,18 +47,31 @@ const ContactSection = () => {
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <a 
-                href="https://calendly.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-4"
+              <button
+                onClick={handleCalendarClick}
+                className="flex items-center gap-4 w-full text-left"
               >
                 <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white">
                   <Calendar size={24} />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900">{t('contact.schedule')}</h3>
-                  <p className="text-gray-600">15 {t('contact.schedule')} (Google Calendar)</p>
+                  <p className="text-gray-600">15 {t('contact.schedule')}</p>
+                </div>
+              </button>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <a 
+                href="mailto:anton.marshall.webdesign@gmail.com" 
+                className="flex items-center gap-4"
+              >
+                <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white">
+                  <Mail size={24} />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900">Email</h3>
+                  <p className="text-gray-600">anton.marshall.webdesign@gmail.com</p>
                 </div>
               </a>
             </div>
