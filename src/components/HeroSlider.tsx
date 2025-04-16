@@ -14,12 +14,12 @@ const slides = [
     alt: 'skizze einer webseite',
   },
   {
-    image: 'https://images.unsplash.com/photo-1493397212122-2b85dda8106b?auto=format&fit=crop&w=1920&q=80',
+    image: `${import.meta.env.BASE_URL}images/different_websites_presentation.png`,
     alt: 'Creative website design',
   },
   {
-    image: 'https://images.unsplash.com/photo-1527576539890-dfa815648363?auto=format&fit=crop&w=1920&q=80',
-    alt: 'Modern business website',
+    image: `${import.meta.env.BASE_URL}images/yoga_knete.png`,
+    alt: 'yoga webseite in Knete',
   },
   {
     image: 'https://images.unsplash.com/photo-1481487196290-c152efe083f5?auto=format&fit=crop&w=1920&q=80',
