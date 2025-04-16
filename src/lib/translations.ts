@@ -28,6 +28,7 @@ export const translations: Translations = {
     'portfolio.title': 'Meine Arbeiten',
     'portfolio.subtitle': 'Eine Auswahl meiner Webdesign-Projekte für japanische Teeshops und Teehäuser',
     'portfolio.view': 'Ansehen',
+    'portfolio.hover': 'Projekt anzeigen',
     
     // Pricing
     'price.title': 'Preis',
@@ -85,6 +86,9 @@ export const translations: Translations = {
     'legal.cookie.text': 'Diese Website verwendet Cookies, um Ihr Browsererlebnis zu verbessern.',
     'legal.cookie.accept': 'Akzeptieren',
     'legal.cookie.decline': 'Ablehnen',
+    
+    // Navigation
+    'back.to.home': 'Zurück zur Startseite',
   },
   en: {
     // Navbar
@@ -104,6 +108,7 @@ export const translations: Translations = {
     'portfolio.title': 'My Work',
     'portfolio.subtitle': 'A selection of my web design projects for Japanese tea shops and tea houses',
     'portfolio.view': 'View',
+    'portfolio.hover': 'View Project',
     
     // Pricing
     'price.title': 'Price',
@@ -161,5 +166,8 @@ export const translations: Translations = {
     'legal.cookie.text': 'This website uses cookies to enhance your browsing experience.',
     'legal.cookie.accept': 'Accept',
     'legal.cookie.decline': 'Decline',
+    
+    // Navigation
+    'back.to.home': 'Back to Home',
   },
 };

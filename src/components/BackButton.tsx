@@ -17,7 +17,7 @@ const BackButton = () => {
       className="mb-6 mt-2"
     >
       <ArrowLeft className="mr-2 h-4 w-4" />
-      {t('back.home')}
+      {t('back.to.home')}
     </Button>
   );
 };

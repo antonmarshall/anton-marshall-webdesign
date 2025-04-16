@@ -4,14 +4,20 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import LanguageSwitcher from './LanguageSwitcher';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const { t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const navigate = useNavigate();
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
+    if (!isHomePage) return;
+    
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
 
@@ -31,10 +37,27 @@ const Navbar = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isHomePage]);
 
-  const scrollToSection = (id: string) => {
+  const navigateToSection = (id: string) => {
     setIsMobileMenuOpen(false);
+    
+    if (!isHomePage) {
+      navigate('/');
+      // Set a small timeout to ensure the page loads before scrolling
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          const offsetPosition = element.offsetTop - 80;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }, 100);
+      return;
+    }
+    
     const element = document.getElementById(id);
     if (element) {
       const offsetPosition = element.offsetTop - 80;
@@ -48,7 +71,7 @@ const Navbar = () => {
 
   const getNavItemClass = (section: string) => {
     return `transition-colors duration-300 px-3 py-2 rounded-md outline-none ${
-      activeSection === section 
+      isHomePage && activeSection === section 
       ? 'bg-accent/10 text-accent'
       : 'text-gray-700 hover:bg-gray-100 hover:text-primary'
     }`;
@@ -59,45 +82,48 @@ const Navbar = () => {
       className={`fixed w-full z-50 transition-all duration-300 bg-white shadow-md py-2`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <div className="text-xl font-bold text-primary hover:text-primary/90 transition-colors">
+        <div 
+          className="text-xl font-bold text-primary hover:text-primary/90 transition-colors cursor-pointer"
+          onClick={() => navigate('/')}
+        >
           Anton Marshall<span className="text-accent"> Webdesign</span>
         </div>
         
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-4">
           <button 
-            onClick={() => scrollToSection('home')} 
+            onClick={() => navigateToSection('home')} 
             className={getNavItemClass('home')}
           >
             {t('home')}
           </button>
           <button 
-            onClick={() => scrollToSection('portfolio')} 
+            onClick={() => navigateToSection('portfolio')} 
             className={getNavItemClass('portfolio')}
           >
             {t('portfolio')}
           </button>
           <button 
-            onClick={() => scrollToSection('workflow')} 
+            onClick={() => navigateToSection('workflow')} 
             className={getNavItemClass('workflow')}
           >
             {t('workflow')}
           </button>
           <button 
-            onClick={() => scrollToSection('price')} 
+            onClick={() => navigateToSection('price')} 
             className={getNavItemClass('price')}
           >
             {t('price')}
           </button>
           <button 
-            onClick={() => scrollToSection('contact')} 
+            onClick={() => navigateToSection('contact')} 
             className={getNavItemClass('contact')}
           >
             {t('contact')}
           </button>
           <LanguageSwitcher />
           <Button 
-            onClick={() => scrollToSection('contact')}
+            onClick={() => navigateToSection('contact')}
             size="sm" 
             className="bg-accent hover:bg-accent/90 text-white"
           >
@@ -112,6 +138,7 @@ const Navbar = () => {
             variant="ghost" 
             size="icon" 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            tabIndex={-1}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </Button>
@@ -123,37 +150,37 @@ const Navbar = () => {
         <div className="md:hidden bg-white w-full shadow-lg">
           <div className="flex flex-col py-4 px-6 space-y-4">
             <button 
-              onClick={() => scrollToSection('home')} 
+              onClick={() => navigateToSection('home')} 
               className={getNavItemClass('home')}
             >
               {t('home')}
             </button>
             <button 
-              onClick={() => scrollToSection('portfolio')} 
+              onClick={() => navigateToSection('portfolio')} 
               className={getNavItemClass('portfolio')}
             >
               {t('portfolio')}
             </button>
             <button 
-              onClick={() => scrollToSection('workflow')} 
+              onClick={() => navigateToSection('workflow')} 
               className={getNavItemClass('workflow')}
             >
               {t('workflow')}
             </button>
             <button 
-              onClick={() => scrollToSection('price')} 
+              onClick={() => navigateToSection('price')} 
               className={getNavItemClass('price')}
             >
               {t('price')}
             </button>
             <button 
-              onClick={() => scrollToSection('contact')} 
+              onClick={() => navigateToSection('contact')} 
               className={getNavItemClass('contact')}
             >
               {t('contact')}
             </button>
             <Button 
-              onClick={() => scrollToSection('contact')}
+              onClick={() => navigateToSection('contact')}
               className="w-full bg-accent hover:bg-accent/90 text-white"
             >
               {t('hero.cta')}
