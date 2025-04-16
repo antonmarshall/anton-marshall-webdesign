@@ -8,15 +8,15 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-white py-16">
+    <footer className="bg-gray-900 text-white py-12 md:py-16">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-          <div>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
+          <div className="text-center md:text-left">
             <div className="text-xl font-bold mb-4">Anton Marshall Webdesign</div>
             <p className="text-gray-400 mb-4">© {currentYear} - {t('footer.rights')}</p>
           </div>
           
-          <div>
+          <div className="text-center md:text-left">
             <h3 className="text-lg font-semibold mb-4">{t('navigation')}</h3>
             <ul className="space-y-2">
               <li>
@@ -42,27 +42,27 @@ const Footer = () => {
             </ul>
           </div>
           
-          <div>
+          <div className="text-center md:text-left">
             <h3 className="text-lg font-semibold mb-4">{t('contact')}</h3>
             <ul className="space-y-4">
-              <li className="flex items-center gap-2 text-gray-400">
+              <li className="flex items-center justify-center md:justify-start gap-2 text-gray-400">
                 <Phone size={20} />
                 <span>+49 123 456 7890</span>
               </li>
-              <li className="flex items-center gap-2 text-gray-400">
+              <li className="flex items-center justify-center md:justify-start gap-2 text-gray-400">
                 <Mail size={20} />
-                <a href="mailto:info@webseiten-freund.de" className="hover:text-white transition-colors">
-                  info@webseiten-freund.de
+                <a href="mailto:a.marshall@webdesign@gmail.com" className="hover:text-white transition-colors">
+                  a.marshall@webdesign@gmail.com
                 </a>
               </li>
-              <li className="flex items-center gap-2 text-gray-400">
+              <li className="flex items-center justify-center md:justify-start gap-2 text-gray-400">
                 <MapPin size={20} />
                 <span>Groningen, Netherlands</span>
               </li>
             </ul>
           </div>
           
-          <div>
+          <div className="text-center md:text-left">
             <h3 className="text-lg font-semibold mb-4">{t('legal')}</h3>
             <ul className="space-y-2">
               <li>

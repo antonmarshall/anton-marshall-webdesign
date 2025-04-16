@@ -2,10 +2,10 @@ import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { PhoneCall, Code, MessageSquare, CheckCircle, GraduationCap } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+
 const WorkflowSection = () => {
-  const {
-    t
-  } = useLanguage();
+  const { t } = useLanguage();
+
   const steps = [{
     icon: <PhoneCall size={24} />,
     title: t('workflow.step1.title'),
@@ -27,69 +27,78 @@ const WorkflowSection = () => {
     desc: t('workflow.step4.desc'),
     detail: "Ihre Website geht online und ich stelle sicher, dass alles reibungslos läuft."
   }];
-  return <section id="workflow" className="py-20 bg-white">
+
+  return (
+    <section id="workflow" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         {/* Personal Introduction */}
-        <div className="max-w-6xl mx-auto mb-20 flex flex-col md:flex-row items-center gap-12 rounded-lg">
-          <Avatar className="w-48 h-48 border-4 border-white shadow-lg">
+        <div className="max-w-6xl mx-auto mb-12 md:mb-20 flex flex-col md:flex-row items-center gap-6 md:gap-12 rounded-lg p-4">
+          <Avatar className="w-32 h-32 md:w-48 md:h-48 border-4 border-white shadow-lg">
             <AvatarImage src="/lovable-uploads/ba2b9903-e0ca-4b32-a32e-d600eb99f44a.png" alt="Anton Marshall" />
             <AvatarFallback>AM</AvatarFallback>
           </Avatar>
-          <div className="flex-1">
-            <h3 className="text-2xl font-semibold mb-4 flex items-center gap-2">
+          <div className="flex-1 text-center md:text-left">
+            <h3 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4 flex items-center justify-center md:justify-start gap-2">
               Anton Marshall
               <GraduationCap className="text-accent" size={24} />
             </h3>
-            <p className="text-gray-600 leading-relaxed">Ich studiere Künstliche Intelligenz an der Universität Groningen. Dort habe ich angefangen mein Studium mit dem Programmieren von Webseiten zu finazieren. Ich habe einen hohen Anspruch an meine Projekte und höre nicht auf, bevor Ihre Webseite visuell ansprechend, intuitiv und überzeugend ist. </p>
+            <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+              Ich studiere Künstliche Intelligenz an der Universität Groningen. Dort habe ich angefangen mein Studium mit dem Programmieren von Webseiten zu finazieren. Ich habe einen hohen Anspruch an meine Projekte und höre nicht auf, bevor Ihre Webseite visuell ansprechend, intuitiv und überzeugend ist.
+            </p>
           </div>
         </div>
 
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
             {t('workflow.title')}
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             {t('workflow.subtitle')}
           </p>
         </div>
 
         <div className="max-w-6xl mx-auto">
           <div className="relative">
-            {/* Timeline line */}
+            {/* Timeline line - visible on mobile and desktop */}
+            <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary/20 via-primary to-accent/80 transform -translate-x-1/2 md:hidden"></div>
             <div className="absolute left-0 right-0 top-1/2 h-0.5 bg-gradient-to-r from-primary/20 via-primary to-accent/80 transform -translate-y-1/2 hidden md:block"></div>
             
             {/* Steps */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
-              {steps.map((step, index) => <div key={index} className="group relative h-full">
-                  <div className="bg-white p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 relative z-10 h-full flex flex-col">
+              {steps.map((step, index) => (
+                <div key={index} className="group relative h-full">
+                  <div className="bg-white p-4 md:p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 relative z-10 h-full flex flex-col">
                     <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-white mx-auto mb-4">
                       {step.icon}
                     </div>
-                    <h3 className="text-lg font-semibold text-center mb-2">{step.title}</h3>
+                    <h3 className="text-base md:text-lg font-semibold text-center mb-2">{step.title}</h3>
                     <p className="text-gray-600 text-center text-sm flex-1">{step.desc}</p>
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/90 to-accent/90 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <p className="text-white text-center p-4">{step.detail}</p>
+                      <p className="text-white text-center p-4 text-sm">{step.detail}</p>
                     </div>
                   </div>
-                </div>)}
+                </div>
+              ))}
             </div>
           </div>
 
-          <div className="mt-16 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg p-8">
-            <h3 className="text-2xl font-semibold mb-4 text-gray-900">
+          <div className="mt-12 md:mt-16 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg p-6 md:p-8">
+            <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900">
               Warum mich wählen?
             </h3>
-            <p className="text-gray-600 leading-relaxed mb-6 font-normal">Professionelle Websites kosten normalerweise weit über 800€. Bei mir bekommen Sie für diesen Preis eine authentische und strukturierte Website. Egal, ob Sie eine auffällige oder eine einfache Website wollen. Keine klare Vorstellung? Kein Problem! Ich führe Sie mit kreativen Ideen durch den Prozess, ohne Sie mit technischen Details zu überfordern. Und wenn Sie bereits konkrete Vorstellungen haben, setze ich diese präzise um.</p>
-            <div className="flex flex-col md:flex-row md:justify-between gap-6 mt-8">
+            <p className="text-gray-600 leading-relaxed mb-6 font-normal text-sm md:text-base">
+              Professionelle Websites kosten normalerweise weit über 800€. Bei mir bekommen Sie für diesen Preis eine authentische und strukturierte Website. Egal, ob Sie eine auffällige oder eine einfache Website wollen. Keine klare Vorstellung? Kein Problem! Ich führe Sie mit kreativen Ideen durch den Prozess, ohne Sie mit technischen Details zu überfordern. Und wenn Sie bereits konkrete Vorstellungen haben, setze ich diese präzise um.
+            </p>
+            <div className="flex flex-col md:flex-row md:justify-between gap-4 md:gap-6 mt-6 md:mt-8">
               <div className="flex items-center gap-3 text-gray-700">
-                <Code size={24} className="text-primary" />
-                <span className="font-medium">
+                <Code size={20} className="text-primary" />
+                <span className="font-medium text-sm md:text-base">
                   {t('workflow.timeline')}
                 </span>
               </div>
               <div className="flex items-center gap-3 text-gray-700">
-                <PhoneCall size={24} className="text-primary" />
-                <span className="font-medium">
+                <PhoneCall size={20} className="text-primary" />
+                <span className="font-medium text-sm md:text-base">
                   {t('workflow.effort')}
                 </span>
               </div>
@@ -97,6 +106,8 @@ const WorkflowSection = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default WorkflowSection;

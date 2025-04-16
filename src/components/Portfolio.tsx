@@ -70,7 +70,7 @@ const Portfolio = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8">
           {portfolioItems.map((item) => (
             <Card key={item.id} className="group overflow-hidden transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1">
               <CardContent className="p-0">
@@ -78,21 +78,21 @@ const Portfolio = () => {
                   <img 
                     src={item.image} 
                     alt={item.alt} 
-                    className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-36 md:h-64 object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-end text-white p-6">
-                    <h3 className="text-xl font-semibold mb-2">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-end text-white p-4 md:p-6">
+                    <h3 className="text-base md:text-xl font-semibold mb-1 md:mb-2">
                       {item.title}
                     </h3>
-                    <p className="text-sm mb-4 opacity-90">{item.desc}</p>
+                    <p className="text-xs md:text-sm mb-2 md:mb-4 opacity-90">{item.desc}</p>
                     <a 
                       href={item.url}
                       target="_blank"
                       rel="noopener noreferrer" 
-                      className="flex items-center gap-2 text-sm bg-white/20 py-2 px-4 rounded-full mt-2 hover:bg-white/30 transition-colors"
+                      className="flex items-center gap-1 md:gap-2 text-xs md:text-sm bg-white/20 py-1 md:py-2 px-3 md:px-4 rounded-full mt-1 md:mt-2 hover:bg-white/30 transition-colors"
                     >
                       <span>{t('portfolio.view')}</span>
-                      <ExternalLink size={16} />
+                      <ExternalLink size={14} />
                     </a>
                   </div>
                 </div>
