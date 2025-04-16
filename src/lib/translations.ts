@@ -1,3 +1,4 @@
+
 export type Language = 'de' | 'en';
 
 type TranslationKeys = {
@@ -24,7 +25,7 @@ export const translations: Translations = {
     
     // Portfolio
     'portfolio.title': 'Meine Arbeiten',
-    'portfolio.subtitle': 'Eine Auswahl meiner Projekte aus verschiedenen Branchen',
+    'portfolio.subtitle': 'Eine Auswahl meiner Webdesign-Projekte für Teehäuser und Café-Betriebe',
     'portfolio.view': 'Ansehen',
     
     // Pricing
@@ -84,7 +85,7 @@ export const translations: Translations = {
     
     // Portfolio
     'portfolio.title': 'My Work',
-    'portfolio.subtitle': 'A selection of my projects from various industries',
+    'portfolio.subtitle': 'A selection of my web design projects for tea houses and cafés',
     'portfolio.view': 'View',
     
     // Pricing

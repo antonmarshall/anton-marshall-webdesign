@@ -17,19 +17,7 @@ const LanguageSwitcher = () => {
       onClick={toggleLanguage} 
       className="flex items-center gap-2"
     >
-      <span className="text-sm font-medium flex items-center gap-1">
-        {language === 'de' ? (
-          <>
-            <span className="text-xl">🇩🇪</span>
-            DE
-          </>
-        ) : (
-          <>
-            <span className="text-xl">🇬🇧</span>
-            EN
-          </>
-        )}
-      </span>
+      {language === 'de' ? '🇩🇪 DE' : '🇬🇧 EN'}
     </Button>
   );
 };
