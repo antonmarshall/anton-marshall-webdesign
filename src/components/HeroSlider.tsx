@@ -33,6 +33,7 @@ const HeroSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [typedText, setTypedText] = useState('');
   const [showButton, setShowButton] = useState(false);
+  const [cursorVisible, setCursorVisible] = useState(true);
   const isMobile = useIsMobile();
   const subtitle = 'Maßgeschneiderte Webseiten, die Ihr Unternehmen zum Strahlen bringen';
 
@@ -48,20 +49,47 @@ const HeroSlider = () => {
     // Reset the typing effect when component mounts
     setTypedText('');
     setShowButton(false);
+    setCursorVisible(true);
     
-    // Create typewriter effect
+    // Create irregular typewriter effect with varying speeds
     let i = 0;
     const typeInterval = setInterval(() => {
       if (i < subtitle.length) {
         setTypedText(subtitle.substring(0, i + 1));
         i++;
-      } else {
+        // Random typing speed adjustment for more natural/irregular effect
         clearInterval(typeInterval);
+        const randomDelay = Math.floor(Math.random() * 60) + 20; // 20-80ms delay for typing variation
         setTimeout(() => {
-          setShowButton(true);
-        }, 500);
+          const newTypeInterval = setInterval(() => {
+            if (i < subtitle.length) {
+              setTypedText(subtitle.substring(0, i + 1));
+              i++;
+            } else {
+              clearInterval(newTypeInterval);
+              
+              // Make cursor blink twice before disappearing
+              setTimeout(() => {
+                setCursorVisible(false);
+                setTimeout(() => {
+                  setCursorVisible(true);
+                  setTimeout(() => {
+                    setCursorVisible(false);
+                    setTimeout(() => {
+                      setCursorVisible(true);
+                      setTimeout(() => {
+                        setCursorVisible(false);
+                        setShowButton(true);
+                      }, 400);
+                    }, 400);
+                  }, 400);
+                }, 400);
+              }, 200);
+            }
+          }, randomDelay);
+        }, randomDelay);
       }
-    }, 50);
+    }, 30); // Initial speed is faster now at 30ms
 
     return () => clearInterval(typeInterval);
   }, []);
@@ -112,11 +140,11 @@ const HeroSlider = () => {
       <div className="relative z-20 flex flex-col items-start justify-center h-full text-white px-4 container mx-auto">
         <div className="max-w-2xl ml-0 mr-auto md:ml-8 lg:ml-16">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 slide-in text-left">
-            <span className="text-primary">Anton Marshall</span> <span className="text-accent">Webdesign</span>
+            <span className="text-primary font-bold">Anton Marshall</span> <span className="text-accent">Webdesign</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-left h-16">
             {typedText}
-            <span className={`inline-block w-0.5 h-5 bg-white ml-1 ${typedText.length < subtitle.length ? 'animate-pulse' : 'opacity-0'}`}></span>
+            <span className={`inline-block w-0.5 h-5 bg-white ml-1 ${cursorVisible ? 'opacity-100' : 'opacity-0'}`}></span>
           </p>
           <div className="text-left">
             {showButton && (
