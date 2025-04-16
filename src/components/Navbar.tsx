@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import LanguageSwitcher from './LanguageSwitcher';
@@ -49,7 +48,7 @@ const Navbar = () => {
   const getNavItemClass = (section: string) => {
     return `transition-colors duration-300 px-3 py-2 rounded-md ${
       activeSection === section 
-      ? 'bg-accent/20 text-accent font-semibold'
+      ? 'bg-accent/10 text-accent'
       : 'text-gray-700 hover:bg-gray-100 hover:text-primary'
     }`;
   };
@@ -154,4 +153,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
