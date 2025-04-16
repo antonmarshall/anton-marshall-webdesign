@@ -10,8 +10,8 @@ const slides = [
     alt: 'Modern website design on laptop',
   },
   {
-    image: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1920&q=80',
-    alt: 'Clean architecture website example',
+    image: `${import.meta.env.BASE_URL}images/hero_image_skizze.png`,
+    alt: 'skizze einer webseite',
   },
   {
     image: 'https://images.unsplash.com/photo-1493397212122-2b85dda8106b?auto=format&fit=crop&w=1920&q=80',
