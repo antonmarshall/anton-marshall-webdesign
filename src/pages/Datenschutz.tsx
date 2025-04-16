@@ -3,6 +3,7 @@ import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
+import BackButton from '@/components/BackButton';
 
 const Datenschutz = () => {
   const { t, language } = useLanguage();
@@ -11,6 +12,7 @@ const Datenschutz = () => {
     <div className="min-h-screen bg-white">
       <Navbar />
       <main className="container mx-auto px-4 py-16">
+        <BackButton />
         <h1 className="text-3xl font-bold mb-8">
           {language === 'de' ? 'Datenschutzerklärung' : 'Privacy Policy'}
         </h1>

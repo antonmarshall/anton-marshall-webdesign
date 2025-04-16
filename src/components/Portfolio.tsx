@@ -4,59 +4,59 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent } from '@/components/ui/card';
 import { ExternalLink } from 'lucide-react';
 
-const portfolioItems = [
-  {
-    id: 'teeshop',
-    title: 'Teekultur Japan',
-    image: '/lovable-uploads/0a5d7fd4-7d5b-4f29-a330-382003c300ca.png',
-    alt: 'Japanischer Teeladen',
-    desc: 'Eleganter Online-Shop für japanische Tees',
-    url: 'https://example-teaware.com',
-  },
-  {
-    id: 'matcha',
-    title: 'Matcha Paradise',
-    image: '/lovable-uploads/db79d66f-14cc-4d9f-928e-9ce0cec847eb.png',
-    alt: 'Matcha Cafe',
-    desc: 'Traditionelle Matcha-Erlebnisse und Zubehör',
-    url: 'https://example-matcha.com',
-  },
-  {
-    id: 'teahouse',
-    title: 'Sakura Teehaus',
-    image: '/lovable-uploads/897a81da-3750-466f-854c-002de80dd104.png',
-    alt: 'Japanisches Teehaus',
-    desc: 'Authentische Teezeremonie-Webpräsenz',
-    url: 'https://example-teahouse.com',
-  },
-  {
-    id: 'sencha',
-    title: 'Sencha Select',
-    image: '/lovable-uploads/f79e217f-1f9e-4999-8d0b-1efca7c4f42a.png',
-    alt: 'Grüner Tee Shop',
-    desc: 'Spezialist für japanischen Grüntee',
-    url: 'https://example-sencha.com',
-  },
-  {
-    id: 'tearoom',
-    title: 'Zen Teatime',
-    image: '/lovable-uploads/6f548b57-4df9-48ee-89a1-608e0e07be55.png',
-    alt: 'Teeraum',
-    desc: 'Modernes japanisches Tee-Erlebnis online',
-    url: 'https://example-tearoom.com',
-  },
-  {
-    id: 'teaware',
-    title: 'Kyoto Teewaren',
-    image: '/lovable-uploads/0b999837-4985-439d-8337-c5290ad3c9ed.png',
-    alt: 'Teegeschirr Shop',
-    desc: 'Premium japanisches Teegeschirr',
-    url: 'https://example-kyoto.com',
-  }
-];
-
 const Portfolio = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+
+  const portfolioItems = [
+    {
+      id: 'teeshop',
+      title: language === 'de' ? 'Teekultur Japan' : 'Tea Culture Japan',
+      image: '/lovable-uploads/0a5d7fd4-7d5b-4f29-a330-382003c300ca.png',
+      alt: language === 'de' ? 'Japanischer Teeladen' : 'Japanese Tea Shop',
+      desc: language === 'de' ? 'Eleganter Online-Shop für japanische Tees' : 'Elegant online shop for Japanese teas',
+      url: 'https://example-teaware.com',
+    },
+    {
+      id: 'matcha',
+      title: language === 'de' ? 'Matcha Paradise' : 'Matcha Paradise',
+      image: '/lovable-uploads/db79d66f-14cc-4d9f-928e-9ce0cec847eb.png',
+      alt: language === 'de' ? 'Matcha Cafe' : 'Matcha Cafe',
+      desc: language === 'de' ? 'Traditionelle Matcha-Erlebnisse und Zubehör' : 'Traditional matcha experiences and accessories',
+      url: 'https://example-matcha.com',
+    },
+    {
+      id: 'teahouse',
+      title: language === 'de' ? 'Sakura Teehaus' : 'Sakura Tea House',
+      image: '/lovable-uploads/897a81da-3750-466f-854c-002de80dd104.png',
+      alt: language === 'de' ? 'Japanisches Teehaus' : 'Japanese Tea House',
+      desc: language === 'de' ? 'Authentische Teezeremonie-Webpräsenz' : 'Authentic tea ceremony web presence',
+      url: 'https://example-teahouse.com',
+    },
+    {
+      id: 'sencha',
+      title: language === 'de' ? 'Sencha Select' : 'Sencha Select',
+      image: '/lovable-uploads/f79e217f-1f9e-4999-8d0b-1efca7c4f42a.png',
+      alt: language === 'de' ? 'Grüner Tee Shop' : 'Green Tea Shop',
+      desc: language === 'de' ? 'Spezialist für japanischen Grüntee' : 'Specialist for Japanese green tea',
+      url: 'https://example-sencha.com',
+    },
+    {
+      id: 'tearoom',
+      title: language === 'de' ? 'Zen Teatime' : 'Zen Teatime',
+      image: '/lovable-uploads/6f548b57-4df9-48ee-89a1-608e0e07be55.png',
+      alt: language === 'de' ? 'Teeraum' : 'Tea Room',
+      desc: language === 'de' ? 'Modernes japanisches Tee-Erlebnis online' : 'Modern Japanese tea experience online',
+      url: 'https://example-tearoom.com',
+    },
+    {
+      id: 'teaware',
+      title: language === 'de' ? 'Kyoto Teewaren' : 'Kyoto Teaware',
+      image: '/lovable-uploads/0b999837-4985-439d-8337-c5290ad3c9ed.png',
+      alt: language === 'de' ? 'Teegeschirr Shop' : 'Teaware Shop',
+      desc: language === 'de' ? 'Premium japanisches Teegeschirr' : 'Premium Japanese teaware',
+      url: 'https://example-kyoto.com',
+    }
+  ];
 
   return (
     <section id="portfolio" className="py-20 bg-gradient-to-b from-gray-50 to-white">
