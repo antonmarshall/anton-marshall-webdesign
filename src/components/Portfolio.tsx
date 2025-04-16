@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent } from '@/components/ui/card';
@@ -35,7 +34,7 @@ const Portfolio = () => {
     {
       id: 'computer',
       title: language === 'de' ? 'PC Support Express' : 'PC Support Express',
-      image: `${import.meta.env.BASE_URL}/images/computer.png`,
+      image: `${import.meta.env.BASE_URL}images/computer.png`,
       alt: language === 'de' ? 'Computer Support' : 'Computer Support',
       desc: language === 'de' ? 'Professionelle IT-Dienstleistungen' : 'Professional IT services',
       url: 'https://amazon.com',
@@ -43,7 +42,7 @@ const Portfolio = () => {
     {
       id: 'gardener',
       title: language === 'de' ? 'Grüne Oase Gartenbau' : 'Green Oasis Landscaping',
-      image: `${import.meta.env.BASE_URL}/images/gärtner.png`,
+      image: `${import.meta.env.BASE_URL}images/gärtner.png`,
       alt: language === 'de' ? 'Gartenbau Website' : 'Landscaping Website',
       desc: language === 'de' ? 'Kreative Gartengestaltung und Pflege' : 'Creative garden design and maintenance',
       url: 'https://example-garten.com',
@@ -51,7 +50,7 @@ const Portfolio = () => {
     {
       id: 'construction',
       title: language === 'de' ? 'Kyoto Teewaren' : 'Kyoto Teaware',
-      image: `${import.meta.env.BASE_URL}/images/bau_unternehmer.png`,
+      image: `${import.meta.env.BASE_URL}images/bau_unternehmer.png`,
       alt: language === 'de' ? 'Teegeschirr Shop' : 'Teaware Shop',
       desc: language === 'de' ? 'Bauunternehmer' : 'construction',
       url: 'https://example-kyoto.com',
