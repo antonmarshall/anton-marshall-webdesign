@@ -40,7 +40,7 @@ const WorkflowSection = () => {
               Anton Marshall
               <GraduationCap className="text-accent" size={24} />
             </h3>
-            <p className="text-gray-600 leading-relaxed">Ich studiere Künstliche Intelligenz an der Universität von Groningen. Ich verbinde technisches Know-how mit kreativem Design. Es macht mir Spaß, mit anderen Leuten zu brainstormen und ihre Visionen zu verstehen. Ich habe einen hohen Anspruch an mich selbst, dass die Websites visuell ansprechend und gut strukturiert sind.</p>
+            <p className="text-gray-600 leading-relaxed">Ich studiere Künstliche Intelligenz an der Universität Groningen. Ich verbinde technisches Know-how mit kreativem Design. Es macht mir Spaß, mit anderen Leuten zu brainstormen und ihre Visionen zu verstehen. Ich habe einen hohen Anspruch an mich selbst, dass die Websites visuell ansprechend und gut strukturiert sind.</p>
           </div>
         </div>
 
