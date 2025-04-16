@@ -51,7 +51,7 @@ const Portfolio = () => {
     {
       id: 'construction',
       title: language === 'de' ? 'Kyoto Teewaren' : 'Kyoto Teaware',
-      image: '${import.meta.env.BASE_URL}/anton-marshall-webdesign/images/bau_unternehmer.png',
+      image: '${import.meta.env.BASE_URL}/images/bau_unternehmer.png',
       alt: language === 'de' ? 'Teegeschirr Shop' : 'Teaware Shop',
       desc: language === 'de' ? 'Bauunternehmer' : 'construction',
       url: 'https://example-kyoto.com',
