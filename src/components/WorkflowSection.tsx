@@ -40,11 +40,7 @@ const WorkflowSection = () => {
               Anton Marshall
               <GraduationCap className="text-accent" size={24} />
             </h3>
-            <p className="text-gray-600 leading-relaxed">
-              Mit 22 Jahren studiere ich Künstliche Intelligenz in Groningen und bringe technisches Know-how mit kreativem Design zusammen. 
-              Ich liebe es, mit Menschen zu brainstormen und ihre Vision zu verstehen. Jedes Projekt ist für mich eine spannende Reise, 
-              bei der ich mit hohen Ansprüchen Ihre digitale Präsenz gestalte.
-            </p>
+            <p className="text-gray-600 leading-relaxed">Ich studiere Künstliche Intelligenz an der Universität von Groningen. Ich verbinde technisches Know-how mit kreativem Design. Es macht mir Spaß, mit anderen Leuten zu brainstormen und ihre Visionen zu verstehen. Ich habe einen hohen Anspruch an mich selbst, dass die Websites visuell ansprechend und gut strukturiert sind.</p>
           </div>
         </div>
 
@@ -83,7 +79,7 @@ const WorkflowSection = () => {
             <h3 className="text-2xl font-semibold mb-4 text-gray-900">
               Warum mich wählen?
             </h3>
-            <p className="text-gray-600 leading-relaxed mb-6 font-normal">professionelle Webseiten kosten in der Regel weit über 800€. Bei mir kriegen sie für diesen Preis eine authentische Webseite. Egal, ob Sie eine auffällige oder eine schlichte Website wünschen. Keine klare Vorstellung? Kein Problem! Ich begleite Sie mit kreativen Ideen durch den Prozess, ohne Sie mit technischen Details zu überfordern. Und wenn Sie bereits konkrete Vorstellungen haben, setze ich diese präzise um.</p>
+            <p className="text-gray-600 leading-relaxed mb-6 font-normal">Professionelle Webseiten kosten in der Regel weit über 800€. Bei mir kriegen Sie dafür eine authentische und strukturierte Webseite. Egal, ob Sie eine auffällige oder eine schlichte Website wünschen. Keine klare Vorstellung? Kein Problem! Ich begleite Sie mit kreativen Ideen durch den Prozess, ohne Sie mit technischen Details zu überfordern. Und wenn Sie bereits konkrete Vorstellungen haben, setze ich diese präzise um.</p>
             <div className="flex flex-col md:flex-row md:justify-between gap-6 mt-8">
               <div className="flex items-center gap-3 text-gray-700">
                 <Code size={24} className="text-primary" />
