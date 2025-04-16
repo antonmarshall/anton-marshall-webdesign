@@ -28,15 +28,14 @@ export const translations: Translations = {
     'portfolio.view': 'Ansehen',
     
     // Pricing
-    'price.title': 'Preisübersicht',
-    'price.subtitle': 'Transparente Preisgestaltung für Ihre Webseite',
-    'price.websitePackage': 'Webseiten-Paket',
-    'price.completePackage': 'Ihr Komplettpaket für den professionellen Webauftritt',
-    'price.includes': 'Im Preis enthalten:',
-    'price.feature1': 'Individuelle Webseitenentwicklung nach Ihren Wünschen',
-    'price.feature2': 'Domain & Hosting für ein Jahr inklusive',
-    'price.feature3': 'Professionelle Einrichtung und Veröffentlichung',
-    'price.payment': 'Zahlung nach Fertigstellung',
+    'price.title': 'Preis',
+    'price.subtitle': 'Transparente Preisgestaltung für Ihre professionelle Website',
+    'price.websitePackage': 'Website-Komplettpaket',
+    'price.includes': 'Leistungen im Überblick',
+    'price.feature1': 'Professionelle Website-Entwicklung nach Ihren Vorstellungen',
+    'price.feature2': 'Domain & Hosting für ein Jahr kostenlos',
+    'price.feature3': 'Komplett-Service von der Planung bis zum Go-Live',
+    'price.payment': 'Bezahlung erst nach vollständiger Fertigstellung',
     
     // Workflow
     'workflow.title': 'Mein Arbeitsprozess',
@@ -88,15 +87,14 @@ export const translations: Translations = {
     'portfolio.view': 'View',
     
     // Pricing
-    'price.title': 'Pricing Overview',
-    'price.subtitle': 'Transparent pricing for your website',
-    'price.websitePackage': 'Website Package',
-    'price.completePackage': 'Your complete package for a professional web presence',
-    'price.includes': 'Package includes:',
-    'price.feature1': 'Custom website development tailored to your needs',
-    'price.feature2': 'Domain & hosting included for one year',
-    'price.feature3': 'Professional setup and publication',
-    'price.payment': 'Payment upon completion',
+    'price.title': 'Price',
+    'price.subtitle': 'Transparent pricing for your professional website',
+    'price.websitePackage': 'Complete Website Package',
+    'price.includes': 'Services Overview',
+    'price.feature1': 'Professional website development according to your vision',
+    'price.feature2': 'Free domain & hosting for one year',
+    'price.feature3': 'Full service from planning to launch',
+    'price.payment': 'Payment only after complete delivery',
     
     // Workflow
     'workflow.title': 'My Process',

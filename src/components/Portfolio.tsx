@@ -8,7 +8,7 @@ const portfolioItems = [
   {
     id: 'teeshop',
     title: 'Teekultur Japan',
-    image: '/lovable-uploads/ba2b9903-e0ca-4b32-a32e-d600eb99f44a.png',
+    image: '/lovable-uploads/0a5d7fd4-7d5b-4f29-a330-382003c300ca.png',
     alt: 'Japanischer Teeladen',
     desc: 'Eleganter Online-Shop für japanische Tees',
     url: 'https://example-teaware.com',
@@ -16,7 +16,7 @@ const portfolioItems = [
   {
     id: 'matcha',
     title: 'Matcha Paradise',
-    image: '/lovable-uploads/ba2b9903-e0ca-4b32-a32e-d600eb99f44a.png',
+    image: '/lovable-uploads/db79d66f-14cc-4d9f-928e-9ce0cec847eb.png',
     alt: 'Matcha Cafe',
     desc: 'Traditionelle Matcha-Erlebnisse und Zubehör',
     url: 'https://example-matcha.com',
@@ -24,7 +24,7 @@ const portfolioItems = [
   {
     id: 'teahouse',
     title: 'Sakura Teehaus',
-    image: '/lovable-uploads/ba2b9903-e0ca-4b32-a32e-d600eb99f44a.png',
+    image: '/lovable-uploads/897a81da-3750-466f-854c-002de80dd104.png',
     alt: 'Japanisches Teehaus',
     desc: 'Authentische Teezeremonie-Webpräsenz',
     url: 'https://example-teahouse.com',
@@ -32,7 +32,7 @@ const portfolioItems = [
   {
     id: 'sencha',
     title: 'Sencha Select',
-    image: '/lovable-uploads/ba2b9903-e0ca-4b32-a32e-d600eb99f44a.png',
+    image: '/lovable-uploads/f79e217f-1f9e-4999-8d0b-1efca7c4f42a.png',
     alt: 'Grüner Tee Shop',
     desc: 'Spezialist für japanischen Grüntee',
     url: 'https://example-sencha.com',
@@ -40,7 +40,7 @@ const portfolioItems = [
   {
     id: 'tearoom',
     title: 'Zen Teatime',
-    image: '/lovable-uploads/ba2b9903-e0ca-4b32-a32e-d600eb99f44a.png',
+    image: '/lovable-uploads/6f548b57-4df9-48ee-89a1-608e0e07be55.png',
     alt: 'Teeraum',
     desc: 'Modernes japanisches Tee-Erlebnis online',
     url: 'https://example-tearoom.com',
@@ -48,7 +48,7 @@ const portfolioItems = [
   {
     id: 'teaware',
     title: 'Kyoto Teewaren',
-    image: '/lovable-uploads/ba2b9903-e0ca-4b32-a32e-d600eb99f44a.png',
+    image: '/lovable-uploads/0b999837-4985-439d-8337-c5290ad3c9ed.png',
     alt: 'Teegeschirr Shop',
     desc: 'Premium japanisches Teegeschirr',
     url: 'https://example-kyoto.com',

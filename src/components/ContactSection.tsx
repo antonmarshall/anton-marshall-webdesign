@@ -1,16 +1,14 @@
-
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { MessageSquare, Calendar, Send, Mail } from 'lucide-react';
+import { Calendar, MessageSquare, Mail, Send } from 'lucide-react';
 
 const ContactSection = () => {
   const { t } = useLanguage();
 
   const handleCalendarClick = () => {
-    // Open Calendly in a new tab
     window.open('https://calendly.com/anton-marshall-webdesign', '_blank');
   };
 
@@ -27,8 +25,23 @@ const ContactSection = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          {/* Contact Options */}
+          {/* Contact Options - Reordered */}
           <div className="space-y-8">
+            <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <button
+                onClick={handleCalendarClick}
+                className="flex items-center gap-4 w-full text-left"
+              >
+                <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white">
+                  <Calendar size={24} />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900">{t('contact.schedule')}</h3>
+                  <p className="text-gray-600">15 {t('contact.minutes')}</p>
+                </div>
+              </button>
+            </div>
+
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <a 
                 href="https://wa.me/491234567890" 
@@ -44,21 +57,6 @@ const ContactSection = () => {
                   <p className="text-gray-600">+49 123 456 7890</p>
                 </div>
               </a>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <button
-                onClick={handleCalendarClick}
-                className="flex items-center gap-4 w-full text-left"
-              >
-                <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white">
-                  <Calendar size={24} />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900">{t('contact.schedule')}</h3>
-                  <p className="text-gray-600">15 {t('contact.schedule')}</p>
-                </div>
-              </button>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">

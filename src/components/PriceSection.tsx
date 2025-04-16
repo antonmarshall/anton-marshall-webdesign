@@ -5,7 +5,7 @@ import { EuroIcon } from 'lucide-react';
 
 const PriceSection = () => {
   const { t } = useLanguage();
-
+  
   return (
     <section id="price" className="py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
