@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { EuroIcon } from 'lucide-react';
 
 const PriceSection = () => {
   const { t } = useLanguage();
@@ -20,15 +19,13 @@ const PriceSection = () => {
 
         <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
           <div className="p-8 md:p-12">
-            <div className="flex flex-col md:flex-row items-center justify-between mb-8">
-              <div>
-                <h3 className="text-2xl md:text-3xl font-bold text-primary">
-                  {t('price.fixedPrice')}
-                </h3>
-                <p className="text-lg text-gray-600 mt-2">
-                  800 €
-                </p>
-              </div>
+            <div className="flex flex-col md:flex-row items-start justify-between mb-8">
+              <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4 md:mb-0">
+                {t('price.fixedPrice')}
+              </h3>
+              <p className="text-2xl md:text-3xl font-bold text-accent">
+                800 €
+              </p>
             </div>
 
             <div className="border-t border-gray-200 pt-8">
