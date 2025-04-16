@@ -27,7 +27,7 @@ const Portfolio = () => {
     {
       id: 'teashop',
       title: language === 'de' ? 'Teekultur Japan' : 'Tea Culture Japan',
-      image: '/images/japanischer_teeladen.png',
+      image: `${import.meta.env.BASE_URL}images/japanischer_teeladen.png`,
       alt: language === 'de' ? 'Japanischer Teeladen' : 'Japanese Tea Shop',
       desc: language === 'de' ? 'Eleganter Online-Shop für japanische Tees' : 'Elegant online shop for Japanese teas',
       url: 'https://example-teashop.com',
