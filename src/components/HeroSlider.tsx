@@ -31,7 +31,10 @@ const slides = [
 const HeroSlider = () => {
   const { t } = useLanguage();
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [typedText, setTypedText] = useState('');
+  const [showButton, setShowButton] = useState(false);
   const isMobile = useIsMobile();
+  const subtitle = 'Maßgeschneiderte Webseiten, die Ihr Unternehmen zum Strahlen bringen';
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -39,6 +42,28 @@ const HeroSlider = () => {
     }, 8000); 
 
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    // Reset the typing effect when component mounts
+    setTypedText('');
+    setShowButton(false);
+    
+    // Create typewriter effect
+    let i = 0;
+    const typeInterval = setInterval(() => {
+      if (i < subtitle.length) {
+        setTypedText(subtitle.substring(0, i + 1));
+        i++;
+      } else {
+        clearInterval(typeInterval);
+        setTimeout(() => {
+          setShowButton(true);
+        }, 500);
+      }
+    }, 50);
+
+    return () => clearInterval(typeInterval);
   }, []);
 
   const goToSlide = (index: number) => {
@@ -85,21 +110,24 @@ const HeroSlider = () => {
 
       {/* Hero Content */}
       <div className="relative z-20 flex flex-col items-start justify-center h-full text-white px-4 container mx-auto">
-        <div className="max-w-2xl bg-gradient-to-br from-[#1E2435] to-[#2D3446] shadow-2xl rounded-xl px-8 py-10 ml-0 mr-auto md:ml-8 lg:ml-16">
+        <div className="max-w-2xl ml-0 mr-auto md:ml-8 lg:ml-16">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 slide-in text-left">
-            {t('hero.title')}
+            <span className="text-primary">Anton Marshall</span> <span className="text-accent">Webdesign</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 slide-in text-left">
-            {t('hero.subtitle')}
+          <p className="text-xl md:text-2xl mb-8 text-left h-16">
+            {typedText}
+            <span className={`inline-block w-0.5 h-5 bg-white ml-1 ${typedText.length < subtitle.length ? 'animate-pulse' : 'opacity-0'}`}></span>
           </p>
           <div className="text-left">
-            <Button 
-              onClick={handleScroll}
-              size={isMobile ? "default" : "lg"}
-              className="bg-accent hover:bg-accent/90 text-white px-10 font-medium text-lg slide-in shadow-lg"
-            >
-              {t('hero.cta')}
-            </Button>
+            {showButton && (
+              <Button 
+                onClick={handleScroll}
+                size={isMobile ? "default" : "lg"}
+                className="bg-accent hover:bg-accent/90 text-white px-10 font-medium text-lg slide-in shadow-lg"
+              >
+                Kostenlose Beratung
+              </Button>
+            )}
           </div>
         </div>
       </div>
