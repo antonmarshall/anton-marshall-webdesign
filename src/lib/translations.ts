@@ -67,6 +67,15 @@ export const translations: Translations = {
     
     // Footer
     'footer.rights': 'Alle Rechte vorbehalten',
+    
+    // Legal
+    'legal': 'Rechtliches',
+    'legal.notice': 'Impressum',
+    'legal.privacy': 'Datenschutz',
+    'legal.terms': 'AGB',
+    'legal.cookie.text': 'Diese Website verwendet Cookies, um Ihr Browsererlebnis zu verbessern.',
+    'legal.cookie.accept': 'Akzeptieren',
+    'legal.cookie.decline': 'Ablehnen',
   },
   en: {
     // Navbar
@@ -126,5 +135,14 @@ export const translations: Translations = {
     
     // Footer
     'footer.rights': 'All Rights Reserved',
+    
+    // Legal
+    'legal': 'Legal',
+    'legal.notice': 'Legal Notice',
+    'legal.privacy': 'Privacy Policy',
+    'legal.terms': 'Terms & Conditions',
+    'legal.cookie.text': 'This website uses cookies to enhance your browsing experience.',
+    'legal.cookie.accept': 'Accept',
+    'legal.cookie.decline': 'Decline',
   },
 };
