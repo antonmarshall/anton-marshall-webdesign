@@ -46,7 +46,7 @@ const HeroSlider = () => {
   }, []);
 
   useEffect(() => {
-    // Reset the typing effect when component mounts
+    // Reset typing effect when component mounts
     setTypedText('');
     setShowButton(false);
     setCursorVisible(true);
@@ -58,7 +58,7 @@ const HeroSlider = () => {
       if (i < subtitle.length) {
         setTypedText(subtitle.substring(0, i + 1));
         i++;
-        // Random typing speed for irregular effect
+        // Random typing speed between 20-80ms for irregular effect
         const randomDelay = Math.floor(Math.random() * 60) + 20;
         typeTimeout = setTimeout(typeNextChar, randomDelay);
       } else {
