@@ -51,47 +51,43 @@ const HeroSlider = () => {
     setShowButton(false);
     setCursorVisible(true);
     
-    // Create irregular typewriter effect with varying speeds
     let i = 0;
-    const typeInterval = setInterval(() => {
+    let typeTimeout = null;
+    
+    const typeNextChar = () => {
       if (i < subtitle.length) {
         setTypedText(subtitle.substring(0, i + 1));
         i++;
-        // Random typing speed adjustment for more natural/irregular effect
-        clearInterval(typeInterval);
-        const randomDelay = Math.floor(Math.random() * 60) + 20; // 20-80ms delay for typing variation
+        // Random typing speed for irregular effect
+        const randomDelay = Math.floor(Math.random() * 60) + 20;
+        typeTimeout = setTimeout(typeNextChar, randomDelay);
+      } else {
+        // Typing complete, blink cursor twice before showing button
         setTimeout(() => {
-          const newTypeInterval = setInterval(() => {
-            if (i < subtitle.length) {
-              setTypedText(subtitle.substring(0, i + 1));
-              i++;
-            } else {
-              clearInterval(newTypeInterval);
-              
-              // Make cursor blink twice before disappearing
+          setCursorVisible(false);
+          setTimeout(() => {
+            setCursorVisible(true);
+            setTimeout(() => {
+              setCursorVisible(false);
               setTimeout(() => {
-                setCursorVisible(false);
+                setCursorVisible(true);
                 setTimeout(() => {
-                  setCursorVisible(true);
-                  setTimeout(() => {
-                    setCursorVisible(false);
-                    setTimeout(() => {
-                      setCursorVisible(true);
-                      setTimeout(() => {
-                        setCursorVisible(false);
-                        setShowButton(true);
-                      }, 400);
-                    }, 400);
-                  }, 400);
+                  setCursorVisible(false);
+                  setShowButton(true);
                 }, 400);
-              }, 200);
-            }
-          }, randomDelay);
-        }, randomDelay);
+              }, 400);
+            }, 400);
+          }, 400);
+        }, 200);
       }
-    }, 30); // Initial speed is faster now at 30ms
-
-    return () => clearInterval(typeInterval);
+    };
+    
+    // Start typing with a short delay
+    typeTimeout = setTimeout(typeNextChar, 30);
+    
+    return () => {
+      if (typeTimeout) clearTimeout(typeTimeout);
+    };
   }, []);
 
   const goToSlide = (index: number) => {
