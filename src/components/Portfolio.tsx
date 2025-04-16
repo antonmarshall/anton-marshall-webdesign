@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent } from '@/components/ui/card';
@@ -5,11 +6,11 @@ import { ExternalLink } from 'lucide-react';
 
 const portfolioItems = [
   {
-    id: 'teashop',
+    id: 'teeshop',
     title: 'Teekultur Japan',
     image: 'https://images.unsplash.com/photo-1584483766114-2cea6facdf57',
     alt: 'Japanischer Teeladen',
-    desc: 'Eleganter Online-Shop für Teeliebhaber',
+    desc: 'Eleganter Online-Shop für japanische Tees',
     url: 'https://example-teaware.com',
   },
   {
@@ -17,7 +18,7 @@ const portfolioItems = [
     title: 'Matcha Paradise',
     image: 'https://images.unsplash.com/photo-1582562124811-c09040d0a901',
     alt: 'Matcha Cafe',
-    desc: 'Traditionelle Matcha-Erlebnisse',
+    desc: 'Traditionelle Matcha-Erlebnisse und Zubehör',
     url: 'https://example-matcha.com',
   },
   {
@@ -25,7 +26,7 @@ const portfolioItems = [
     title: 'Sakura Teehaus',
     image: 'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86',
     alt: 'Japanisches Teehaus',
-    desc: 'Authentische Teezeremonie-Erlebnisse',
+    desc: 'Authentische Teezeremonie-Webpräsenz',
     url: 'https://example-teahouse.com',
   },
   {
@@ -33,7 +34,7 @@ const portfolioItems = [
     title: 'Sencha Select',
     image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e',
     alt: 'Grüner Tee Shop',
-    desc: 'Premiumqualität japanischer Grüntee',
+    desc: 'Spezialist für japanischen Grüntee',
     url: 'https://example-sencha.com',
   },
   {
@@ -41,7 +42,7 @@ const portfolioItems = [
     title: 'Zen Teatime',
     image: 'https://images.unsplash.com/photo-1472396961693-142e6e269027',
     alt: 'Teeraum',
-    desc: 'Moderne japanische Teekultur',
+    desc: 'Modernes japanisches Tee-Erlebnis online',
     url: 'https://example-tearoom.com',
   },
   {
@@ -49,7 +50,7 @@ const portfolioItems = [
     title: 'Kyoto Teewaren',
     image: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9',
     alt: 'Teegeschirr Shop',
-    desc: 'Handgefertigtes Teegeschirr',
+    desc: 'Premium japanisches Teegeschirr',
     url: 'https://example-kyoto.com',
   }
 ];

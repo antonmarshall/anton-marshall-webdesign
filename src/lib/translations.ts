@@ -1,4 +1,3 @@
-
 export type Language = 'de' | 'en';
 
 type TranslationKeys = {
@@ -25,7 +24,7 @@ export const translations: Translations = {
     
     // Portfolio
     'portfolio.title': 'Meine Arbeiten',
-    'portfolio.subtitle': 'Eine Auswahl meiner Webdesign-Projekte für Teehäuser und Café-Betriebe',
+    'portfolio.subtitle': 'Eine Auswahl meiner Webdesign-Projekte für japanische Teeshops und Teehäuser',
     'portfolio.view': 'Ansehen',
     
     // Pricing
@@ -85,7 +84,7 @@ export const translations: Translations = {
     
     // Portfolio
     'portfolio.title': 'My Work',
-    'portfolio.subtitle': 'A selection of my web design projects for tea houses and cafés',
+    'portfolio.subtitle': 'A selection of my web design projects for Japanese tea shops and tea houses',
     'portfolio.view': 'View',
     
     // Pricing
