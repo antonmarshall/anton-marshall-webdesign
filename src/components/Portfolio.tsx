@@ -11,7 +11,7 @@ const Portfolio = () => {
     {
       id: 'handwerk',
       title: language === 'de' ? 'Müller & Sohn Schreinerei' : 'Müller & Son Carpentry',
-      image: '${import.meta.env.BASE_URL}images/handwerker.png',
+      image: `${import.meta.env.BASE_URL}images/handwerker.png`,
       alt: language === 'de' ? 'Schreinerei Website' : 'Carpentry Website',
       desc: language === 'de' ? 'Traditionelle Schreinerei mit modernem Webauftritt' : 'Traditional carpentry with modern web presence',
       url: 'https://example-handwerk.com',
@@ -19,7 +19,7 @@ const Portfolio = () => {
     {
       id: 'psycho',
       title: language === 'de' ? 'Praxis für Psychotherapie' : 'Psychotherapy Practice',
-      image: '${import.meta.env.BASE_URL}images/psychotherapie.png',
+      image: `${import.meta.env.BASE_URL}images/psychotherapie.png`,
       alt: language === 'de' ? 'Psychotherapie Praxis' : 'Psychotherapy Practice',
       desc: language === 'de' ? 'Vertrauensvolle Online-Präsenz für Therapeuten' : 'Trustworthy online presence for therapists',
       url: 'https://example-therapy.com',
@@ -35,7 +35,7 @@ const Portfolio = () => {
     {
       id: 'computer',
       title: language === 'de' ? 'PC Support Express' : 'PC Support Express',
-      image: '${import.meta.env.BASE_URL}/images/computer.png',
+      image: `${import.meta.env.BASE_URL}/images/computer.png`,
       alt: language === 'de' ? 'Computer Support' : 'Computer Support',
       desc: language === 'de' ? 'Professionelle IT-Dienstleistungen' : 'Professional IT services',
       url: 'https://amazon.com',
@@ -43,7 +43,7 @@ const Portfolio = () => {
     {
       id: 'gardener',
       title: language === 'de' ? 'Grüne Oase Gartenbau' : 'Green Oasis Landscaping',
-      image: '${import.meta.env.BASE_URL}/images/gärtner.png',
+      image: `${import.meta.env.BASE_URL}/images/gärtner.png`,
       alt: language === 'de' ? 'Gartenbau Website' : 'Landscaping Website',
       desc: language === 'de' ? 'Kreative Gartengestaltung und Pflege' : 'Creative garden design and maintenance',
       url: 'https://example-garten.com',
@@ -51,7 +51,7 @@ const Portfolio = () => {
     {
       id: 'construction',
       title: language === 'de' ? 'Kyoto Teewaren' : 'Kyoto Teaware',
-      image: '${import.meta.env.BASE_URL}/images/bau_unternehmer.png',
+      image: `${import.meta.env.BASE_URL}/images/bau_unternehmer.png`,
       alt: language === 'de' ? 'Teegeschirr Shop' : 'Teaware Shop',
       desc: language === 'de' ? 'Bauunternehmer' : 'construction',
       url: 'https://example-kyoto.com',
