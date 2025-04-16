@@ -11,10 +11,10 @@ const PriceSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-            {t('price.title')}
+            Preis
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            {t('price.subtitle')}
+            Professionelle Website-Erstellung – Komplettpaket
           </p>
         </div>
 
@@ -23,10 +23,10 @@ const PriceSection = () => {
             <div className="flex flex-col md:flex-row items-center justify-between mb-8">
               <div>
                 <h3 className="text-2xl md:text-3xl font-bold text-primary">
-                  {t('price.websitePackage')}
+                  Pauschalpreis
                 </h3>
                 <p className="text-lg text-gray-600 mt-2">
-                  {t('price.completePackage')}
+                  Einmalige Investition in Ihre Online-Präsenz
                 </p>
               </div>
               <div className="mt-6 md:mt-0 flex items-center gap-2">
@@ -39,30 +39,30 @@ const PriceSection = () => {
 
             <div className="border-t border-gray-200 pt-8">
               <h4 className="text-xl font-semibold mb-6 text-primary">
-                {t('price.includes')}
+                Leistungsumfang
               </h4>
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <svg className="h-5 w-5 text-accent mt-1 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-lg">{t('price.feature1')}</span>
+                  <span className="text-lg">Individuelle Gestaltung und Entwicklung Ihrer Website</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="h-5 w-5 text-accent mt-1 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-lg">{t('price.feature2')}</span>
+                  <span className="text-lg">Inklusive Domainregistrierung und Hosting für 12 Monate</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="h-5 w-5 text-accent mt-1 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-lg">{t('price.feature3')}</span>
+                  <span className="text-lg">Persönliche Betreuung von der Konzeption bis zur Veröffentlichung</span>
                 </li>
               </ul>
               <p className="mt-8 text-lg text-gray-600 border-t border-gray-200 pt-6">
-                {t('price.payment')}
+                Hinweis: Die Zahlung erfolgt erst nach vollständiger Fertigstellung und Ihrer Freigabe der Website.
               </p>
             </div>
           </div>
