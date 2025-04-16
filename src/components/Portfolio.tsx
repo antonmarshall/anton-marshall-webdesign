@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent } from '@/components/ui/card';
 import { ExternalLink } from 'lucide-react';
+
+// Lazy load image component
+const LazyImage = lazy(() => import('@/components/LazyImage'));
 
 const Portfolio = () => {
   const { t, language } = useLanguage();
@@ -77,11 +80,13 @@ const Portfolio = () => {
             >
               <CardContent className="p-0">
                 <div className="relative aspect-[4/3]">
-                  <img 
-                    src={item.image} 
-                    alt={item.alt} 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
+                  <Suspense fallback={<div className="w-full h-full bg-gray-200 animate-pulse" />}>
+                    <LazyImage 
+                      src={item.image} 
+                      alt={item.alt}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                  </Suspense>
                   <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-end text-white p-6">
                     <h3 className="text-xl font-semibold mb-2 text-center">
                       {item.title}
