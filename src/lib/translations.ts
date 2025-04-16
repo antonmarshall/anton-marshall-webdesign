@@ -17,6 +17,7 @@ export const translations: Translations = {
     'price': 'Preis',
     'contact': 'Kontakt',
     'navigation': 'Navigation',
+    'brand.name': 'Anton Marshall WebDesign',
     
     // Hero
     'hero.title': 'Professionelle Webseiten für Ihr Unternehmen',
@@ -28,6 +29,18 @@ export const translations: Translations = {
     'portfolio.subtitle': 'Eine Auswahl meiner Webdesign-Projekte für verschiedene Unternehmen',
     'portfolio.view': 'Ansehen',
     'portfolio.hover': 'Projekt anzeigen',
+    'portfolio.construction': 'Bauunternehmen Website',
+    'portfolio.computer': 'Computer Service Website',
+    'portfolio.garden': 'Gärtnerei Website',
+    'portfolio.tea': 'Japanischer Teeladen',
+    'portfolio.psycho': 'Psychotherapie Website',
+    'portfolio.photo': 'Fotografie Studio Website',
+    'portfolio.construction.desc': 'Professioneller Webauftritt für Bauunternehmen',
+    'portfolio.computer.desc': 'Moderne Website für PC-Dienstleistungen',
+    'portfolio.garden.desc': 'Frische Website für Gärtnerei',
+    'portfolio.tea.desc': 'Eleganter Online-Shop für japanische Tees',
+    'portfolio.psycho.desc': 'Vertrauensvolle Online-Präsenz für Therapeuten',
+    'portfolio.photo.desc': 'Kreative Website für Fotografie Studio',
     
     // Pricing
     'price.title': 'Preis',
@@ -73,6 +86,8 @@ export const translations: Translations = {
     'contact.email': 'E-Mail',
     'contact.message': 'Nachricht',
     'contact.send': 'Senden',
+    'contact.success': 'Nachricht erfolgreich gesendet!',
+    'contact.error': 'Fehler beim Senden der Nachricht.',
     
     // Footer
     'footer.rights': 'Alle Rechte vorbehalten',
@@ -89,6 +104,11 @@ export const translations: Translations = {
     
     // Navigation
     'back.to.home': 'Zurück zur Startseite',
+    
+    // Accessibility
+    'aria.menu': 'Hauptmenü',
+    'aria.toggle': 'Menü öffnen/schließen',
+    'aria.language': 'Sprache ändern',
   },
   en: {
     // Navbar
@@ -98,6 +118,7 @@ export const translations: Translations = {
     'price': 'Price',
     'contact': 'Contact',
     'navigation': 'Navigation',
+    'brand.name': 'Anton Marshall WebDesign',
     
     // Hero
     'hero.title': 'Professional Websites for Your Business',
@@ -109,6 +130,18 @@ export const translations: Translations = {
     'portfolio.subtitle': 'A selection of my web design projects for various businesses',
     'portfolio.view': 'View',
     'portfolio.hover': 'View Project',
+    'portfolio.construction': 'Construction Company Website',
+    'portfolio.computer': 'Computer Service Website',
+    'portfolio.garden': 'Garden Center Website',
+    'portfolio.tea': 'Japanese Tea Shop',
+    'portfolio.psycho': 'Psychotherapy Website',
+    'portfolio.photo': 'Photography Studio Website',
+    'portfolio.construction.desc': 'Professional web presence for construction company',
+    'portfolio.computer.desc': 'Modern website for PC services',
+    'portfolio.garden.desc': 'Fresh website for garden center',
+    'portfolio.tea.desc': 'Elegant online shop for Japanese teas',
+    'portfolio.psycho.desc': 'Trustworthy online presence for therapists',
+    'portfolio.photo.desc': 'Creative website for photography studio',
     
     // Pricing
     'price.title': 'Price',
@@ -154,6 +187,8 @@ export const translations: Translations = {
     'contact.email': 'Email',
     'contact.message': 'Message',
     'contact.send': 'Send',
+    'contact.success': 'Message sent successfully!',
+    'contact.error': 'Error sending message.',
     
     // Footer
     'footer.rights': 'All Rights Reserved',
@@ -170,5 +205,10 @@ export const translations: Translations = {
     
     // Navigation
     'back.to.home': 'Back to Home',
+    
+    // Accessibility
+    'aria.menu': 'Main menu',
+    'aria.toggle': 'Toggle menu',
+    'aria.language': 'Change language',
   },
 };

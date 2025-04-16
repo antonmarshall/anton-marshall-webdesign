@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="500" height="500" fill="#000000"/>
+  <g transform="scale(0.9) translate(25,25)">
+    <!-- A letter -->
+    <path
+      d="M50 400 L200 100 L350 400 L300 400 L200 200 L100 400 Z"
+      fill="#2563eb"
+    />
+    <!-- M letter -->
+    <path
+      d="M300 400 L300 100 L400 300 L500 100 L500 400 L450 400 L450 200 L400 300 L350 200 L350 400 Z"
+      fill="#84cc16"
+    />
+  </g>
+</svg> 

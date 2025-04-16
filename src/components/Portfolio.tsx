@@ -10,42 +10,50 @@ const Portfolio = () => {
     {
       id: 'construction',
       title: language === 'de' ? 'Rheiner Lob Bauunternehmen' : 'Rheiner Lob Construction',
-      image: '/images/portfolio/construction.jpg',
-      alt: language === 'de' ? 'Bauunternehmen Website' : 'Construction Company Website',
-      desc: language === 'de' ? 'Professioneller Webauftritt für Bauunternehmen' : 'Professional web presence for construction company',
+      image: `${import.meta.env.BASE_URL}images/bau_unternehmer.png`,
+      alt: t('portfolio.construction'),
+      desc: t('portfolio.construction.desc'),
       url: '/examples/construction',
     },
     {
       id: 'computer',
       title: 'Custom PC Solutions',
-      image: '/images/portfolio/computer.jpg',
-      alt: language === 'de' ? 'Computer Service Website' : 'Computer Service Website',
-      desc: language === 'de' ? 'Moderne Website für PC-Dienstleistungen' : 'Modern website for PC services',
+      image: `${import.meta.env.BASE_URL}images/computer.png`,
+      alt: t('portfolio.computer'),
+      desc: t('portfolio.computer.desc'),
       url: '/examples/computer',
     },
     {
       id: 'gardener',
       title: language === 'de' ? 'Grüne Oase' : 'Green Oasis',
-      image: '/images/portfolio/gardener.jpg',
-      alt: language === 'de' ? 'Gärtnerei Website' : 'Garden Center Website',
-      desc: language === 'de' ? 'Frische Website für Gärtnerei' : 'Fresh website for garden center',
+      image: `${import.meta.env.BASE_URL}images/gärtner.png`,
+      alt: t('portfolio.garden'),
+      desc: t('portfolio.garden.desc'),
       url: '/examples/gardener',
     },
     {
       id: 'teashop',
       title: language === 'de' ? 'Teehaus Japan' : 'Tea House Japan',
-      image: '/images/portfolio/teashop.jpg',
-      alt: language === 'de' ? 'Japanischer Teeladen' : 'Japanese Tea Shop',
-      desc: language === 'de' ? 'Eleganter Online-Shop für japanische Tees' : 'Elegant online shop for Japanese teas',
+      image: `${import.meta.env.BASE_URL}images/japanischer_teeladen.png`,
+      alt: t('portfolio.tea'),
+      desc: t('portfolio.tea.desc'),
       url: '/examples/teashop',
     },
     {
       id: 'psycho',
       title: language === 'de' ? 'Praxis für Psychotherapie' : 'Psychotherapy Practice',
-      image: '/images/portfolio/psycho.jpg',
-      alt: language === 'de' ? 'Psychotherapie Website' : 'Psychotherapy Website',
-      desc: language === 'de' ? 'Vertrauensvolle Online-Präsenz für Therapeuten' : 'Trustworthy online presence for therapists',
+      image: `${import.meta.env.BASE_URL}images/psychotherapie.png`,
+      alt: t('portfolio.psycho'),
+      desc: t('portfolio.psycho.desc'),
       url: '/examples/psycho',
+    },
+    {
+      id: 'photography',
+      title: language === 'de' ? 'Licht & Schatten Studio' : 'Light & Shadow Studio',
+      image: `${import.meta.env.BASE_URL}images/yoga_knete.png`,
+      alt: t('portfolio.photo'),
+      desc: t('portfolio.photo.desc'),
+      url: '/examples/photography',
     }
   ];
 
@@ -53,7 +61,7 @@ const Portfolio = () => {
     <section id="portfolio" className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
             {t('portfolio.title')}
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">

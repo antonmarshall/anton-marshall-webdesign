@@ -4,6 +4,7 @@ import LanguageSwitcher from './LanguageSwitcher';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useNavigate, useLocation } from 'react-router-dom';
+import Logo from './Logo';
 
 const Navbar = () => {
   const { t } = useLanguage();
@@ -43,7 +44,6 @@ const Navbar = () => {
     
     if (!isHomePage) {
       navigate('/');
-      // Set a small timeout to ensure the page loads before scrolling
       setTimeout(() => {
         const element = document.getElementById(id);
         if (element) {
@@ -86,10 +86,13 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div 
-          className="text-xl font-bold text-primary hover:opacity-90 transition-opacity cursor-pointer"
+          className="flex items-center gap-2 cursor-pointer"
           onClick={() => navigate('/')}
         >
-          Anton Marshall<span className="text-accent"> Webdesign</span>
+          <Logo width={40} height={40} />
+          <span className="text-xl font-bold text-primary">
+            Anton Marshall<span className="text-accent"> WebDesign</span>
+          </span>
         </div>
         
         {/* Desktop Menu */}

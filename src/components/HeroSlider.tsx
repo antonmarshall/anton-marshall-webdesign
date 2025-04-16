@@ -28,13 +28,12 @@ const slides = [
 ];
 
 const HeroSlider = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [typedText, setTypedText] = useState('');
   const [showButton, setShowButton] = useState(false);
   const [cursorVisible, setCursorVisible] = useState(true);
   const isMobile = useIsMobile();
-  const subtitle = 'Maßgeschneiderte Webseiten, die Ihr Unternehmen zum Strahlen bringen';
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -53,10 +52,11 @@ const HeroSlider = () => {
       setShowButton(false);
       setCursorVisible(true);
       
+      const textToType = t('hero.subtitle');
       let i = 0;
       const typeNextChar = () => {
-        if (i < subtitle.length) {
-          setTypedText(subtitle.substring(0, i + 1));
+        if (i < textToType.length) {
+          setTypedText(textToType.substring(0, i + 1));
           i++;
           // Random typing speed between 20-80ms for irregular effect
           const randomDelay = Math.floor(Math.random() * 60) + 20;
@@ -92,7 +92,7 @@ const HeroSlider = () => {
       clearTimeout(typingTimeout);
       clearTimeout(cursorTimeout);
     };
-  }, [subtitle]);
+  }, [t, language]); // Restart animation when language changes
 
   const goToSlide = (index) => {
     setCurrentIndex(index);
@@ -140,7 +140,7 @@ const HeroSlider = () => {
       <div className="relative z-20 flex flex-col items-start justify-center h-full text-white px-4 container mx-auto">
         <div className="max-w-2xl ml-0 mr-auto md:ml-8 lg:ml-16">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 slide-in text-left">
-            <span className="text-primary font-bold">Anton Marshall</span> <span className="text-accent">Webdesign</span>
+            <span className="text-primary font-bold">Anton Marshall</span> <span className="text-accent">WebDesign</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-left h-16">
             {typedText}
@@ -153,7 +153,7 @@ const HeroSlider = () => {
                 size={isMobile ? "default" : "lg"}
                 className="bg-accent hover:bg-accent/90 text-white px-10 font-medium text-lg slide-in shadow-lg"
               >
-                Kostenlose Beratung
+                {t('hero.cta')}
               </Button>
             )}
           </div>
