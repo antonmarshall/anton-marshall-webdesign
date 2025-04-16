@@ -74,7 +74,7 @@ const HeroSlider = () => {
             index === currentIndex ? 'opacity-100' : 'opacity-0'
           }`}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-black/30 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/60 z-10" />
           <img
             src={slide.image}
             alt={slide.alt}
@@ -85,7 +85,7 @@ const HeroSlider = () => {
 
       {/* Hero Content */}
       <div className="relative z-20 flex flex-col items-center justify-center h-full text-white text-center px-4">
-        <div className="max-w-4xl px-6 py-8 rounded-xl bg-gradient-to-r from-primary/20 to-accent/20 backdrop-blur-sm border border-white/10 shadow-lg">
+        <div className="max-w-4xl px-8 py-10 rounded-lg bg-gradient-to-r from-[#1A1F2C] to-[#2A3040] shadow-xl border-l-4 border-accent">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 slide-in">
             {t('hero.title')}
           </h1>
@@ -95,7 +95,7 @@ const HeroSlider = () => {
           <Button 
             onClick={handleScroll}
             size={isMobile ? "default" : "lg"}
-            className="bg-accent hover:bg-accent/90 text-white px-8 text-lg slide-in shadow-lg"
+            className="bg-accent hover:bg-accent/90 text-white px-10 font-medium text-lg slide-in shadow-lg"
           >
             {t('hero.cta')}
           </Button>
