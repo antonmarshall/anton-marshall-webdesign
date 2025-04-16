@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import LanguageSwitcher from './LanguageSwitcher';
@@ -46,18 +47,16 @@ const Navbar = () => {
   };
 
   const getNavItemClass = (section: string) => {
-    return `transition-colors ${
+    return `transition-colors duration-300 px-3 py-2 rounded-md ${
       activeSection === section 
-      ? 'text-accent font-semibold'
-      : 'text-gray-700 hover:text-primary'
+      ? 'bg-accent/20 text-accent font-semibold'
+      : 'text-gray-700 hover:bg-gray-100 hover:text-primary'
     }`;
   };
 
   return (
     <nav 
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/95 shadow-md py-2' : 'bg-white/90 py-4'
-      }`}
+      className={`fixed w-full z-50 transition-all duration-300 bg-white/95 shadow-md py-2`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="text-xl font-bold text-primary hover:text-primary/90 transition-colors">
@@ -65,7 +64,7 @@ const Navbar = () => {
         </div>
         
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-4">
           <button 
             onClick={() => scrollToSection('home')} 
             className={getNavItemClass('home')}
@@ -155,3 +154,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
