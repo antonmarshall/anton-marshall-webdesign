@@ -85,7 +85,7 @@ const HeroSlider = () => {
 
       {/* Hero Content */}
       <div className="relative z-20 flex flex-col items-center justify-center h-full text-white text-center px-4">
-        <div className="max-w-4xl px-8 py-10 rounded-lg bg-gradient-to-r from-[#1A1F2C] to-[#2A3040] shadow-xl border-l-4 border-accent">
+        <div className="max-w-4xl px-8 py-10 rounded-xl bg-gradient-to-br from-[#1E2435] to-[#2D3446] shadow-2xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 slide-in">
             {t('hero.title')}
           </h1>
