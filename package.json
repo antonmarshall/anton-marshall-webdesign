@@ -83,5 +83,18 @@
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
     "vite": "^6.3.0"
-  }
+  },
+  "description": "**URL**: https://lovable.dev/projects/d209e15c-d824-4496-b064-60adf0bb295c",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antonmarshall/anton-marshall-webdesign.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antonmarshall/anton-marshall-webdesign/issues"
+  },
+  "homepage": "https://github.com/antonmarshall/anton-marshall-webdesign#readme"
 }
