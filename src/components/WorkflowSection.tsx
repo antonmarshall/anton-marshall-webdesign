@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { PhoneCall, Code, MessageSquare, CheckCircle, GraduationCap } from 'lucide-react';
@@ -10,22 +11,22 @@ const WorkflowSection = () => {
     icon: <PhoneCall size={24} />,
     title: t('workflow.step1.title'),
     desc: t('workflow.step1.desc'),
-    detail: "Ein kurzes, kostenloses Gespräch um Ihre Website-Wünsche kennenzulernen."
+    detail: t('workflow.step1.detail')
   }, {
     icon: <Code size={24} />,
     title: t('workflow.step2.title'),
     desc: t('workflow.step2.desc'),
-    detail: "Ich setze Ihre Ideen in eine moderne, responsive Website um."
+    detail: t('workflow.step2.detail')
   }, {
     icon: <MessageSquare size={24} />,
     title: t('workflow.step3.title'),
     desc: t('workflow.step3.desc'),
-    detail: "Gemeinsam verfeinern wir das Design bis es perfekt passt."
+    detail: t('workflow.step3.detail')
   }, {
     icon: <CheckCircle size={24} />,
     title: t('workflow.step4.title'),
     desc: t('workflow.step4.desc'),
-    detail: "Ihre Website geht online und ich stelle sicher, dass alles reibungslos läuft."
+    detail: t('workflow.step4.detail')
   }];
 
   return (
@@ -43,7 +44,7 @@ const WorkflowSection = () => {
               <GraduationCap className="text-accent" size={24} />
             </h3>
             <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-              Ich studiere Künstliche Intelligenz an der Universität Groningen. Dort habe ich angefangen mein Studium mit dem Programmieren von Webseiten zu finazieren. Ich habe einen hohen Anspruch an meine Projekte und höre nicht auf, bevor Ihre Webseite visuell ansprechend, intuitiv und überzeugend ist.
+              {t('about.personal')}
             </p>
           </div>
         </div>
@@ -84,10 +85,10 @@ const WorkflowSection = () => {
 
           <div className="mt-12 md:mt-16 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg p-6 md:p-8">
             <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900">
-              Warum mich wählen?
+              {t('about.title')}
             </h3>
             <p className="text-gray-600 leading-relaxed mb-6 font-normal text-sm md:text-base">
-              Professionelle Websites kosten normalerweise weit über 800€. Bei mir bekommen Sie für diesen Preis eine authentische und strukturierte Website. Egal, ob Sie eine auffällige oder eine einfache Website wollen. Keine klare Vorstellung? Kein Problem! Ich führe Sie mit kreativen Ideen durch den Prozess, ohne Sie mit technischen Details zu überfordern. Und wenn Sie bereits konkrete Vorstellungen haben, setze ich diese präzise um.
+              {t('about.desc')}
             </p>
             <div className="flex flex-col md:flex-row md:justify-between gap-4 md:gap-6 mt-6 md:mt-8">
               <div className="flex items-center gap-3 text-gray-700">

@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 
 const Impressum = () => {
-  const { language } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <div className="min-h-screen bg-white">
@@ -27,10 +27,10 @@ const Impressum = () => {
           </p>
 
           <h3 className="text-lg font-semibold mb-2">
-            {language === 'de' ? 'Kontakt' : 'Contact'}
+            {t('contact')}
           </h3>
           <p className="mb-4">
-            Telefon: +49 123 456 7890<br />
+            {language === 'de' ? 'Telefon' : 'Phone'}: +49 123 456 7890<br />
             E-Mail: a.marshall@webdesign.com
           </p>
 

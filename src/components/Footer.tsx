@@ -51,13 +51,13 @@ const Footer = () => {
               </li>
               <li className="flex items-center justify-center md:justify-start gap-2 text-gray-400">
                 <Mail size={20} />
-                <a href="mailto:a.marshall@webdesign@gmail.com" className="hover:text-white transition-colors">
-                  a.marshall@webdesign@gmail.com
+                <a href="mailto:a.marshall@webdesign.com" className="hover:text-white transition-colors">
+                  a.marshall@webdesign.com
                 </a>
               </li>
               <li className="flex items-center justify-center md:justify-start gap-2 text-gray-400">
                 <MapPin size={20} />
-                <span>Groningen, Netherlands</span>
+                <span>{t('footer.location')}</span>
               </li>
             </ul>
           </div>
@@ -67,17 +67,17 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <a href="/impressum" className="text-gray-400 hover:text-white transition-colors">
-                  Impressum
+                  {t('legal.notice')}
                 </a>
               </li>
               <li>
                 <a href="/datenschutz" className="text-gray-400 hover:text-white transition-colors">
-                  Datenschutz
+                  {t('legal.privacy')}
                 </a>
               </li>
               <li>
                 <a href="/agb" className="text-gray-400 hover:text-white transition-colors">
-                  AGB
+                  {t('legal.terms')}
                 </a>
               </li>
             </ul>

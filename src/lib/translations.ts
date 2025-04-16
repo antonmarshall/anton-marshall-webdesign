@@ -1,3 +1,4 @@
+
 export type Language = 'de' | 'en';
 
 type TranslationKeys = {
@@ -16,6 +17,7 @@ export const translations: Translations = {
     'workflow': 'Ablauf',
     'price': 'Preis',
     'contact': 'Kontakt',
+    'navigation': 'Navigation',
     
     // Hero
     'hero.title': 'Professionelle Webseiten für Ihr Unternehmen',
@@ -42,24 +44,30 @@ export const translations: Translations = {
     'workflow.subtitle': 'Ein einfacher und transparenter Ablauf für Ihre Website',
     'workflow.step1.title': 'Erstgespräch',
     'workflow.step1.desc': 'Kurzes kostenloses Kennenlerngespräch',
+    'workflow.step1.detail': 'Ein kurzes, kostenloses Gespräch um Ihre Website-Wünsche kennenzulernen.',
     'workflow.step2.title': 'Entwicklung',
     'workflow.step2.desc': 'Design und Umsetzung Ihrer Website',
+    'workflow.step2.detail': 'Ich setze Ihre Ideen in eine moderne, responsive Website um.',
     'workflow.step3.title': 'Feedback',
     'workflow.step3.desc': 'Gemeinsame Abstimmung und Anpassungen',
+    'workflow.step3.detail': 'Gemeinsam verfeinern wir das Design bis es perfekt passt.',
     'workflow.step4.title': 'Fertigstellung',
     'workflow.step4.desc': 'Ihre Website geht online',
+    'workflow.step4.detail': 'Ihre Website geht online und ich stelle sicher, dass alles reibungslos läuft.',
     'workflow.timeline': 'Gesamtdauer: Maximal 3 Wochen',
     'workflow.effort': 'Ihr Aufwand: Nur 2-3 kurze Gespräche',
     
     // About
     'about.title': 'Warum mich wählen?',
-    'about.desc': 'Ich bin der ideale Partner für alle, die keine Zeit haben und jemanden mit Erfahrung brauchen, um ihr Unternehmen im Internet optimal zu präsentieren. Egal ob Sie eine auffällige oder eine schlichte, ruhige Webseite wünschen - ich bin für Sie geeignet. Auch wenn Sie keine klare Vorstellung haben, führe ich Sie durch den Prozess, ohne Sie mit Fragen zu überfordern. Und wenn Sie bereits genaue Ideen haben, setze ich diese präzise um.',
+    'about.desc': 'Professionelle Websites kosten normalerweise weit über 800€. Bei mir bekommen Sie für diesen Preis eine authentische und strukturierte Website. Egal, ob Sie eine auffällige oder eine einfache Website wollen. Keine klare Vorstellung? Kein Problem! Ich führe Sie mit kreativen Ideen durch den Prozess, ohne Sie mit technischen Details zu überfordern. Und wenn Sie bereits konkrete Vorstellungen haben, setze ich diese präzise um.',
+    'about.personal': 'Ich studiere Künstliche Intelligenz an der Universität Groningen. Dort habe ich angefangen mein Studium mit dem Programmieren von Webseiten zu finazieren. Ich habe einen hohen Anspruch an meine Projekte und höre nicht auf, bevor Ihre Webseite visuell ansprechend, intuitiv und überzeugend ist.',
     
     // Contact
     'contact.title': 'Kontaktieren Sie mich',
     'contact.subtitle': 'Vereinbaren Sie ein kostenloses 15-minütiges Beratungsgespräch',
     'contact.whatsapp': 'WhatsApp',
     'contact.schedule': 'Termin vereinbaren',
+    'contact.minutes': 'Minuten',
     'contact.name': 'Name',
     'contact.email': 'E-Mail',
     'contact.message': 'Nachricht',
@@ -67,6 +75,7 @@ export const translations: Translations = {
     
     // Footer
     'footer.rights': 'Alle Rechte vorbehalten',
+    'footer.location': 'Groningen, Niederlande',
     
     // Legal
     'legal': 'Rechtliches',
@@ -84,6 +93,7 @@ export const translations: Translations = {
     'workflow': 'Process',
     'price': 'Price',
     'contact': 'Contact',
+    'navigation': 'Navigation',
     
     // Hero
     'hero.title': 'Professional Websites for Your Business',
@@ -110,24 +120,30 @@ export const translations: Translations = {
     'workflow.subtitle': 'A simple and transparent process for your website',
     'workflow.step1.title': 'Initial Chat',
     'workflow.step1.desc': 'Brief free get-to-know conversation',
+    'workflow.step1.detail': 'A short, free call to get to know your website needs.',
     'workflow.step2.title': 'Development',
     'workflow.step2.desc': 'Design and implementation of your website',
+    'workflow.step2.detail': 'I transform your ideas into a modern, responsive website.',
     'workflow.step3.title': 'Feedback',
     'workflow.step3.desc': 'Joint review and adjustments',
+    'workflow.step3.detail': 'Together we refine the design until it fits perfectly.',
     'workflow.step4.title': 'Completion',
     'workflow.step4.desc': 'Your website goes live',
+    'workflow.step4.detail': 'Your website goes online and I ensure everything runs smoothly.',
     'workflow.timeline': 'Total duration: Maximum 3 weeks',
     'workflow.effort': 'Your effort: Only 2-3 short calls',
     
     // About
     'about.title': 'Why Choose Me?',
-    'about.desc': "I'm the ideal partner for those who don't have time and need someone with experience to make their business stand out online. Whether you want a striking or a simple, calm website - I'm suitable for you. Even if you don't have a clear vision, I'll guide you through the process without overwhelming you with questions. And if you already have precise ideas, I'll implement them accurately.",
+    'about.desc': "Professional websites typically cost well over €800. With me, you get an authentic and structured website for this price. Whether you want a striking or a simple website. No clear vision? No problem! I'll guide you through the process with creative ideas, without overwhelming you with technical details. And if you already have specific ideas, I'll implement them precisely.",
+    'about.personal': "I'm studying Artificial Intelligence at the University of Groningen. That's where I started financing my studies by programming websites. I have high standards for my projects and don't stop until your website is visually appealing, intuitive, and convincing.",
     
     // Contact
     'contact.title': 'Contact Me',
     'contact.subtitle': 'Schedule a free 15-minute consultation call',
     'contact.whatsapp': 'WhatsApp',
     'contact.schedule': 'Schedule Appointment',
+    'contact.minutes': 'minutes',
     'contact.name': 'Name',
     'contact.email': 'Email',
     'contact.message': 'Message',
@@ -135,6 +151,7 @@ export const translations: Translations = {
     
     // Footer
     'footer.rights': 'All Rights Reserved',
+    'footer.location': 'Groningen, Netherlands',
     
     // Legal
     'legal': 'Legal',

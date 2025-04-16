@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
@@ -6,7 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Calendar, MessageSquare, Mail, Send } from 'lucide-react';
 
 const ContactSection = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const handleCalendarClick = () => {
     window.open('https://calendly.com/anton-marshall-webdesign', '_blank');
@@ -61,7 +62,7 @@ const ContactSection = () => {
 
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <a 
-                href="mailto:anton.marshall.webdesign@gmail.com" 
+                href="mailto:a.marshall@webdesign.com" 
                 className="flex items-center gap-4"
               >
                 <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white">
@@ -69,7 +70,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900">Email</h3>
-                  <p className="text-gray-600">anton.marshall.webdesign@gmail.com</p>
+                  <p className="text-gray-600">a.marshall@webdesign.com</p>
                 </div>
               </a>
             </div>
@@ -82,14 +83,14 @@ const ContactSection = () => {
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                   {t('contact.name')}
                 </label>
-                <Input id="name" type="text" placeholder="Max Mustermann" />
+                <Input id="name" type="text" placeholder={language === 'de' ? "Max Mustermann" : "John Doe"} />
               </div>
               
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                   {t('contact.email')}
                 </label>
-                <Input id="email" type="email" placeholder="max@example.com" />
+                <Input id="email" type="email" placeholder={language === 'de' ? "max@beispiel.de" : "john@example.com"} />
               </div>
               
               <div>
@@ -98,7 +99,7 @@ const ContactSection = () => {
                 </label>
                 <Textarea 
                   id="message" 
-                  placeholder="Ich möchte mehr über Ihre Dienstleistungen erfahren..." 
+                  placeholder={language === 'de' ? "Ich möchte mehr über Ihre Dienstleistungen erfahren..." : "I would like to learn more about your services..."} 
                   rows={4}
                 />
               </div>
