@@ -46,51 +46,56 @@ const HeroSlider = () => {
   }, []);
 
   useEffect(() => {
-    // Reset typing effect when component mounts
-    setTypedText('');
-    setShowButton(false);
-    setCursorVisible(true);
-    
-    let i = 0;
-    let typeTimeout = null;
-    
-    const typeNextChar = () => {
-      if (i < subtitle.length) {
-        setTypedText(subtitle.substring(0, i + 1));
-        i++;
-        // Random typing speed between 20-80ms for irregular effect
-        const randomDelay = Math.floor(Math.random() * 60) + 20;
-        typeTimeout = setTimeout(typeNextChar, randomDelay);
-      } else {
-        // Typing complete, blink cursor twice before showing button
-        setTimeout(() => {
-          setCursorVisible(false);
+    let typingTimeout;
+    let cursorTimeout;
+
+    const typeText = () => {
+      setTypedText('');
+      setShowButton(false);
+      setCursorVisible(true);
+      
+      let i = 0;
+      const typeNextChar = () => {
+        if (i < subtitle.length) {
+          setTypedText(subtitle.substring(0, i + 1));
+          i++;
+          // Random typing speed between 20-80ms for irregular effect
+          const randomDelay = Math.floor(Math.random() * 60) + 20;
+          typingTimeout = setTimeout(typeNextChar, randomDelay);
+        } else {
+          // Typing complete, blink cursor twice before showing button
           setTimeout(() => {
-            setCursorVisible(true);
-            setTimeout(() => {
-              setCursorVisible(false);
-              setTimeout(() => {
-                setCursorVisible(true);
-                setTimeout(() => {
-                  setCursorVisible(false);
-                  setShowButton(true);
+            setCursorVisible(false);
+            cursorTimeout = setTimeout(() => {
+              setCursorVisible(true);
+              cursorTimeout = setTimeout(() => {
+                setCursorVisible(false);
+                cursorTimeout = setTimeout(() => {
+                  setCursorVisible(true);
+                  cursorTimeout = setTimeout(() => {
+                    setCursorVisible(false);
+                    setShowButton(true);
+                  }, 400);
                 }, 400);
               }, 400);
             }, 400);
-          }, 400);
-        }, 200);
-      }
+          }, 200);
+        }
+      };
+      
+      // Start typing with a short delay
+      typingTimeout = setTimeout(typeNextChar, 500);
     };
     
-    // Start typing with a short delay
-    typeTimeout = setTimeout(typeNextChar, 30);
+    typeText();
     
     return () => {
-      if (typeTimeout) clearTimeout(typeTimeout);
+      clearTimeout(typingTimeout);
+      clearTimeout(cursorTimeout);
     };
-  }, []);
+  }, [subtitle]);
 
-  const goToSlide = (index: number) => {
+  const goToSlide = (index) => {
     setCurrentIndex(index);
   };
 
