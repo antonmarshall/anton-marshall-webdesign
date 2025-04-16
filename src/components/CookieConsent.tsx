@@ -9,13 +9,18 @@ const CookieConsent = () => {
 
   useEffect(() => {
     const consent = localStorage.getItem('cookieConsent');
-    if (!consent) {
+    if (consent === null) {
       setShowConsent(true);
     }
   }, []);
 
   const handleAccept = () => {
-    localStorage.setItem('cookieConsent', 'true');
+    localStorage.setItem('cookieConsent', 'accepted');
+    setShowConsent(false);
+  };
+
+  const handleReject = () => {
+    localStorage.setItem('cookieConsent', 'rejected');
     setShowConsent(false);
   };
 
@@ -28,6 +33,13 @@ const CookieConsent = () => {
           {t('legal.cookie.text')}
         </p>
         <div className="flex gap-4">
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={handleReject}
+          >
+            {t('legal.cookie.reject')}
+          </Button>
           <Button
             variant="default"
             size="sm"

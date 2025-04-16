@@ -6,7 +6,7 @@ import Navbar from '@/components/Navbar';
 import BackButton from '@/components/BackButton';
 
 const Datenschutz = () => {
-  const { t, language } = useLanguage();
+  const { language } = useLanguage();
 
   return (
     <div className="min-h-screen bg-white">
@@ -17,22 +17,24 @@ const Datenschutz = () => {
           {language === 'de' ? 'Datenschutzerklärung' : 'Privacy Policy'}
         </h1>
         <div className="prose max-w-none">
-          <h2 className="text-xl font-semibold mb-4">
-            {language === 'de' ? '1. Datenschutz auf einen Blick' : '1. Privacy at a glance'}
-          </h2>
-          <p className="mb-4">
-            {language === 'de' 
-              ? 'Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen.'
-              : 'The following information provides a simple overview of what happens to your personal data when you visit this website.'}
+          <h2 className="text-xl font-semibold mb-4">Datenschutz auf einen Blick</h2>
+          <p className="mb-6">
+            Der Schutz Ihrer Daten ist uns wichtig. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften.
           </p>
           
-          <h3 className="text-lg font-semibold mb-2">
-            {language === 'de' ? 'Datenerfassung auf dieser Website' : 'Data collection on this website'}
-          </h3>
-          <p className="mb-4">
-            {language === 'de'
-              ? 'Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Die Kontaktdaten können Sie dem Impressum dieser Website entnehmen.'
-              : 'Data processing on this website is carried out by the website operator. You can find their contact details in the legal notice of this website.'}
+          <h3 className="text-lg font-semibold mb-2">Kontaktaufnahme</h3>
+          <p className="mb-6">
+            Wenn Sie uns per E-Mail oder Kontaktformular kontaktieren, speichern wir Ihre Angaben zur Bearbeitung der Anfrage. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
+          </p>
+
+          <h3 className="text-lg font-semibold mb-2">Cookies</h3>
+          <p className="mb-6">
+            Unsere Website verwendet keine Cookies, um Nutzerprofile zu erstellen. Technisch notwendige Cookies werden ausschließlich für den sicheren Betrieb der Seite verwendet.
+          </p>
+
+          <h3 className="text-lg font-semibold mb-2">Ihre Rechte</h3>
+          <p className="mb-6">
+            Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit sowie auf Widerspruch. Bei Fragen wenden Sie sich bitte an: a.marshall@webdesign.com
           </p>
         </div>
       </main>
