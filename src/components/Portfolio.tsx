@@ -38,7 +38,7 @@ const Portfolio = () => {
       image: '/images/computer.png',
       alt: language === 'de' ? 'Computer Support' : 'Computer Support',
       desc: language === 'de' ? 'Professionelle IT-Dienstleistungen' : 'Professional IT services',
-      url: 'https://example-pcservice.com',
+      url: 'https://google.com',
     },
     {
       id: 'gardener',
