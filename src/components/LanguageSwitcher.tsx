@@ -2,7 +2,7 @@
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { Globe } from 'lucide-react';
+import { FlagTriangleRight } from 'lucide-react';
 
 const LanguageSwitcher = () => {
   const { language, setLanguage } = useLanguage();
@@ -16,9 +16,9 @@ const LanguageSwitcher = () => {
       variant="ghost" 
       size="sm" 
       onClick={toggleLanguage} 
-      className="flex items-center gap-1"
+      className="flex items-center gap-2"
     >
-      <Globe size={16} />
+      <FlagTriangleRight size={16} className={language === 'de' ? 'text-red-500' : 'text-blue-500'} />
       <span className="text-sm font-medium">{language === 'de' ? 'EN' : 'DE'}</span>
     </Button>
   );

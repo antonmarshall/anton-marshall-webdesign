@@ -11,10 +11,10 @@ const PriceSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-            {t('price.title') || 'Preis'}
+            {t('price.title')}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            {t('price.subtitle') || 'Transparente Preisgestaltung für Ihre Webseite'}
+            {t('price.subtitle')}
           </p>
         </div>
 
@@ -23,13 +23,13 @@ const PriceSection = () => {
             <div className="flex flex-col md:flex-row items-center justify-between mb-8">
               <div>
                 <h3 className="text-2xl md:text-3xl font-bold text-primary">
-                  {t('price.websitePackage') || 'Webseiten-Paket'}
+                  {t('price.websitePackage')}
                 </h3>
                 <p className="text-lg text-gray-600 mt-2">
-                  {t('price.completePackage') || 'Komplettpaket für Ihre professionelle Online-Präsenz'}
+                  {t('price.completePackage')}
                 </p>
               </div>
-              <div className="mt-6 md:mt-0 flex items-center">
+              <div className="mt-6 md:mt-0 flex items-center gap-2">
                 <div className="text-3xl md:text-4xl font-bold text-accent flex items-center">
                   <span>800</span>
                   <EuroIcon className="ml-1 w-8 h-8" />
@@ -38,47 +38,32 @@ const PriceSection = () => {
             </div>
 
             <div className="border-t border-gray-200 pt-8">
-              <h4 className="text-xl font-semibold mb-4 text-primary">
-                {t('price.includes') || 'Im Preis enthalten:'}
+              <h4 className="text-xl font-semibold mb-6 text-primary">
+                {t('price.includes')}
               </h4>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <ul className="space-y-4">
                 <li className="flex items-start">
-                  <svg className="h-5 w-5 text-accent mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="h-5 w-5 text-accent mt-1 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>{t('price.feature1') || 'Responsive Design'}</span>
+                  <span className="text-lg">{t('price.feature1')}</span>
                 </li>
                 <li className="flex items-start">
-                  <svg className="h-5 w-5 text-accent mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="h-5 w-5 text-accent mt-1 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>{t('price.feature2') || 'Suchmaschinenoptimierung'}</span>
+                  <span className="text-lg">{t('price.feature2')}</span>
                 </li>
                 <li className="flex items-start">
-                  <svg className="h-5 w-5 text-accent mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="h-5 w-5 text-accent mt-1 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>{t('price.feature3') || 'Kontaktformular'}</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="h-5 w-5 text-accent mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>{t('price.feature4') || 'Domain & Hosting (1 Jahr)'}</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="h-5 w-5 text-accent mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>{t('price.feature5') || 'Unbegrenzte Revisionen'}</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="h-5 w-5 text-accent mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>{t('price.feature6') || 'Support nach Launch'}</span>
+                  <span className="text-lg">{t('price.feature3')}</span>
                 </li>
               </ul>
+              <p className="mt-8 text-lg text-gray-600 border-t border-gray-200 pt-6">
+                {t('price.payment')}
+              </p>
             </div>
           </div>
         </div>

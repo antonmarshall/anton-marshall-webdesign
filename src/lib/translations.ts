@@ -27,9 +27,15 @@ export const translations: Translations = {
     'portfolio.view': 'Ansehen',
     
     // Pricing
-    'pricing.title': 'Transparente Preisgestaltung',
-    'pricing.price': '800€ pro Seite',
-    'pricing.includes': 'Inklusive Design, Entwicklung und Anpassungen',
+    'price.title': 'Preisübersicht',
+    'price.subtitle': 'Transparente Preisgestaltung für Ihre Webseite',
+    'price.websitePackage': 'Webseiten-Paket',
+    'price.completePackage': 'Ihr Komplettpaket für den professionellen Webauftritt',
+    'price.includes': 'Im Preis enthalten:',
+    'price.feature1': 'Individuelle Webseitenentwicklung nach Ihren Wünschen',
+    'price.feature2': 'Domain & Hosting für ein Jahr inklusive',
+    'price.feature3': 'Professionelle Einrichtung und Veröffentlichung',
+    'price.payment': 'Zahlung nach Fertigstellung',
     
     // Workflow
     'workflow.title': 'Mein Arbeitsprozess',
@@ -80,9 +86,15 @@ export const translations: Translations = {
     'portfolio.view': 'View',
     
     // Pricing
-    'pricing.title': 'Transparent Pricing',
-    'pricing.price': '€800 per page',
-    'pricing.includes': 'Includes design, development, and adjustments',
+    'price.title': 'Pricing Overview',
+    'price.subtitle': 'Transparent pricing for your website',
+    'price.websitePackage': 'Website Package',
+    'price.completePackage': 'Your complete package for a professional web presence',
+    'price.includes': 'Package includes:',
+    'price.feature1': 'Custom website development tailored to your needs',
+    'price.feature2': 'Domain & hosting included for one year',
+    'price.feature3': 'Professional setup and publication',
+    'price.payment': 'Payment upon completion',
     
     // Workflow
     'workflow.title': 'My Process',
