@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -11,16 +10,16 @@ const slides = [
     alt: 'Modern website design on laptop',
   },
   {
-    image: `${import.meta.env.BASE_URL}images/hero_image_skizze.png`,
-    alt: 'skizze einer webseite',
-  },
-  {
-    image: `${import.meta.env.BASE_URL}images/different_websites_presentation.png`,
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1920&q=80',
     alt: 'Creative website design',
   },
   {
-    image: `${import.meta.env.BASE_URL}images/yoga_knete.png`,
-    alt: 'yoga webseite in Knete',
+    image: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1920&q=80',
+    alt: 'Professional web development',
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1920&q=80',
+    alt: 'Modern business website',
   },
   {
     image: 'https://images.unsplash.com/photo-1481487196290-c152efe083f5?auto=format&fit=crop&w=1920&q=80',
@@ -128,7 +127,7 @@ const HeroSlider = () => {
             index === currentIndex ? 'opacity-100' : 'opacity-0'
           }`}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/60 z-10" />
+          <div className="absolute inset-0 bg-black/60 z-10" />
           <img
             src={slide.image}
             alt={slide.alt}

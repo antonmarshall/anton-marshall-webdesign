@@ -71,7 +71,7 @@ const Navbar = () => {
   const getNavItemClass = (section: string) => {
     return `transition-colors duration-300 px-3 py-2 rounded-md outline-none ${
       isHomePage && activeSection === section 
-      ? 'bg-gradient-to-r from-primary/20 to-secondary/20 text-primary font-medium'
+      ? 'bg-primary text-white font-medium'
       : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-primary dark:hover:text-primary'
     }`;
   };
@@ -86,7 +86,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div 
-          className="text-xl font-bold gradient-text hover:opacity-90 transition-opacity cursor-pointer"
+          className="text-xl font-bold text-primary hover:opacity-90 transition-opacity cursor-pointer"
           onClick={() => navigate('/')}
         >
           Anton Marshall<span className="text-accent"> Webdesign</span>
@@ -128,7 +128,7 @@ const Navbar = () => {
           <Button 
             onClick={() => navigateToSection('contact')}
             size="sm" 
-            className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white"
+            className="bg-primary hover:bg-primary/90 text-white"
           >
             {t('hero.cta')}
           </Button>
@@ -184,7 +184,7 @@ const Navbar = () => {
             </button>
             <Button 
               onClick={() => navigateToSection('contact')}
-              className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white"
+              className="w-full bg-primary hover:bg-primary/90 text-white"
             >
               {t('hero.cta')}
             </Button>

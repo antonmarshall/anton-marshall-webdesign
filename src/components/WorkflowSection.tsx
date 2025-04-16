@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { PhoneCall, Code, MessageSquare, CheckCircle, GraduationCap } from 'lucide-react';
@@ -61,20 +60,20 @@ const WorkflowSection = () => {
         <div className="max-w-6xl mx-auto">
           <div className="relative">
             {/* Timeline line - visible on mobile and desktop */}
-            <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary/20 via-primary to-accent/80 transform -translate-x-1/2 md:hidden"></div>
-            <div className="absolute left-0 right-0 top-1/2 h-0.5 bg-gradient-to-r from-primary/20 via-primary to-accent/80 transform -translate-y-1/2 hidden md:block"></div>
+            <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-primary transform -translate-x-1/2 md:hidden"></div>
+            <div className="absolute left-0 right-0 top-1/2 h-0.5 bg-primary transform -translate-y-1/2 hidden md:block"></div>
             
             {/* Steps */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
               {steps.map((step, index) => (
                 <div key={index} className="group relative h-full">
                   <div className="bg-white p-4 md:p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 relative z-10 h-full flex flex-col">
-                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-white mx-auto mb-4">
+                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-4">
                       {step.icon}
                     </div>
                     <h3 className="text-base md:text-lg font-semibold text-center mb-2">{step.title}</h3>
                     <p className="text-gray-600 text-center text-sm flex-1">{step.desc}</p>
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/90 to-accent/90 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <div className="absolute inset-0 bg-primary rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                       <p className="text-white text-center p-4 text-sm">{step.detail}</p>
                     </div>
                   </div>
