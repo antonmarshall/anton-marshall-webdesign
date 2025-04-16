@@ -83,18 +83,20 @@ const HeroSlider = () => {
 
       {/* Hero Content */}
       <div className="relative z-20 flex flex-col items-center justify-center h-full text-white text-center px-4">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 slide-in">
-          {t('hero.title')}
-        </h1>
-        <p className="text-xl md:text-2xl mb-8 max-w-3xl slide-in">
-          {t('hero.subtitle')}
-        </p>
-        <Button 
-          onClick={handleScroll}
-          className="bg-accent hover:bg-accent/90 text-white px-8 py-6 text-lg slide-in"
-        >
-          {t('hero.cta')}
-        </Button>
+        <div className="bg-black/40 backdrop-blur-sm rounded-xl p-8 max-w-3xl">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 slide-in">
+            {t('hero.title')}
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 slide-in">
+            {t('hero.subtitle')}
+          </p>
+          <Button 
+            onClick={handleScroll}
+            className="bg-accent hover:bg-accent/90 text-white px-8 py-6 text-lg slide-in"
+          >
+            {t('hero.cta')}
+          </Button>
+        </div>
       </div>
 
       {/* Navigation Arrows */}
