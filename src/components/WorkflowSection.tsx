@@ -79,9 +79,7 @@ const WorkflowSection = () => {
             <h3 className="text-2xl font-semibold mb-4 text-gray-900">
               Warum mich wählen?
             </h3>
-            <p className="text-gray-600 leading-relaxed mb-6 font-normal">Professionelle Websites kosten normalerweise weit über 800€. Bei mir bekommen Sie für diesen Preis eine authentische und strukturierte Website. Egal, ob Sie eine auffällige oder eine einfache Website wollen. Keine klare Vorstellung? Kein Problem! Ich führe Sie mit kreativen Ideen durch den Prozess, ohne Sie mit technischen Details zu überfordern. Und wenn Sie bereits konkrete Vorstellungen haben, setze ich diese präzise um.
-
-Übersetzt mit DeepL.com (kostenlose Version)</p>
+            <p className="text-gray-600 leading-relaxed mb-6 font-normal">Professionelle Websites kosten normalerweise weit über 800€. Bei mir bekommen Sie für diesen Preis eine authentische und strukturierte Website. Egal, ob Sie eine auffällige oder eine einfache Website wollen. Keine klare Vorstellung? Kein Problem! Ich führe Sie mit kreativen Ideen durch den Prozess, ohne Sie mit technischen Details zu überfordern. Und wenn Sie bereits konkrete Vorstellungen haben, setze ich diese präzise um.</p>
             <div className="flex flex-col md:flex-row md:justify-between gap-6 mt-8">
               <div className="flex items-center gap-3 text-gray-700">
                 <Code size={24} className="text-primary" />
