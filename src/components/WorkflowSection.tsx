@@ -35,7 +35,7 @@ const WorkflowSection = () => {
         {/* Personal Introduction */}
         <div className="max-w-6xl mx-auto mb-12 md:mb-20 flex flex-col md:flex-row items-center gap-6 md:gap-12 rounded-lg p-4">
           <Avatar className="w-32 h-32 md:w-48 md:h-48 border-4 border-white shadow-lg">
-            <AvatarImage src="/lovable-uploads/ba2b9903-e0ca-4b32-a32e-d600eb99f44a.png" alt="Anton Marshall" />
+            <AvatarImage src="/images/japanischer_teeladen.png" alt="Anton Marshall" />
             <AvatarFallback>AM</AvatarFallback>
           </Avatar>
           <div className="flex-1 text-center md:text-left">
