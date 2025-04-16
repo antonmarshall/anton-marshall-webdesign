@@ -19,7 +19,7 @@ const AGB = () => {
         <div className="prose max-w-none">
           <h2 className="text-xl font-semibold mb-4">1. Geltungsbereich</h2>
           <p className="mb-6">
-            Diese AGB gelten für alle Leistungen im Zusammenhang mit der Erstellung und Bereitstellung von Webseiten durch Anton Marshall Webdesign.
+            Diese AGB gelten für alle Leistungen im Zusammenhang mit der Erstellung und Bereitstellung von Webseiten durch Anton Marshall WebDesign.
           </p>
 
           <h2 className="text-xl font-semibold mb-4">2. Leistungen</h2>

@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
           <div className="text-center md:text-left">
-            <div className="text-xl font-bold mb-4">Anton Marshall Webdesign</div>
+            <div className="text-xl font-bold mb-4">Anton Marshall WebDesign</div>
             <p className="text-gray-400 mb-4">© {currentYear} - {t('footer.rights')}</p>
           </div>
           

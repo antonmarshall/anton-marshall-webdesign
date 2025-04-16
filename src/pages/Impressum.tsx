@@ -21,7 +21,7 @@ const Impressum = () => {
               {language === 'de' ? 'Angaben gemäß § 5 TMG' : 'Information according to § 5 TMG'}
             </h2>
             <p className="mb-4 text-gray-600 dark:text-gray-300">
-              Anton Marshall Webdesign<br />
+              Anton Marshall WebDesign<br />
               Anton Marshall<br />
               Groningen, Niederlande
             </p>
