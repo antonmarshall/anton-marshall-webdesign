@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import HeroSlider from '@/components/HeroSlider';
 import Portfolio from '@/components/Portfolio';
 import WorkflowSection from '@/components/WorkflowSection';
+import PriceSection from '@/components/PriceSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
@@ -16,6 +17,7 @@ const Index = () => {
         <HeroSlider />
         <Portfolio />
         <WorkflowSection />
+        <PriceSection />
         <ContactSection />
         <Footer />
       </div>
