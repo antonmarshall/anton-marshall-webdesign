@@ -1,43 +1,35 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Portfolio from './components/Portfolio';
-import Pricing from './components/Pricing';
-import Workflow from './components/Workflow';
-import About from './components/About';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import Legal from './components/Legal';
-import CookieConsent from './components/CookieConsent';
-import { LanguageProvider } from './contexts/LanguageContext';
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as Sonner } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { LanguageProvider } from "@/contexts/LanguageContext";
+import Index from "./pages/Index";
+import NotFound from "./pages/NotFound";
+import Legal from "./components/Legal";
+import CookieConsent from "./components/CookieConsent";
 
-const App = () => {
-  return (
-    <LanguageProvider>
-      <Router>
-        <div className="min-h-screen">
-          <Navbar />
+const queryClient = new QueryClient();
+
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <LanguageProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter basename="/anton-marshall-webdesign">
           <Routes>
-            <Route path="/" element={
-              <>
-                <Hero />
-                <Portfolio />
-                <Pricing />
-                <Workflow />
-                <About />
-                <Contact />
-                <Legal />
-              </>
-            } />
+            <Route path="/" element={<Index />} />
             <Route path="/impressum" element={<Legal />} />
+            <Route path="/datenschutz" element={<Legal />} />
+            <Route path="/agb" element={<Legal />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
-          <Footer />
           <CookieConsent />
-        </div>
-      </Router>
-    </LanguageProvider>
-  );
-};
+        </BrowserRouter>
+      </LanguageProvider>
+    </TooltipProvider>
+  </QueryClientProvider>
+);
 
 export default App;
