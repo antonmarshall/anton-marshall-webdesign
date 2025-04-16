@@ -89,10 +89,7 @@ const Navbar = () => {
           className="flex items-center gap-2 cursor-pointer"
           onClick={() => navigate('/')}
         >
-          <Logo width={40} height={40} />
-          <span className="text-xl font-bold text-primary">
-            Anton Marshall<span className="text-accent"> WebDesign</span>
-          </span>
+          <Logo />
         </div>
         
         {/* Desktop Menu */}
