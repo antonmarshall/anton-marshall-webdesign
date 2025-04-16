@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -7,17 +6,17 @@ import { useLanguage } from '@/contexts/LanguageContext';
 
 const BackButton = () => {
   const navigate = useNavigate();
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   
   return (
     <Button 
       variant="outline" 
-      size="sm" 
+      size="default" 
       onClick={() => navigate('/')}
-      className="mb-6 mt-2"
+      className="flex items-center gap-2 bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
     >
-      <ArrowLeft className="mr-2 h-4 w-4" />
-      {t('back.to.home')}
+      <ArrowLeft className="h-4 w-4" />
+      {language === 'de' ? 'Zurück zur Startseite' : 'Back to Home'}
     </Button>
   );
 };

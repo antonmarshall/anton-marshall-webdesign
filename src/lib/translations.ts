@@ -25,7 +25,7 @@ export const translations: Translations = {
     
     // Portfolio
     'portfolio.title': 'Meine Arbeiten',
-    'portfolio.subtitle': 'Eine Auswahl meiner Webdesign-Projekte für japanische Teeshops und Teehäuser',
+    'portfolio.subtitle': 'Eine Auswahl meiner Webdesign-Projekte für verschiedene Unternehmen',
     'portfolio.view': 'Ansehen',
     'portfolio.hover': 'Projekt anzeigen',
     
@@ -85,7 +85,7 @@ export const translations: Translations = {
     'legal.terms': 'AGB',
     'legal.cookie.text': 'Diese Website verwendet Cookies, um Ihr Browsererlebnis zu verbessern.',
     'legal.cookie.accept': 'Akzeptieren',
-    'legal.cookie.decline': 'Ablehnen',
+    'legal.cookie.reject': 'Ablehnen',
     
     // Navigation
     'back.to.home': 'Zurück zur Startseite',
@@ -106,7 +106,7 @@ export const translations: Translations = {
     
     // Portfolio
     'portfolio.title': 'My Work',
-    'portfolio.subtitle': 'A selection of my web design projects for Japanese tea shops and tea houses',
+    'portfolio.subtitle': 'A selection of my web design projects for various businesses',
     'portfolio.view': 'View',
     'portfolio.hover': 'View Project',
     
@@ -166,7 +166,7 @@ export const translations: Translations = {
     'legal.terms': 'Terms & Conditions',
     'legal.cookie.text': 'This website uses cookies to enhance your browsing experience.',
     'legal.cookie.accept': 'Accept',
-    'legal.cookie.decline': 'Decline',
+    'legal.cookie.reject': 'Decline',
     
     // Navigation
     'back.to.home': 'Back to Home',

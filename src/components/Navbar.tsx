@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import LanguageSwitcher from './LanguageSwitcher';
@@ -72,18 +71,22 @@ const Navbar = () => {
   const getNavItemClass = (section: string) => {
     return `transition-colors duration-300 px-3 py-2 rounded-md outline-none ${
       isHomePage && activeSection === section 
-      ? 'bg-accent/10 text-accent'
-      : 'text-gray-700 hover:bg-gray-100 hover:text-primary'
+      ? 'bg-gradient-to-r from-primary/20 to-secondary/20 text-primary font-medium'
+      : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-primary dark:hover:text-primary'
     }`;
   };
 
   return (
     <nav 
-      className={`fixed w-full z-50 transition-all duration-300 bg-white shadow-md py-2`}
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-md py-2' 
+          : 'bg-transparent py-4'
+      }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div 
-          className="text-xl font-bold text-primary hover:text-primary/90 transition-colors cursor-pointer"
+          className="text-xl font-bold gradient-text hover:opacity-90 transition-opacity cursor-pointer"
           onClick={() => navigate('/')}
         >
           Anton Marshall<span className="text-accent"> Webdesign</span>
@@ -125,7 +128,7 @@ const Navbar = () => {
           <Button 
             onClick={() => navigateToSection('contact')}
             size="sm" 
-            className="bg-accent hover:bg-accent/90 text-white"
+            className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white"
           >
             {t('hero.cta')}
           </Button>
@@ -138,7 +141,7 @@ const Navbar = () => {
             variant="ghost" 
             size="icon" 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            tabIndex={-1}
+            className="text-gray-700 dark:text-gray-300"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </Button>
@@ -147,7 +150,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white w-full shadow-lg">
+        <div className="md:hidden bg-white dark:bg-gray-900 w-full shadow-lg">
           <div className="flex flex-col py-4 px-6 space-y-4">
             <button 
               onClick={() => navigateToSection('home')} 
@@ -181,7 +184,7 @@ const Navbar = () => {
             </button>
             <Button 
               onClick={() => navigateToSection('contact')}
-              className="w-full bg-accent hover:bg-accent/90 text-white"
+              className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white"
             >
               {t('hero.cta')}
             </Button>
