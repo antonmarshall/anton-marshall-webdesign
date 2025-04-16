@@ -11,7 +11,7 @@ const Portfolio = () => {
     {
       id: 'handwerk',
       title: language === 'de' ? 'Müller & Sohn Schreinerei' : 'Müller & Son Carpentry',
-      image: '/lovable-uploads/0a5d7fd4-7d5b-4f29-a330-382003c300ca.png',
+      image: '/images/handwerker.png',
       alt: language === 'de' ? 'Schreinerei Website' : 'Carpentry Website',
       desc: language === 'de' ? 'Traditionelle Schreinerei mit modernem Webauftritt' : 'Traditional carpentry with modern web presence',
       url: 'https://example-handwerk.com',
@@ -19,7 +19,7 @@ const Portfolio = () => {
     {
       id: 'psycho',
       title: language === 'de' ? 'Praxis für Psychotherapie' : 'Psychotherapy Practice',
-      image: '/lovable-uploads/db79d66f-14cc-4d9f-928e-9ce0cec847eb.png',
+      image: '/images/psychotherapie.png',
       alt: language === 'de' ? 'Psychotherapie Praxis' : 'Psychotherapy Practice',
       desc: language === 'de' ? 'Vertrauensvolle Online-Präsenz für Therapeuten' : 'Trustworthy online presence for therapists',
       url: 'https://example-therapy.com',
@@ -27,7 +27,7 @@ const Portfolio = () => {
     {
       id: 'teashop',
       title: language === 'de' ? 'Teekultur Japan' : 'Tea Culture Japan',
-      image: '/lovable-uploads/897a81da-3750-466f-854c-002de80dd104.png',
+      image: '/images/japanischer_teeladen.png',
       alt: language === 'de' ? 'Japanischer Teeladen' : 'Japanese Tea Shop',
       desc: language === 'de' ? 'Eleganter Online-Shop für japanische Tees' : 'Elegant online shop for Japanese teas',
       url: 'https://example-teashop.com',
@@ -35,7 +35,7 @@ const Portfolio = () => {
     {
       id: 'computer',
       title: language === 'de' ? 'PC Support Express' : 'PC Support Express',
-      image: '/lovable-uploads/f79e217f-1f9e-4999-8d0b-1efca7c4f42a.png',
+      image: '/images/computer.png',
       alt: language === 'de' ? 'Computer Support' : 'Computer Support',
       desc: language === 'de' ? 'Professionelle IT-Dienstleistungen' : 'Professional IT services',
       url: 'https://example-pcservice.com',
@@ -43,17 +43,17 @@ const Portfolio = () => {
     {
       id: 'gardener',
       title: language === 'de' ? 'Grüne Oase Gartenbau' : 'Green Oasis Landscaping',
-      image: '/lovable-uploads/6f548b57-4df9-48ee-89a1-608e0e07be55.png',
+      image: '/images/gärtner.png',
       alt: language === 'de' ? 'Gartenbau Website' : 'Landscaping Website',
       desc: language === 'de' ? 'Kreative Gartengestaltung und Pflege' : 'Creative garden design and maintenance',
       url: 'https://example-garten.com',
     },
     {
-      id: 'teaware',
+      id: 'construction',
       title: language === 'de' ? 'Kyoto Teewaren' : 'Kyoto Teaware',
-      image: '/lovable-uploads/0b999837-4985-439d-8337-c5290ad3c9ed.png',
+      image: '/images/bau_unternehmer.png',
       alt: language === 'de' ? 'Teegeschirr Shop' : 'Teaware Shop',
-      desc: language === 'de' ? 'Premium japanisches Teegeschirr' : 'Premium Japanese teaware',
+      desc: language === 'de' ? 'Bauunternehmer' : 'construction',
       url: 'https://example-kyoto.com',
     }
   ];
