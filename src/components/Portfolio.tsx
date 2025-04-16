@@ -11,7 +11,7 @@ const Portfolio = () => {
     {
       id: 'handwerk',
       title: language === 'de' ? 'Müller & Sohn Schreinerei' : 'Müller & Son Carpentry',
-      image: '${import.meta.env.BASE_URL}/images/handwerker.png',
+      image: '${import.meta.env.BASE_URL}images/handwerker.png',
       alt: language === 'de' ? 'Schreinerei Website' : 'Carpentry Website',
       desc: language === 'de' ? 'Traditionelle Schreinerei mit modernem Webauftritt' : 'Traditional carpentry with modern web presence',
       url: 'https://example-handwerk.com',
@@ -19,7 +19,7 @@ const Portfolio = () => {
     {
       id: 'psycho',
       title: language === 'de' ? 'Praxis für Psychotherapie' : 'Psychotherapy Practice',
-      image: '${import.meta.env.BASE_URL}/images/psychotherapie.png',
+      image: '${import.meta.env.BASE_URL}images/psychotherapie.png',
       alt: language === 'de' ? 'Psychotherapie Praxis' : 'Psychotherapy Practice',
       desc: language === 'de' ? 'Vertrauensvolle Online-Präsenz für Therapeuten' : 'Trustworthy online presence for therapists',
       url: 'https://example-therapy.com',
