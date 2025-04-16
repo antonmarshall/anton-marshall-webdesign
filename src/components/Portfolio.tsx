@@ -1,62 +1,51 @@
-import React, { lazy, Suspense } from 'react';
+import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent } from '@/components/ui/card';
 import { ExternalLink } from 'lucide-react';
-
-// Lazy load image component
-const LazyImage = lazy(() => import('@/components/LazyImage'));
 
 const Portfolio = () => {
   const { t, language } = useLanguage();
 
   const portfolioItems = [
     {
-      id: 'handwerk',
-      title: language === 'de' ? 'Müller & Sohn Schreinerei' : 'Müller & Son Carpentry',
-      image: '/images/portfolio/handwerk.jpg',
-      alt: language === 'de' ? 'Schreinerei Website' : 'Carpentry Website',
-      desc: language === 'de' ? 'Traditionelle Schreinerei mit modernem Webauftritt' : 'Traditional carpentry with modern web presence',
-      url: '/examples/handwerk',
+      id: 'construction',
+      title: language === 'de' ? 'Rheiner Lob Bauunternehmen' : 'Rheiner Lob Construction',
+      image: '/images/portfolio/construction.jpg',
+      alt: language === 'de' ? 'Bauunternehmen Website' : 'Construction Company Website',
+      desc: language === 'de' ? 'Professioneller Webauftritt für Bauunternehmen' : 'Professional web presence for construction company',
+      url: '/examples/construction',
     },
     {
-      id: 'psycho',
-      title: language === 'de' ? 'Praxis für Psychotherapie' : 'Psychotherapy Practice',
-      image: '/images/portfolio/psycho.jpg',
-      alt: language === 'de' ? 'Psychotherapie Praxis' : 'Psychotherapy Practice',
-      desc: language === 'de' ? 'Vertrauensvolle Online-Präsenz für Therapeuten' : 'Trustworthy online presence for therapists',
-      url: '/examples/psycho',
+      id: 'computer',
+      title: 'Custom PC Solutions',
+      image: '/images/portfolio/computer.jpg',
+      alt: language === 'de' ? 'Computer Service Website' : 'Computer Service Website',
+      desc: language === 'de' ? 'Moderne Website für PC-Dienstleistungen' : 'Modern website for PC services',
+      url: '/examples/computer',
+    },
+    {
+      id: 'gardener',
+      title: language === 'de' ? 'Grüne Oase' : 'Green Oasis',
+      image: '/images/portfolio/gardener.jpg',
+      alt: language === 'de' ? 'Gärtnerei Website' : 'Garden Center Website',
+      desc: language === 'de' ? 'Frische Website für Gärtnerei' : 'Fresh website for garden center',
+      url: '/examples/gardener',
     },
     {
       id: 'teashop',
-      title: language === 'de' ? 'Teekultur Japan' : 'Tea Culture Japan',
+      title: language === 'de' ? 'Teehaus Japan' : 'Tea House Japan',
       image: '/images/portfolio/teashop.jpg',
       alt: language === 'de' ? 'Japanischer Teeladen' : 'Japanese Tea Shop',
       desc: language === 'de' ? 'Eleganter Online-Shop für japanische Tees' : 'Elegant online shop for Japanese teas',
       url: '/examples/teashop',
     },
     {
-      id: 'computer',
-      title: language === 'de' ? 'PC Support Express' : 'PC Support Express',
-      image: '/images/portfolio/computer.jpg',
-      alt: language === 'de' ? 'Computer Support' : 'Computer Support',
-      desc: language === 'de' ? 'Professionelle IT-Dienstleistungen' : 'Professional IT services',
-      url: '/examples/computer',
-    },
-    {
-      id: 'gardener',
-      title: language === 'de' ? 'Grüne Oase Gartenbau' : 'Green Oasis Landscaping',
-      image: '/images/portfolio/gardener.jpg',
-      alt: language === 'de' ? 'Gartenbau Website' : 'Landscaping Website',
-      desc: language === 'de' ? 'Kreative Gartengestaltung und Pflege' : 'Creative garden design and maintenance',
-      url: '/examples/gardener',
-    },
-    {
-      id: 'construction',
-      title: language === 'de' ? 'Kyoto Teewaren' : 'Kyoto Teaware',
-      image: '/images/portfolio/construction.jpg',
-      alt: language === 'de' ? 'Teegeschirr Shop' : 'Teaware Shop',
-      desc: language === 'de' ? 'Bauunternehmer' : 'construction',
-      url: '/examples/construction',
+      id: 'psycho',
+      title: language === 'de' ? 'Praxis für Psychotherapie' : 'Psychotherapy Practice',
+      image: '/images/portfolio/psycho.jpg',
+      alt: language === 'de' ? 'Psychotherapie Website' : 'Psychotherapy Website',
+      desc: language === 'de' ? 'Vertrauensvolle Online-Präsenz für Therapeuten' : 'Trustworthy online presence for therapists',
+      url: '/examples/psycho',
     }
   ];
 
@@ -80,13 +69,11 @@ const Portfolio = () => {
             >
               <CardContent className="p-0">
                 <div className="relative aspect-[4/3]">
-                  <Suspense fallback={<div className="w-full h-full bg-gray-200 animate-pulse" />}>
-                    <LazyImage 
-                      src={item.image} 
-                      alt={item.alt}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                  </Suspense>
+                  <img 
+                    src={item.image} 
+                    alt={item.alt} 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
                   <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-end text-white p-6">
                     <h3 className="text-xl font-semibold mb-2 text-center">
                       {item.title}
