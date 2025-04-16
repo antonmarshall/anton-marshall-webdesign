@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -50,6 +49,12 @@ const PriceSection = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <span className="text-lg">{t('price.feature3')}</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="h-5 w-5 text-accent mt-1 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-lg">{t('price.feature4')}</span>
                 </li>
               </ul>
               <p className="mt-8 text-lg text-gray-600 border-t border-gray-200 pt-6">

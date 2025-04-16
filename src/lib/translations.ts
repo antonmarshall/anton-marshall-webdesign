@@ -1,4 +1,3 @@
-
 export type Language = 'de' | 'en';
 
 type TranslationKeys = {
@@ -38,6 +37,7 @@ export const translations: Translations = {
     'price.feature1': 'Individuelle Gestaltung und Entwicklung Ihrer Website',
     'price.feature2': 'Inklusive Domainregistrierung und Hosting für 12 Monate',
     'price.feature3': 'Begleitung von der Planung bis zur Veröffentlichung',
+    'price.feature4': 'Responsives Design für alle Geräte: Perfekt auf Smartphone und Tablet',
     'price.payment': 'Hinweis: Die Zahlung erfolgt erst nach Fertigstellung und Ihrer Zustimmung zur Veröffentlichung der Website.',
     
     // Workflow
@@ -61,7 +61,7 @@ export const translations: Translations = {
     // About
     'about.title': 'Warum mich wählen?',
     'about.desc': 'Professionelle Websites kosten normalerweise weit über 800€. Bei mir bekommen Sie für diesen Preis eine authentische und strukturierte Website. Egal, ob Sie eine auffällige oder eine einfache Website wollen. Keine klare Vorstellung? Kein Problem! Ich führe Sie mit kreativen Ideen durch den Prozess, ohne Sie mit technischen Details zu überfordern. Und wenn Sie bereits konkrete Vorstellungen haben, setze ich diese präzise um.',
-    'about.personal': 'Ich studiere Künstliche Intelligenz an der Universität Groningen. Dort habe ich angefangen mein Studium mit dem Programmieren von Webseiten zu finazieren. Ich habe einen hohen Anspruch an meine Projekte und höre nicht auf, bevor Ihre Webseite visuell ansprechend, intuitiv und überzeugend ist.',
+    'about.personal': 'Ich studiere Künstliche Intelligenz an der Universität Groningen. Dort habe ich angefangen mein Studium mit dem Programmieren von Webseiten zu finanzieren. Ich habe einen hohen Anspruch an meine Projekte und höre nicht auf, bevor Ihre Webseite visuell ansprechend, intuitiv und überzeugend ist.',
     
     // Contact
     'contact.title': 'Kontaktieren Sie mich',
@@ -118,6 +118,7 @@ export const translations: Translations = {
     'price.feature1': 'Custom design and development of your website',
     'price.feature2': 'Domain registration and hosting included for 12 months',
     'price.feature3': 'Guidance from planning to publication',
+    'price.feature4': 'Responsive design for all devices: Perfect on smartphone and tablet',
     'price.payment': 'Note: Payment is only due after completion and your approval for website publication.',
     
     // Workflow

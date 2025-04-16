@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Mail, Phone, MapPin } from 'lucide-react';
@@ -45,6 +44,7 @@ const Footer = () => {
           <div className="text-center md:text-left">
             <h3 className="text-lg font-semibold mb-4">{t('contact')}</h3>
             <ul className="space-y-4">
+              <li className="text-lg font-semibold mb-2">{t('contact.schedule')}</li>
               <li className="flex items-center justify-center md:justify-start gap-2 text-gray-400">
                 <Phone size={20} />
                 <span>+49 123 456 7890</span>
@@ -54,10 +54,6 @@ const Footer = () => {
                 <a href="mailto:a.marshall@webdesign.com" className="hover:text-white transition-colors">
                   a.marshall@webdesign.com
                 </a>
-              </li>
-              <li className="flex items-center justify-center md:justify-start gap-2 text-gray-400">
-                <MapPin size={20} />
-                <span>{t('footer.location')}</span>
               </li>
             </ul>
           </div>
