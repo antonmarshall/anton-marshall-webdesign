@@ -84,21 +84,23 @@ const HeroSlider = () => {
       ))}
 
       {/* Hero Content */}
-      <div className="relative z-20 flex flex-col items-center justify-center h-full text-white text-center px-4">
-        <div className="max-w-4xl px-8 py-10 rounded-xl bg-gradient-to-br from-[#1E2435] to-[#2D3446] shadow-2xl">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 slide-in">
+      <div className="relative z-20 flex flex-col items-start justify-center h-full text-white px-4 container mx-auto">
+        <div className="max-w-2xl bg-gradient-to-br from-[#1E2435] to-[#2D3446] shadow-2xl rounded-xl px-8 py-10 ml-0 mr-auto md:ml-8 lg:ml-16">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 slide-in text-left">
             {t('hero.title')}
           </h1>
-          <p className="text-xl md:text-2xl mb-8 slide-in">
+          <p className="text-xl md:text-2xl mb-8 slide-in text-left">
             {t('hero.subtitle')}
           </p>
-          <Button 
-            onClick={handleScroll}
-            size={isMobile ? "default" : "lg"}
-            className="bg-accent hover:bg-accent/90 text-white px-10 font-medium text-lg slide-in shadow-lg"
-          >
-            {t('hero.cta')}
-          </Button>
+          <div className="text-left">
+            <Button 
+              onClick={handleScroll}
+              size={isMobile ? "default" : "lg"}
+              className="bg-accent hover:bg-accent/90 text-white px-10 font-medium text-lg slide-in shadow-lg"
+            >
+              {t('hero.cta')}
+            </Button>
+          </div>
         </div>
       </div>
 
