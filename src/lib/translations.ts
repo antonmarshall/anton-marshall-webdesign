@@ -29,13 +29,13 @@ export const translations: Translations = {
     
     // Pricing
     'price.title': 'Preis',
-    'price.subtitle': 'Transparente Preisgestaltung für Ihre professionelle Website',
-    'price.websitePackage': 'Website-Komplettpaket',
-    'price.includes': 'Leistungen im Überblick',
-    'price.feature1': 'Professionelle Website-Entwicklung nach Ihren Vorstellungen',
-    'price.feature2': 'Domain & Hosting für ein Jahr kostenlos',
-    'price.feature3': 'Komplett-Service von der Planung bis zum Go-Live',
-    'price.payment': 'Bezahlung erst nach vollständiger Fertigstellung',
+    'price.subtitle': 'Professionelle Website-Erstellung – Komplettpaket',
+    'price.fixedPrice': 'Einmaliger Festpreis',
+    'price.includes': 'Leistungsumfang',
+    'price.feature1': 'Individuelle Gestaltung und Entwicklung Ihrer Website',
+    'price.feature2': 'Inklusive Domainregistrierung und Hosting für 12 Monate',
+    'price.feature3': 'Begleitung von der Planung bis zur Veröffentlichung',
+    'price.payment': 'Hinweis: Die Zahlung erfolgt erst nach Fertigstellung und Ihrer Zustimmung zur Veröffentlichung der Website.',
     
     // Workflow
     'workflow.title': 'Mein Arbeitsprozess',
@@ -88,13 +88,13 @@ export const translations: Translations = {
     
     // Pricing
     'price.title': 'Price',
-    'price.subtitle': 'Transparent pricing for your professional website',
-    'price.websitePackage': 'Complete Website Package',
-    'price.includes': 'Services Overview',
-    'price.feature1': 'Professional website development according to your vision',
-    'price.feature2': 'Free domain & hosting for one year',
-    'price.feature3': 'Full service from planning to launch',
-    'price.payment': 'Payment only after complete delivery',
+    'price.subtitle': 'Professional Website Creation – Complete Package',
+    'price.fixedPrice': 'One-time Fixed Price',
+    'price.includes': 'Services Included',
+    'price.feature1': 'Custom design and development of your website',
+    'price.feature2': 'Domain registration and hosting included for 12 months',
+    'price.feature3': 'Guidance from planning to publication',
+    'price.payment': 'Note: Payment is only due after completion and your approval for website publication.',
     
     // Workflow
     'workflow.title': 'My Process',
