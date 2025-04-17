@@ -78,7 +78,7 @@ const Legal = () => {
   };
 
   return (
-    <section className="py-20 bg-white dark:bg-gray-900">
+    <section className="py-20 bg-[#f8f2f1] dark:bg-gray-900">
       <div className="container mx-auto px-4 max-w-4xl">
         <button
           onClick={() => navigate(-1)}
