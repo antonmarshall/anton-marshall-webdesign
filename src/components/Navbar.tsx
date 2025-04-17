@@ -104,7 +104,8 @@ const Navbar = () => {
         const element = document.getElementById(id);
         if (element) {
           clearInterval(checkElement);
-          const offsetPosition = element.offsetTop - 80;
+          // Adjust offset to ensure content is not cut off
+          const offsetPosition = element.offsetTop - 100;
           window.scrollTo({
             top: offsetPosition,
             behavior: 'smooth'
@@ -119,7 +120,8 @@ const Navbar = () => {
     
     const element = document.getElementById(id);
     if (element) {
-      const offsetPosition = element.offsetTop - 80;
+      // Adjust offset to ensure content is not cut off
+      const offsetPosition = element.offsetTop - 100;
       window.scrollTo({
         top: offsetPosition,
         behavior: 'smooth'
