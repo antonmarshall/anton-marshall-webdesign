@@ -2,6 +2,7 @@ import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent } from '@/components/ui/card';
 import { ExternalLink } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Portfolio = () => {
   const { t, language } = useLanguage();
@@ -13,7 +14,6 @@ const Portfolio = () => {
       image: `${import.meta.env.BASE_URL}images/bau_unternehmer.png`,
       alt: t('portfolio.construction'),
       desc: t('portfolio.construction.desc'),
-      url: '/examples/construction',
     },
     {
       id: 'computer',
@@ -21,7 +21,6 @@ const Portfolio = () => {
       image: `${import.meta.env.BASE_URL}images/computer.png`,
       alt: t('portfolio.computer'),
       desc: t('portfolio.computer.desc'),
-      url: '/examples/computer',
     },
     {
       id: 'gardener',
@@ -29,7 +28,6 @@ const Portfolio = () => {
       image: `${import.meta.env.BASE_URL}images/gärtner.png`,
       alt: t('portfolio.garden'),
       desc: t('portfolio.garden.desc'),
-      url: '/examples/gardener',
     },
     {
       id: 'teashop',
@@ -37,7 +35,6 @@ const Portfolio = () => {
       image: `${import.meta.env.BASE_URL}images/japanischer_teeladen.png`,
       alt: t('portfolio.tea'),
       desc: t('portfolio.tea.desc'),
-      url: '/examples/teashop',
     },
     {
       id: 'psycho',
@@ -45,7 +42,6 @@ const Portfolio = () => {
       image: `${import.meta.env.BASE_URL}images/psychotherapie.png`,
       alt: t('portfolio.psycho'),
       desc: t('portfolio.psycho.desc'),
-      url: '/examples/psycho',
     },
     {
       id: 'photography',
@@ -53,7 +49,6 @@ const Portfolio = () => {
       image: `${import.meta.env.BASE_URL}images/yoga_knete.png`,
       alt: t('portfolio.photo'),
       desc: t('portfolio.photo.desc'),
-      url: '/examples/photography',
     }
   ];
 
@@ -87,13 +82,13 @@ const Portfolio = () => {
                       {item.title}
                     </h3>
                     <p className="text-sm mb-4 text-center opacity-90">{item.desc}</p>
-                    <a 
-                      href={item.url}
+                    <Link 
+                      to={`/portfolio/${item.id}`}
                       className="flex items-center gap-2 text-sm bg-primary hover:bg-primary/90 py-2 px-4 rounded-full transition-colors"
                     >
                       <span>{t('portfolio.view')}</span>
                       <ExternalLink size={14} />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </CardContent>

@@ -7,6 +7,7 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Legal from "./components/Legal";
+import PortfolioDetail from "./components/PortfolioDetail";
 import CookieConsent from "./components/CookieConsent";
 
 const queryClient = new QueryClient();
@@ -23,6 +24,7 @@ const App = () => (
             <Route path="/impressum" element={<Legal />} />
             <Route path="/datenschutz" element={<Legal />} />
             <Route path="/agb" element={<Legal />} />
+            <Route path="/portfolio/:id" element={<PortfolioDetail />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <CookieConsent />
