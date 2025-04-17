@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import LanguageSwitcher from './LanguageSwitcher';
 import { Menu, X } from 'lucide-react';
@@ -14,29 +14,63 @@ const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const isHomePage = location.pathname === '/';
+  const scrollTimeoutRef = useRef<number | null>(null);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
+
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as Node)) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location.pathname]);
 
   useEffect(() => {
     if (!isHomePage) return;
     
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      // Debounce scroll event
+      if (scrollTimeoutRef.current) {
+        window.clearTimeout(scrollTimeoutRef.current);
+      }
+      
+      scrollTimeoutRef.current = window.setTimeout(() => {
+        setIsScrolled(window.scrollY > 10);
 
-      // Update active section based on scroll position
-      const sections = ['home', 'portfolio', 'workflow', 'price', 'contact'];
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          if (rect.top <= 100 && rect.bottom >= 100) {
-            setActiveSection(section);
-            break;
+        // Update active section based on scroll position
+        const sections = ['home', 'portfolio', 'workflow', 'price', 'contact'];
+        for (const section of sections) {
+          const element = document.getElementById(section);
+          if (element) {
+            const rect = element.getBoundingClientRect();
+            // Adjust the threshold to make it more accurate
+            if (rect.top <= 150 && rect.bottom >= 150) {
+              setActiveSection(section);
+              break;
+            }
           }
         }
-      }
+      }, 50);
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (scrollTimeoutRef.current) {
+        window.clearTimeout(scrollTimeoutRef.current);
+      }
+    };
   }, [isHomePage]);
 
   const navigateToSection = (id: string) => {
@@ -44,9 +78,11 @@ const Navbar = () => {
     
     if (!isHomePage) {
       navigate('/');
-      setTimeout(() => {
+      // Use a more reliable way to wait for navigation
+      const checkElement = setInterval(() => {
         const element = document.getElementById(id);
         if (element) {
+          clearInterval(checkElement);
           const offsetPosition = element.offsetTop - 80;
           window.scrollTo({
             top: offsetPosition,
@@ -54,6 +90,9 @@ const Navbar = () => {
           });
         }
       }, 100);
+      
+      // Clear interval after 2 seconds to prevent infinite checking
+      setTimeout(() => clearInterval(checkElement), 2000);
       return;
     }
     
@@ -150,7 +189,10 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white dark:bg-gray-900 w-full shadow-lg">
+        <div 
+          ref={mobileMenuRef}
+          className="md:hidden bg-white dark:bg-gray-900 w-full shadow-lg absolute top-full left-0 right-0"
+        >
           <div className="flex flex-col py-4 px-6 space-y-4">
             <button 
               onClick={() => navigateToSection('home')} 
