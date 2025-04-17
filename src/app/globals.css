@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 98%;
+  --foreground: 222.2 84% 4.9%;
+}
+
+body {
+  background-color: rgb(250, 250, 252);
+}
+
+/* ... existing code ... */ 
