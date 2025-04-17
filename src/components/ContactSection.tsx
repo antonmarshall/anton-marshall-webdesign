@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
@@ -10,7 +9,7 @@ const ContactSection = () => {
   const { t, language } = useLanguage();
 
   const handleCalendarClick = () => {
-    window.open('https://calendly.com/anton-marshall-webdesign', '_blank');
+    window.open('https://calendly.com/anton-marshall03/30min', '_blank');
   };
 
   return (
