@@ -53,44 +53,46 @@ const Navbar = () => {
       setIsScrolled(currentScrollY > 0);
       lastScrollY.current = currentScrollY;
 
-      // Debounce the active section update for performance
-      if (scrollTimeoutRef.current) {
-        window.clearTimeout(scrollTimeoutRef.current);
-      }
+      // Update active section based on scroll position
+      const sections = ['home', 'portfolio', 'workflow', 'price', 'contact'];
+      let foundActive = false;
       
-      scrollTimeoutRef.current = window.setTimeout(() => {
-        // Update active section based on scroll position
-        const sections = ['home', 'portfolio', 'workflow', 'price', 'contact'];
-        let foundActive = false;
-        
-        // Check sections in reverse order to prioritize the one most in view
-        for (let i = sections.length - 1; i >= 0; i--) {
-          const section = sections[i];
-          const element = document.getElementById(section);
-          if (element) {
-            const rect = element.getBoundingClientRect();
-            // Adjust the threshold to make it more accurate
-            if (rect.top <= 100) {
-              setActiveSection(section);
-              foundActive = true;
-              break;
-            }
+      // Check sections in reverse order to prioritize the one most in view
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          // Adjust the threshold to make it more accurate
+          if (rect.top <= 100) {
+            setActiveSection(section);
+            foundActive = true;
+            break;
           }
         }
-        
-        // If no section is in view, set the first one as active
-        if (!foundActive && window.scrollY < 100) {
-          setActiveSection('home');
-        }
-      }, 50);
+      }
+      
+      // If no section is in view, set the first one as active
+      if (!foundActive && window.scrollY < 100) {
+        setActiveSection('home');
+      }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      if (scrollTimeoutRef.current) {
-        window.clearTimeout(scrollTimeoutRef.current);
+    // Use requestAnimationFrame for smoother performance
+    let ticking = false;
+    const scrollListener = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
       }
+    };
+
+    window.addEventListener('scroll', scrollListener);
+    return () => {
+      window.removeEventListener('scroll', scrollListener);
     };
   }, [isHomePage]);
 
