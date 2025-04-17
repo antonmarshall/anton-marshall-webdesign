@@ -16,6 +16,7 @@ const Navbar = () => {
   const isHomePage = location.pathname === '/';
   const scrollTimeoutRef = useRef<number | null>(null);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const lastScrollY = useRef(0);
 
   // Close mobile menu when clicking outside
   useEffect(() => {
@@ -36,30 +37,50 @@ const Navbar = () => {
     setIsMobileMenuOpen(false);
   }, [location.pathname]);
 
+  // Set initial scroll state
+  useEffect(() => {
+    if (window.scrollY > 0) {
+      setIsScrolled(true);
+    }
+  }, []);
+
   useEffect(() => {
     if (!isHomePage) return;
     
     const handleScroll = () => {
-      // Debounce scroll event
+      // Update scroll state immediately for better responsiveness
+      const currentScrollY = window.scrollY;
+      setIsScrolled(currentScrollY > 0);
+      lastScrollY.current = currentScrollY;
+
+      // Debounce the active section update for performance
       if (scrollTimeoutRef.current) {
         window.clearTimeout(scrollTimeoutRef.current);
       }
       
       scrollTimeoutRef.current = window.setTimeout(() => {
-        setIsScrolled(window.scrollY > 10);
-
         // Update active section based on scroll position
         const sections = ['home', 'portfolio', 'workflow', 'price', 'contact'];
-        for (const section of sections) {
+        let foundActive = false;
+        
+        // Check sections in reverse order to prioritize the one most in view
+        for (let i = sections.length - 1; i >= 0; i--) {
+          const section = sections[i];
           const element = document.getElementById(section);
           if (element) {
             const rect = element.getBoundingClientRect();
             // Adjust the threshold to make it more accurate
-            if (rect.top <= 150 && rect.bottom >= 150) {
+            if (rect.top <= 100) {
               setActiveSection(section);
+              foundActive = true;
               break;
             }
           }
+        }
+        
+        // If no section is in view, set the first one as active
+        if (!foundActive && window.scrollY < 100) {
+          setActiveSection('home');
         }
       }, 50);
     };
