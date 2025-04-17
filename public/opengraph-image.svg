@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#ffffff"/>
+  
+  <!-- Logo -->
+  <g transform="translate(60, 215)">
+    <text font-family="Arial, sans-serif" font-weight="bold" font-size="100">
+      <tspan fill="#2563eb">Anton Marshall </tspan>
+      <tspan fill="#aece7e">WebDesign</tspan>
+    </text>
+    <text x="0" y="100" font-family="Arial, sans-serif" font-size="40" fill="#4b5563">
+      Maßgeschneiderte Webseiten, die Ihr Unternehmen zum Strahlen bringen
+    </text>
+  </g>
+</svg> 
