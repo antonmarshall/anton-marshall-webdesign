@@ -105,7 +105,7 @@ const Navbar = () => {
         if (element) {
           clearInterval(checkElement);
           // Further reduce offset to bring content even closer to navbar
-          const offsetPosition = element.offsetTop - 50;
+          const offsetPosition = element.offsetTop - 40;
           window.scrollTo({
             top: offsetPosition,
             behavior: 'smooth'

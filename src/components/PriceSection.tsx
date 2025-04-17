@@ -23,7 +23,7 @@ const PriceSection = () => {
                 {t('price.fixedPrice')}
               </h3>
               <p className="text-2xl md:text-3xl font-bold text-accent">
-                800 €
+                600 €
               </p>
             </div>
 

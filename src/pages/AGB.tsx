@@ -29,7 +29,7 @@ const AGB = () => {
 
           <h2 className="text-xl font-semibold mb-4">3. Vergütung</h2>
           <p className="mb-6">
-            Der Preis beträgt 800 € als einmaliger Festpreis. Die Zahlung erfolgt erst nach Fertigstellung und Ihrer Zustimmung zur Veröffentlichung der Website.
+            Der Preis beträgt 600 € als einmaliger Festpreis. Die Zahlung erfolgt erst nach Fertigstellung und Ihrer Zustimmung zur Veröffentlichung der Website.
           </p>
 
           <h2 className="text-xl font-semibold mb-4">4. Mitwirkungspflichten</h2>
