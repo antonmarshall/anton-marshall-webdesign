@@ -71,7 +71,7 @@ export const translations: Translations = {
     
     // About
     'about.title': 'Meine Stärken für Ihr Projekt',
-    'about.desc': 'Die einfachsten Unternehmenswebsites beginnen bei professionellen Agenturen oft erst ab 1.500 € und können je nach Umfang und Anforderungen schnell deutlich teurer werden. Bei mir erhalten Sie eine authentische und strukturierte Website zu einem fairen Preis. Ob Sie eine auffällige oder eine schlichte Website möchtens – ich begleite Sie mit kreativen Ideen durch den gesamten Prozess, ohne Sie mit technischen Details zu überfordern. Falls Sie bereits konkrete Vorstellungen haben, setze ich diese präzise um.',
+    'about.desc': 'Die einfachsten Unternehmenswebsites beginnen bei professionellen Agenturen oft erst ab 1.500 € und können je nach Umfang und Anforderungen schnell deutlich teurer werden. Bei mir erhalten Sie eine authentische und strukturierte Website zu einem fairen Preis. Ob Sie eine auffällige oder eine schlichte Website möchten – ich begleite Sie mit kreativen Ideen durch den gesamten Prozess, ohne Sie mit technischen Details zu überfordern. Falls Sie bereits konkrete Vorstellungen haben, setze ich diese präzise um.',
     'about.personal': 'Ich studiere Künstliche Intelligenz an der Universität Groningen. Dort habe ich angefangen mein Studium mit dem Programmieren von Webseiten zu finanzieren. Ich habe einen hohen Anspruch an meine Projekte und höre nicht auf, bevor Ihre Webseite visuell ansprechend, intuitiv und überzeugend ist.',
     
     // Contact
