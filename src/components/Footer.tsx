@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -62,19 +63,19 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">{t('legal')}</h3>
             <ul className="space-y-2">
               <li>
-                <a href="/impressum" className="text-gray-400 hover:text-white transition-colors">
+                <Link to="/impressum" className="text-gray-400 hover:text-white transition-colors">
                   {t('legal.notice')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/datenschutz" className="text-gray-400 hover:text-white transition-colors">
+                <Link to="/datenschutz" className="text-gray-400 hover:text-white transition-colors">
                   {t('legal.privacy')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/agb" className="text-gray-400 hover:text-white transition-colors">
+                <Link to="/agb" className="text-gray-400 hover:text-white transition-colors">
                   {t('legal.terms')}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
