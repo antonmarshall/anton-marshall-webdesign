@@ -50,7 +50,7 @@ export const translations: Translations = {
     'price.feature1': 'Individuelle Gestaltung und Entwicklung Ihrer Website',
     'price.feature2': 'Inklusive Domainregistrierung und Hosting für 12 Monate',
     'price.feature3': 'Begleitung von der Planung bis zur Veröffentlichung',
-    'price.feature4': '​Anpassungsfähiges Design für alle Endgeräte - Optimierte Benutzeroberfläche unabhängig vom verwendeten Gerät.',
+    'price.feature4': '​Anpassungsfähiges Design für alle Endgeräte. (Desktop, Tablet und Smartphone)',
     'price.payment': 'Hinweis: Die Zahlung erfolgt erst nach Fertigstellung und Ihrer Zustimmung zur Veröffentlichung der Website.',
     
     // Workflow
@@ -73,7 +73,7 @@ export const translations: Translations = {
     
     // About
     'about.title': 'Meine Stärken für Ihr Projekt',
-    'about.desc': 'Professionelle Websites kosten normalerweise weit über 800€. Bei mir bekommen Sie für diesen Preis eine authentische und strukturierte Website. Egal, ob Sie eine auffällige oder eine einfache Website wollen. Keine klare Vorstellung? Kein Problem! Ich führe Sie mit kreativen Ideen durch den Prozess, ohne Sie mit technischen Details zu überfordern. Und wenn Sie bereits konkrete Vorstellungen haben, setze ich diese präzise um.',
+    'about.desc': 'Die einfachsten Unternehmenswebsites beginnen bei professionellen Agenturen oft erst ab 1.500 € und können je nach Umfang und Anforderungen schnell deutlich teurer werden..​Bei mir erhalten Sie eine authentische und strukturierte Website zu einem fairen Preis. Ob Sie eine auffällige oder eine schlichte Website wünschen – ich begleite Sie mit kreativen Ideen durch den gesamten Prozess, ohne Sie mit technischen Details zu überfordern. Falls Sie bereits konkrete Vorstellungen haben, setze ich diese präzise um.',
     'about.personal': 'Ich studiere Künstliche Intelligenz an der Universität Groningen. Dort habe ich angefangen mein Studium mit dem Programmieren von Webseiten zu finanzieren. Ich habe einen hohen Anspruch an meine Projekte und höre nicht auf, bevor Ihre Webseite visuell ansprechend, intuitiv und überzeugend ist.',
     
     // Contact
