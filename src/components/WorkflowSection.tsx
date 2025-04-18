@@ -98,7 +98,7 @@ const WorkflowSection = () => {
 
           {/* Minimal Timeline */}
           <div className="mt-8 text-center">
-            <h3 className="text-xl font-semibold mb-4">Gesamtdauer: max. 3 Wochen</h3>
+            <h3 className="text-xl font-semibold mb-4">innerhalb von 3 Wochen</h3>
             <div className="flex items-center justify-center gap-2">
               <div className="h-1 w-24 bg-primary rounded-full"></div>
               <ArrowRight className="text-primary" size={20} />
