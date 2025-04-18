@@ -43,7 +43,7 @@ export const translations: Translations = {
     'portfolio.photo.desc': 'Kreative Website für Fotografie Studio',
     
     // Pricing
-    'price.title': 'Preis (test if it changes !!!)',
+    'price.title': 'Preis',
     'price.subtitle': 'Professionelle Website-Erstellung – Komplettpaket',
     'price.fixedPrice': 'Einmaliger Festpreis',
     'price.includes': 'Leistungsumfang',
@@ -68,8 +68,6 @@ export const translations: Translations = {
     'workflow.step4.title': 'Entwicklung',
     'workflow.step4.desc': 'Professionelle Umsetzung mit modernsten Technologien',
     'workflow.step4.detail': 'Ihre Website wird mit den neuesten Webtechnologien entwickelt, um maximale Performance, Sicherheit und Benutzerfreundlichkeit zu gewährleisten.',
-    'workflow.timeline': 'Gesamtdauer: Maximal 3 Wochen',
-    'workflow.effort': 'Ihr Aufwand: Nur 2-3 kurze Gespräche',
     
     // About
     'about.title': 'Meine Stärken für Ihr Projekt',
