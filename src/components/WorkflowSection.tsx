@@ -77,31 +77,6 @@ const WorkflowSection = () => {
               ))}
             </div>
           </div>
-
-          <div className="mt-12 md:mt-16 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg p-6 md:p-8">
-            <div className="text-center">
-              <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900">
-                {t('workflow.timeline.title')}
-              </h3>
-              <p className="text-gray-600 mb-6">
-                {t('workflow.timeline.description')}
-              </p>
-              <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
-                <div className="flex items-center gap-2">
-                  <div className="w-4 h-4 rounded-full bg-primary"></div>
-                  <span className="text-sm font-medium">Beratung</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-4 h-4 rounded-full bg-accent"></div>
-                  <span className="text-sm font-medium">Design</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-4 h-4 rounded-full bg-primary/70"></div>
-                  <span className="text-sm font-medium">Entwicklung</span>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
