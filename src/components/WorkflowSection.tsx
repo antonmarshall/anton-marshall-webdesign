@@ -82,16 +82,49 @@ const WorkflowSection = () => {
             </div>
           </div>
 
-          {/* Timeline and Effort Info */}
-          <div className="mt-8 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg p-4 md:p-6">
-            <div className="flex flex-col md:flex-row md:justify-between gap-4 md:gap-6">
-              <div className="flex items-center gap-3 text-gray-700">
-                <Code size={20} className="text-primary" />
-                <span className="font-medium text-sm md:text-base">
-                  {t('workflow.timeline')}
-                </span>
+          {/* Timeline Graph */}
+          <div className="mt-12 bg-white rounded-lg shadow-lg p-6 md:p-8">
+            <h3 className="text-xl md:text-2xl font-semibold mb-6 text-gray-900 text-center">
+              {t('workflow.timeline')}
+            </h3>
+            
+            {/* Timeline Bar */}
+            <div className="relative h-8 bg-gray-100 rounded-full overflow-hidden mb-8">
+              <div className="absolute top-0 left-0 h-full bg-primary rounded-full" style={{ width: '100%' }}>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="text-white font-medium text-sm">3 Wochen</span>
+                </div>
               </div>
-              <div className="flex items-center gap-3 text-gray-700">
+            </div>
+            
+            {/* Timeline Steps */}
+            <div className="grid grid-cols-3 gap-4">
+              <div className="text-center">
+                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-2">
+                  <span className="font-bold">1</span>
+                </div>
+                <p className="text-sm font-medium">Beratung</p>
+                <p className="text-xs text-gray-500">Tag 1-2</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-2">
+                  <span className="font-bold">2</span>
+                </div>
+                <p className="text-sm font-medium">Design</p>
+                <p className="text-xs text-gray-500">Tag 3-10</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-2">
+                  <span className="font-bold">3</span>
+                </div>
+                <p className="text-sm font-medium">Entwicklung</p>
+                <p className="text-xs text-gray-500">Tag 11-21</p>
+              </div>
+            </div>
+            
+            {/* Effort Info */}
+            <div className="mt-8 bg-gradient-to-r from-accent/10 to-primary/10 rounded-lg p-4 flex items-center justify-center">
+              <div className="flex items-center gap-3">
                 <PhoneCall size={20} className="text-primary" />
                 <span className="font-medium text-sm md:text-base">
                   {t('workflow.effort')}
