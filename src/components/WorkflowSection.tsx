@@ -114,7 +114,7 @@ const WorkflowSection = () => {
                 return (
                   <div 
                     key={index} 
-                    className={`group relative ${bgColor} transition-all duration-300 hover:brightness-110`}
+                    className={`group relative ${bgColor} transition-all duration-300 hover:scale-105 hover:shadow-lg`}
                     style={{ width: `${width}%` }}
                   >
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-2">
