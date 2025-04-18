@@ -1,0 +1,124 @@
+[33m8bdb3ee[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Update website
+[33m81f7610[m Update website
+[33m4e75d3c[m Update website
+[33mef5d28d[m Update website
+[33m54b19a7[m Update website
+[33mb32e6eb[m Update website
+[33m95cc23d[m Update website
+[33mcb21eb8[m Update website
+[33m675fc12[m Update website
+[33m0df6dc6[m Update website
+[33m3afa669[m Update website
+[33m3504094[m Update website
+[33ma7cb91f[m Update website
+[33m9644f6a[m Update website
+[33mf302020[m Update website
+[33m13802c7[m Update website
+[33m5c589b0[m Update website
+[33m0b3c765[m Update website
+[33m3d04df9[m Update website
+[33mede8f11[m oh es ist alles anders
+[33m97f1442[m test restore
+[33m30406ba[m Update website
+[33m5b9ab5d[m Update website
+[33m84ab096[m Update website
+[33mfe57bce[m Update website
+[33m14e5713[m Update website
+[33m12a0752[m Update website
+[33me6ebab4[m Update website
+[33m1aa5e9d[m Update website
+[33m3babb2e[m Update website
+[33m403c789[m Fix Navbar bugs and improve mobile menu behavior
+[33mea0eea2[m Add portfolio detail pages with back button
+[33m27a22d7[m Update legal pages background color to #f8f2f1
+[33m90b2b2b[m Add back button to legal pages and update footer links
+[33m34bbac4[m why me
+[33mc4426c3[m logo
+[33m1969ed7[m logo
+[33m50ad401[m Update Calendly link to correct URL
+[33mccccda4[m Add OpenGraph image and optimize social media meta tags
+[33m68d52fd[m Add new favicon with AM letters in circle
+[33mc92183b[m Update background color to light gray for more professional look
+[33m88d0336[m Update Logo styling and text spacing
+[33m07c877d[m logo
+[33m925ae07[m logo
+[33mb8c6fa2[m Initial commit: Project setup
+[33ma5ae7c5[m Initial commit: Project setup
+[33m1c61ac4[m favicon
+[33mb53e4cf[m your commit message
+[33m83f3314[m Fix: Revert to stable version and update index.html
+[33m902980d[m Fix App routing and restore original structure
+[33m15e1f20[m Update branding to Anton Marshall WebDesign, fix portfolio images and legal routing
+[33m7333655[m Optimize performance with lazy loading, update branding to Marshall WebDesign, add legal page
+[33mf609d5e[m Add restaurant example website with modern design and responsive layout
+[33m58a6e7f[m Update design: Replace gradients with solid colors, fix menu bug, update slideshow images
+[33m275ed30[m Update website design and translations: Enhanced Navbar with gradient effects, updated translations, and improved overall styling
+[33m699c3ad[m fix: update image paths in Portfolio component
+[33m4aabeb9[m Refactor: Remove unused code and comments
+[33mc46e499[m Fix: Potential GitHub overwrite issue
+[33m3c9ee21[m Fix: Resolve rendering issue
+[33mf9c4217[m feat: Improve hero slider text animation
+[33mbb84074[m Refactor: Update HeroSlider component
+[33m67948ab[m Refactor: Improve layout and design
+[33m3640a84[m Fix: Improve Hero section design
+[33m69d69d9[m Refactor: Improve hero slider design
+[33m0ab220f[m Refactor: Improve hero slider design
+[33m3a69ba4[m Add hero section styling
+[33mfc9e574[m slides
+[33m793fd07[m slides
+[33md6da998[m error prob
+[33m537fa13[m error prob
+[33m0f5d2e2[m profil picture test is prob not going to work have to do the referencing trick
+[33m4933eec[m t
+[33m13676dd[m apastrophe test
+[33m8737765[m test
+[33ma774b75[m suboptimal solution to get the right image path i dont know why vite is not adding the path so i have to do it a bit tricky
+[33m4d55f3b[m versuch 1000
+[33m571b4ef[m versuch 1000
+[33m7c8075f[m versuch 1000
+[33m7f60381[m test if images work in public images folder
+[33me51ad4a[m test if images work in public images folder
+[33m65c5743[m test if deploy works
+[33mcc966f3[m change package.json so that deploy also builds before
+[33mc928eeb[m tab header
+[33mcc36532[m Bilder ordner und referencen anpassen
+[33mf52aefa[m Router basefestlegen
+[33m90eb255[m basepfad ändern bug fix
+[33mb992118[m basepfad ändern
+[33mcc4d15b[m deploy in jsonfestlegen
+[33m909fbd5[m Add cookie consent popup
+[33mb50f27d[m Add legal pages and cookie consent
+[33m76fb476[m Add mobile responsiveness to price section
+[33m558a10a[m Refactor: Update portfolio items
+[33m1b4b584[m Fix: Language switcher and mobile menu behavior
+[33m880fdbb[m Fix: Improve UI and navigation
+[33m5643792[m Fix: Ensure all translatable strings are used
+[33m2d090fc[m Fix: Wrap Index component with LanguageProvider
+[33m051f57f[m Add legal and cookie popup features
+[33m627829c[m Fix: Mobile responsiveness and design adjustments
+[33m6eb6b07[m feat: Improve price section and mobile layout
+[33ma6e51e2[m Fix: Improve translations and hero slider
+[33m7009098[m Fix: Language switcher and price section
+[33mcdf141a[m Refactor: Update portfolio images and pricing section
+[33m7f73eb5[m Fix: Use local images
+[33mffe5aa2[m Fix: Update portfolio images and text
+[33m28ee858[m Visual edit in Lovable
+[33mde2ada7[m Visual edit in Lovable
+[33m3502dd8[m Visual edit in Lovable
+[33m563ddd3[m Refactor: Update portfolio and language switcher
+[33md63f36a[m Visual edit in Lovable
+[33m828a1d1[m Visual edit in Lovable
+[33m45f162f[m Fix: Contact and Language Switcher updates
+[33md86dcc4[m Visual edit in Lovable
+[33m98fb9fa[m feat: Update price section and translations
+[33m255a28e[m Fix: Remove black box on menu click
+[33m9389cf5[m Remove focus ring from buttons
+[33mc96fdea[m Fix: Remove black outline on menu click
+[33m07ae233[m feat: Improve design and add features
+[33m40981ce[m Visual edit in Lovable
+[33m76a3e1c[m Refactor: Update workflow and portfolio sections
+[33mdf28114[m Refactor: Improve UI and content
+[33maed8e37[m Refactor: Improve design and content
+[33mad5a227[m Fix: Import lucide-react icons
+[33m99e1cbd[m Feat: Implement website content
+[33ma020958[m Use tech stack vite_react_shadcn_ts
