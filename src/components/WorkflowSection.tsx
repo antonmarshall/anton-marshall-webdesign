@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { PhoneCall, Search, Code, MonitorCheck, CloudUpload, GraduationCap } from 'lucide-react';
+import { PhoneCall, MessageSquare, Code, MonitorCheck, CloudUpload, GraduationCap } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const WorkflowSection = () => {
@@ -10,27 +10,32 @@ const WorkflowSection = () => {
     {
       icon: <PhoneCall size={24} />,
       title: "Kostenloses Erstgespräch",
-      subtitle: "30 Minuten zur groben Bedarfsklärung"
+      subtitle: "Bedarf klären",
+      duration: "2 Tage"
     },
     {
-      icon: <Search size={24} />,
-      title: "Detaillierter Discovery-Call",
-      subtitle: "30 Minuten zur präzisen Festlegung von Scope & Zielen"
+      icon: <MessageSquare size={24} />,
+      title: "Ideen-Gespräch",
+      subtitle: "Gemeinsam 30 Min. brainstormen",
+      duration: "2 Tage"
     },
     {
       icon: <Code size={24} />,
-      title: "Design & Programmierung",
-      subtitle: "Wireframes, visuelles Design & technische Umsetzung"
+      title: "Design & Umsetzung",
+      subtitle: "Entwurf fertigstellen",
+      duration: "14 Tage"
     },
     {
       icon: <MonitorCheck size={24} />,
       title: "Review & Feedback",
-      subtitle: "Live-Demo & Änderungswünsche aufnehmen"
+      subtitle: "Live-Demo & Korrekturen",
+      duration: "3 Tage"
     },
     {
       icon: <CloudUpload size={24} />,
-      title: "Finalisierung & Upload",
-      subtitle: "Letzte Anpassungen, Liveschaltung & Übergabe"
+      title: "Fertigstellung & Upload",
+      subtitle: "Online schalten",
+      duration: "3 Tage"
     }
   ];
 
@@ -63,55 +68,40 @@ const WorkflowSection = () => {
           </p>
         </div>
 
-        {/* Workflow Steps */}
+        {/* Timeline Workflow */}
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
-            {steps.map((step, index) => (
-              <div key={index} className="bg-white rounded-2xl shadow-md p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-4">
-                  {step.icon}
+          <div className="relative">
+            {/* Timeline line - visible on mobile and desktop */}
+            <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-primary transform -translate-x-1/2 md:hidden"></div>
+            <div className="absolute left-0 right-0 top-1/2 h-0.5 bg-primary transform -translate-y-1/2 hidden md:block"></div>
+            
+            {/* Steps */}
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-8 relative">
+              {steps.map((step, index) => (
+                <div key={index} className="group relative h-full">
+                  <div className="bg-white p-4 md:p-6 rounded-2xl shadow-md transition-all duration-300 hover:shadow-lg hover:scale-105 relative z-10 h-full flex flex-col">
+                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-4">
+                      {step.icon}
+                    </div>
+                    <h3 className="text-base md:text-lg font-semibold text-center mb-2">{step.title}</h3>
+                    <p className="text-gray-600 text-center text-sm flex-1">{step.subtitle}</p>
+                    <p className="text-primary font-medium text-center mt-2">{step.duration}</p>
+                  </div>
                 </div>
-                <h3 className="text-lg font-bold text-center mb-2">{step.title}</h3>
-                <p className="text-gray-600 text-center text-sm">{step.subtitle}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
-          {/* Timeline */}
-          <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
-            <h3 className="text-xl font-semibold mb-6 text-center">Gesamtdauer: 3 Wochen</h3>
-            
-            {/* Timeline Bar */}
-            <div className="relative h-8 bg-gray-100 rounded-full overflow-hidden mb-8">
-              <div className="absolute top-0 left-0 h-full bg-primary rounded-full" style={{ width: '33.33%' }}></div>
-              <div className="absolute top-0 left-1/3 h-full bg-primary/80 rounded-full" style={{ width: '33.33%' }}></div>
-              <div className="absolute top-0 left-2/3 h-full bg-primary/60 rounded-full" style={{ width: '33.33%' }}></div>
-            </div>
-            
-            {/* Timeline Steps */}
-            <div className="grid grid-cols-3 gap-4">
-              <div className="text-center">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-2">
-                  <span className="font-bold">1</span>
+          {/* Timeline Numbers */}
+          <div className="mt-8 flex justify-between px-4 md:px-0">
+            {steps.map((step, index) => (
+              <div key={index} className="flex flex-col items-center">
+                <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white mb-2">
+                  <span className="font-bold">{index + 1}</span>
                 </div>
-                <p className="text-sm font-medium">Erstgespräch</p>
-                <p className="text-xs text-gray-500">Woche 1</p>
+                <p className="text-xs text-gray-500">{step.duration}</p>
               </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-2">
-                  <span className="font-bold">2</span>
-                </div>
-                <p className="text-sm font-medium">Discovery-Call & Planung</p>
-                <p className="text-xs text-gray-500">Woche 2</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-2">
-                  <span className="font-bold">3</span>
-                </div>
-                <p className="text-sm font-medium">Umsetzung & Finalisierung</p>
-                <p className="text-xs text-gray-500">Woche 3</p>
-              </div>
-            </div>
+            ))}
           </div>
 
           <div className="mt-12 md:mt-16 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg p-6 md:p-8">
