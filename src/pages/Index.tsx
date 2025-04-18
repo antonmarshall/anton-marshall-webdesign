@@ -7,7 +7,6 @@ import PriceSection from '@/components/PriceSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 import AboutMe from '@/components/AboutMe';
-import StrengthsSection from '@/components/StrengthsSection';
 
 const Index = () => {
   // Force a repaint on load to ensure all components display correctly
