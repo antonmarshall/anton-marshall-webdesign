@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { PhoneCall, MessageSquare, Code, MonitorCheck, CloudUpload, GraduationCap } from 'lucide-react';
+import { PhoneCall, MessageSquare, Code, MonitorCheck, CloudUpload, GraduationCap, ArrowRight } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const WorkflowSection = () => {
@@ -11,41 +11,38 @@ const WorkflowSection = () => {
       icon: <PhoneCall size={24} />,
       title: "Kostenloses Erstgespräch",
       subtitle: "Bedarf klären",
-      duration: "2 Tage",
+      duration: "Tag 1",
       shortName: "Erstgespräch"
     },
     {
       icon: <MessageSquare size={24} />,
       title: "Ideen-Gespräch",
       subtitle: "Gemeinsam 30 Min. brainstormen",
-      duration: "2 Tage",
+      duration: "Tag 2",
       shortName: "Ideen"
     },
     {
       icon: <Code size={24} />,
       title: "Design & Umsetzung",
       subtitle: "Entwurf fertigstellen",
-      duration: "14 Tage",
+      duration: "Tag 3-16",
       shortName: "Design"
     },
     {
       icon: <MonitorCheck size={24} />,
       title: "Review & Feedback",
       subtitle: "Live-Demo & Korrekturen",
-      duration: "3 Tage",
+      duration: "Tag 17-19",
       shortName: "Review"
     },
     {
       icon: <CloudUpload size={24} />,
       title: "Fertigstellung & Upload",
       subtitle: "Online schalten",
-      duration: "3 Tage",
+      duration: "Tag 20-21",
       shortName: "Upload"
     }
   ];
-
-  // Calculate total days for proportional widths
-  const totalDays = steps.reduce((sum, step) => sum + parseInt(step.duration), 0);
 
   return (
     <section id="workflow" className="py-20 bg-white">
@@ -99,36 +96,13 @@ const WorkflowSection = () => {
             </div>
           </div>
 
-          {/* Timeline Bar */}
-          <div className="mt-4 relative">
-            {/* Timeline Segments Container */}
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-              {steps.map((step, index) => {
-                const isEven = index % 2 === 0;
-                const bgColor = isEven ? 'bg-blue-500' : 'bg-blue-600';
-                
-                return (
-                  <div 
-                    key={index} 
-                    className={`${bgColor} h-12 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-lg relative group`}
-                  >
-                    <div className="absolute inset-0 flex items-center justify-center text-white p-2">
-                      <span className="font-bold text-sm whitespace-nowrap">{step.duration}</span>
-                    </div>
-                    
-                    {/* Tooltip */}
-                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-48 bg-white rounded-lg shadow-lg p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 pointer-events-none">
-                      <div className="flex items-center gap-2 mb-2">
-                        <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center text-white">
-                          {step.icon}
-                        </div>
-                        <span className="font-semibold text-sm">{step.title}</span>
-                      </div>
-                      <p className="text-xs text-gray-600">{step.subtitle}</p>
-                    </div>
-                  </div>
-                );
-              })}
+          {/* Minimal Timeline */}
+          <div className="mt-8 text-center">
+            <h3 className="text-xl font-semibold mb-4">Gesamtdauer: max. 3 Wochen</h3>
+            <div className="flex items-center justify-center gap-2">
+              <div className="h-1 w-24 bg-primary rounded-full"></div>
+              <ArrowRight className="text-primary" size={20} />
+              <div className="h-1 w-24 bg-primary rounded-full"></div>
             </div>
           </div>
 
