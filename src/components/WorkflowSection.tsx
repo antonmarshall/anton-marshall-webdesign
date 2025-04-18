@@ -78,17 +78,6 @@ const WorkflowSection = () => {
             </div>
           </div>
         </div>
-
-        <div className="mt-12 md:mt-16 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg p-6 md:p-8">
-          <div className="text-center">
-            <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900">
-              {t('about.title')}
-            </h3>
-            <p className="text-gray-600 leading-relaxed mb-6 font-normal text-sm md:text-base">
-              {t('about.desc')}
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );
