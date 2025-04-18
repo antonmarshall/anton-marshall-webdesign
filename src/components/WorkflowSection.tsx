@@ -82,14 +82,9 @@ const WorkflowSection = () => {
             </div>
           </div>
 
-          <div className="mt-12 md:mt-16 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg p-6 md:p-8">
-            <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900">
-              {t('about.title')}
-            </h3>
-            <p className="text-gray-600 leading-relaxed mb-6 font-normal text-sm md:text-base">
-              {t('about.desc')}
-            </p>
-            <div className="flex flex-col md:flex-row md:justify-between gap-4 md:gap-6 mt-6 md:mt-8">
+          {/* Timeline and Effort Info */}
+          <div className="mt-8 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg p-4 md:p-6">
+            <div className="flex flex-col md:flex-row md:justify-between gap-4 md:gap-6">
               <div className="flex items-center gap-3 text-gray-700">
                 <Code size={20} className="text-primary" />
                 <span className="font-medium text-sm md:text-base">
@@ -103,6 +98,15 @@ const WorkflowSection = () => {
                 </span>
               </div>
             </div>
+          </div>
+
+          <div className="mt-12 md:mt-16 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg p-6 md:p-8">
+            <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900">
+              {t('about.title')}
+            </h3>
+            <p className="text-gray-600 leading-relaxed mb-6 font-normal text-sm md:text-base">
+              {t('about.desc')}
+            </p>
           </div>
         </div>
       </div>
