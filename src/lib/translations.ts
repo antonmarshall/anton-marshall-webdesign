@@ -54,8 +54,8 @@ export const translations: Translations = {
     'price.payment': 'Hinweis: Die Zahlung erfolgt erst nach Fertigstellung und Ihrer Freigabe zur Veröffentlichung der Website.',
     
     // Workflow
-    'workflow.title': 'Mein Ablauf',
-    'workflow.subtitle': 'Transparenter Prozess von der ersten Idee bis zur fertigen Website',
+    'workflow.title': '3 Wochen bis zur fertigen Website',
+    'workflow.subtitle': 'Klarer Ablauf von der ersten Idee bis zur fertigen Website',
     'workflow.step1.title': 'Beratung',
     'workflow.step1.desc': 'Kostenlose Erstberatung zur Klärung Ihrer Wünsche und Ziele',
     'workflow.step1.detail': 'Wir besprechen Ihre Anforderungen, Ziele und Vision für Ihre Website. Ich analysiere Ihre Branche und Zielgruppe, um die beste Lösung für Sie zu finden.',
