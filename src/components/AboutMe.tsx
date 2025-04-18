@@ -20,19 +20,19 @@ const AboutMe = () => {
           
           {/* Right column with text content */}
           <div className="w-full md:w-2/3 flex flex-col">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+            <h2 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4 flex items-center gap-2">
               Anton Marshall
               <GraduationCap className="text-accent" size={24} />
             </h2>
             <p className="text-gray-600 leading-relaxed text-sm md:text-base mb-8">
-              {t('about.desc')}
+              {t('about.personal')}
             </p>
             
             <h3 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4">
               {t('about.title')}
             </h3>
             <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-              {t('about.strengths')}
+              {t('about.desc')}
             </p>
           </div>
         </div>
