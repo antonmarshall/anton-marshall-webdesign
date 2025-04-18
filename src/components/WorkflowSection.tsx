@@ -1,7 +1,6 @@
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { PhoneCall, MessageSquare, Code, MonitorCheck, CloudUpload, GraduationCap, ArrowRight } from 'lucide-react';
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { PhoneCall, MessageSquare, Code, MonitorCheck, CloudUpload } from 'lucide-react';
 
 const WorkflowSection = () => {
   const { t } = useLanguage();
@@ -47,23 +46,6 @@ const WorkflowSection = () => {
   return (
     <section id="workflow" className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        {/* Personal Introduction */}
-        <div className="max-w-6xl mx-auto mb-12 md:mb-20 flex flex-col md:flex-row items-center gap-6 md:gap-12 rounded-lg p-4">
-          <Avatar className="w-32 h-32 md:w-48 md:h-48 border-4 border-white shadow-lg">
-            <AvatarImage src={`${import.meta.env.BASE_URL}images/profil_bild.png`} alt="Anton Marshall" />
-            <AvatarFallback>AM</AvatarFallback>
-          </Avatar>
-          <div className="flex-1 text-center md:text-left">
-            <h3 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4 flex items-center justify-center md:justify-start gap-2">
-              Anton Marshall
-              <GraduationCap className="text-accent" size={24} />
-            </h3>
-            <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-              {t('about.personal')}
-            </p>
-          </div>
-        </div>
-
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
             {t('workflow.title')}
@@ -96,14 +78,29 @@ const WorkflowSection = () => {
             </div>
           </div>
 
-
           <div className="mt-12 md:mt-16 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg p-6 md:p-8">
-            <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900">
-              {t('about.title')}
-            </h3>
-            <p className="text-gray-600 leading-relaxed mb-6 font-normal text-sm md:text-base">
-              {t('about.desc')}
-            </p>
+            <div className="text-center">
+              <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900">
+                {t('workflow.timeline.title')}
+              </h3>
+              <p className="text-gray-600 mb-6">
+                {t('workflow.timeline.description')}
+              </p>
+              <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
+                <div className="flex items-center gap-2">
+                  <div className="w-4 h-4 rounded-full bg-primary"></div>
+                  <span className="text-sm font-medium">Beratung</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-4 h-4 rounded-full bg-accent"></div>
+                  <span className="text-sm font-medium">Design</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-4 h-4 rounded-full bg-primary/70"></div>
+                  <span className="text-sm font-medium">Entwicklung</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

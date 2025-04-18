@@ -6,6 +6,8 @@ import WorkflowSection from '@/components/WorkflowSection';
 import PriceSection from '@/components/PriceSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
+import AboutMe from '@/components/AboutMe';
+import StrengthsSection from '@/components/StrengthsSection';
 
 const Index = () => {
   // Force a repaint on load to ensure all components display correctly
@@ -20,8 +22,10 @@ const Index = () => {
     <div className="min-h-screen">
       <Navbar />
       <HeroSlider />
+      <AboutMe />
       <WorkflowSection />
       <Portfolio />
+      <StrengthsSection />
       <PriceSection />
       <ContactSection />
       <Footer />
