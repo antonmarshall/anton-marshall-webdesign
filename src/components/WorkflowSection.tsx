@@ -102,25 +102,15 @@ const WorkflowSection = () => {
           {/* Timeline Bar */}
           <div className="mt-4 relative">
             {/* Timeline Segments Container */}
-            <div className="w-full bg-gray-100 h-12 rounded-2xl overflow-hidden relative">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
               {steps.map((step, index) => {
-                const width = (parseInt(step.duration) / totalDays) * 100;
                 const isEven = index % 2 === 0;
                 const bgColor = isEven ? 'bg-blue-500' : 'bg-blue-600';
-                
-                // Calculate left position based on previous steps
-                const leftPosition = steps
-                  .slice(0, index)
-                  .reduce((sum, s) => sum + (parseInt(s.duration) / totalDays) * 100, 0);
                 
                 return (
                   <div 
                     key={index} 
-                    className={`absolute top-0 bottom-0 ${bgColor} transition-all duration-300 hover:scale-105 hover:shadow-lg`}
-                    style={{ 
-                      width: `${width}%`,
-                      left: `${leftPosition}%`
-                    }}
+                    className={`${bgColor} h-12 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-lg relative group`}
                   >
                     <div className="absolute inset-0 flex items-center justify-center text-white p-2">
                       <span className="font-bold text-sm whitespace-nowrap">{step.duration}</span>
