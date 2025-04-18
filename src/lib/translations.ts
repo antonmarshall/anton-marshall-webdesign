@@ -43,7 +43,7 @@ export const translations: Translations = {
     'portfolio.photo.desc': 'Kreative Website für Fotografie Studio',
     
     // Pricing
-    'price.title': 'Preis',
+    'price.title': 'Preis (test if it changes !!!)',
     'price.subtitle': 'Professionelle Website-Erstellung – Komplettpaket',
     'price.fixedPrice': 'Einmaliger Festpreis',
     'price.includes': 'Leistungsumfang',
