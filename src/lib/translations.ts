@@ -22,7 +22,7 @@ export const translations: Translations = {
     
     // Hero
     'hero.title': 'Professionelle Webseiten für Ihr Unternehmen',
-    'hero.subtitle': 'Maßgeschneiderte Webseiten, die Ihr Unternehmen zum Strahlen bringen',
+    'hero.subtitle': 'Maßgeschneiderte Webseiten für einen souveränen online Auftritt',
     'hero.cta': 'Kostenlose Beratung',
     
     // Portfolio

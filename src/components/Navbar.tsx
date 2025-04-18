@@ -54,7 +54,7 @@ const Navbar = () => {
       lastScrollY.current = currentScrollY;
 
       // Update active section based on scroll position
-      const sections = ['home', 'workflow', 'about', 'portfolio', 'strengths', 'price', 'contact'];
+      const sections = ['home', 'workflow', 'about', 'portfolio', 'price', 'contact'];
       let foundActive = false;
       
       // Check sections in reverse order to prioritize the one most in view
@@ -183,12 +183,6 @@ const Navbar = () => {
             {t('portfolio')}
           </button>
           <button 
-            onClick={() => navigateToSection('strengths')} 
-            className={getNavItemClass('strengths')}
-          >
-            {t('about.title')}
-          </button>
-          <button 
             onClick={() => navigateToSection('price')} 
             className={getNavItemClass('price')}
           >
@@ -201,13 +195,6 @@ const Navbar = () => {
             {t('contact')}
           </button>
           <LanguageSwitcher />
-          <Button 
-            onClick={() => navigateToSection('contact')}
-            size="sm" 
-            className="bg-primary hover:bg-primary/90 text-white"
-          >
-            {t('hero.cta')}
-          </Button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -256,12 +243,6 @@ const Navbar = () => {
               {t('portfolio')}
             </button>
             <button 
-              onClick={() => navigateToSection('strengths')} 
-              className={getNavItemClass('strengths')}
-            >
-              {t('about.title')}
-            </button>
-            <button 
               onClick={() => navigateToSection('price')} 
               className={getNavItemClass('price')}
             >
@@ -273,12 +254,6 @@ const Navbar = () => {
             >
               {t('contact')}
             </button>
-            <Button 
-              onClick={() => navigateToSection('contact')}
-              className="w-full bg-primary hover:bg-primary/90 text-white"
-            >
-              {t('hero.cta')}
-            </Button>
           </div>
         </div>
       )}
