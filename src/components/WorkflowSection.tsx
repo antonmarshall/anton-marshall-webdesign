@@ -1,32 +1,38 @@
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { PhoneCall, Code, MessageSquare, CheckCircle, GraduationCap } from 'lucide-react';
+import { PhoneCall, Search, Code, MonitorCheck, CloudUpload, GraduationCap } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const WorkflowSection = () => {
   const { t } = useLanguage();
 
-  const steps = [{
-    icon: <PhoneCall size={24} />,
-    title: t('workflow.step1.title'),
-    desc: t('workflow.step1.desc'),
-    detail: t('workflow.step1.detail')
-  }, {
-    icon: <Code size={24} />,
-    title: t('workflow.step2.title'),
-    desc: t('workflow.step2.desc'),
-    detail: t('workflow.step2.detail')
-  }, {
-    icon: <MessageSquare size={24} />,
-    title: t('workflow.step3.title'),
-    desc: t('workflow.step3.desc'),
-    detail: t('workflow.step3.detail')
-  }, {
-    icon: <CheckCircle size={24} />,
-    title: t('workflow.step4.title'),
-    desc: t('workflow.step4.desc'),
-    detail: t('workflow.step4.detail')
-  }];
+  const steps = [
+    {
+      icon: <PhoneCall size={24} />,
+      title: "Kostenloses Erstgespräch",
+      subtitle: "30 Minuten zur groben Bedarfsklärung"
+    },
+    {
+      icon: <Search size={24} />,
+      title: "Detaillierter Discovery-Call",
+      subtitle: "30 Minuten zur präzisen Festlegung von Scope & Zielen"
+    },
+    {
+      icon: <Code size={24} />,
+      title: "Design & Programmierung",
+      subtitle: "Wireframes, visuelles Design & technische Umsetzung"
+    },
+    {
+      icon: <MonitorCheck size={24} />,
+      title: "Review & Feedback",
+      subtitle: "Live-Demo & Änderungswünsche aufnehmen"
+    },
+    {
+      icon: <CloudUpload size={24} />,
+      title: "Finalisierung & Upload",
+      subtitle: "Letzte Anpassungen, Liveschaltung & Übergabe"
+    }
+  ];
 
   return (
     <section id="workflow" className="py-20 bg-white">
@@ -57,44 +63,29 @@ const WorkflowSection = () => {
           </p>
         </div>
 
+        {/* Workflow Steps */}
         <div className="max-w-6xl mx-auto">
-          <div className="relative">
-            {/* Timeline line - visible on mobile and desktop */}
-            <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-primary transform -translate-x-1/2 md:hidden"></div>
-            <div className="absolute left-0 right-0 top-1/2 h-0.5 bg-primary transform -translate-y-1/2 hidden md:block"></div>
-            
-            {/* Steps */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
-              {steps.map((step, index) => (
-                <div key={index} className="group relative h-full">
-                  <div className="bg-white p-4 md:p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 relative z-10 h-full flex flex-col">
-                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-4">
-                      {step.icon}
-                    </div>
-                    <h3 className="text-base md:text-lg font-semibold text-center mb-2">{step.title}</h3>
-                    <p className="text-gray-600 text-center text-sm flex-1">{step.desc}</p>
-                    <div className="absolute inset-0 bg-primary rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <p className="text-white text-center p-4 text-sm">{step.detail}</p>
-                    </div>
-                  </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
+            {steps.map((step, index) => (
+              <div key={index} className="bg-white rounded-2xl shadow-md p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-4">
+                  {step.icon}
                 </div>
-              ))}
-            </div>
+                <h3 className="text-lg font-bold text-center mb-2">{step.title}</h3>
+                <p className="text-gray-600 text-center text-sm">{step.subtitle}</p>
+              </div>
+            ))}
           </div>
 
-          {/* Timeline Graph */}
-          <div className="mt-12 bg-white rounded-lg shadow-lg p-6 md:p-8">
-            <h3 className="text-xl md:text-2xl font-semibold mb-6 text-gray-900 text-center">
-              {t('workflow.timeline')}
-            </h3>
+          {/* Timeline */}
+          <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
+            <h3 className="text-xl font-semibold mb-6 text-center">Gesamtdauer: 3 Wochen</h3>
             
             {/* Timeline Bar */}
             <div className="relative h-8 bg-gray-100 rounded-full overflow-hidden mb-8">
-              <div className="absolute top-0 left-0 h-full bg-primary rounded-full" style={{ width: '100%' }}>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-white font-medium text-sm">3 Wochen</span>
-                </div>
-              </div>
+              <div className="absolute top-0 left-0 h-full bg-primary rounded-full" style={{ width: '33.33%' }}></div>
+              <div className="absolute top-0 left-1/3 h-full bg-primary/80 rounded-full" style={{ width: '33.33%' }}></div>
+              <div className="absolute top-0 left-2/3 h-full bg-primary/60 rounded-full" style={{ width: '33.33%' }}></div>
             </div>
             
             {/* Timeline Steps */}
@@ -103,32 +94,22 @@ const WorkflowSection = () => {
                 <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-2">
                   <span className="font-bold">1</span>
                 </div>
-                <p className="text-sm font-medium">Beratung</p>
-                <p className="text-xs text-gray-500">Tag 1-2</p>
+                <p className="text-sm font-medium">Erstgespräch</p>
+                <p className="text-xs text-gray-500">Woche 1</p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-2">
                   <span className="font-bold">2</span>
                 </div>
-                <p className="text-sm font-medium">Design</p>
-                <p className="text-xs text-gray-500">Tag 3-10</p>
+                <p className="text-sm font-medium">Discovery-Call & Planung</p>
+                <p className="text-xs text-gray-500">Woche 2</p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-2">
                   <span className="font-bold">3</span>
                 </div>
-                <p className="text-sm font-medium">Entwicklung</p>
-                <p className="text-xs text-gray-500">Tag 11-21</p>
-              </div>
-            </div>
-            
-            {/* Effort Info */}
-            <div className="mt-8 bg-gradient-to-r from-accent/10 to-primary/10 rounded-lg p-4 flex items-center justify-center">
-              <div className="flex items-center gap-3">
-                <PhoneCall size={20} className="text-primary" />
-                <span className="font-medium text-sm md:text-base">
-                  {t('workflow.effort')}
-                </span>
+                <p className="text-sm font-medium">Umsetzung & Finalisierung</p>
+                <p className="text-xs text-gray-500">Woche 3</p>
               </div>
             </div>
           </div>
