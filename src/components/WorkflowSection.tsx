@@ -93,7 +93,6 @@ const WorkflowSection = () => {
                     </div>
                     <h3 className="text-base md:text-lg font-semibold text-center mb-2">{step.title}</h3>
                     <p className="text-gray-600 text-center text-sm flex-1">{step.subtitle}</p>
-                    <p className="text-primary font-medium text-center mt-2">{step.duration}</p>
                   </div>
                 </div>
               ))}
@@ -101,11 +100,9 @@ const WorkflowSection = () => {
           </div>
 
           {/* Timeline Bar */}
-          <div className="mt-12 bg-white rounded-2xl shadow-md p-4 md:p-6">
-            <h3 className="text-xl font-semibold mb-6 text-center">Gesamtdauer: {totalDays} Tage</h3>
-            
+          <div className="mt-4">
             {/* Timeline Segments */}
-            <div className="flex flex-col md:flex-row h-24 md:h-16 rounded-2xl overflow-hidden">
+            <div className="flex flex-col md:flex-row h-12 rounded-2xl overflow-hidden">
               {steps.map((step, index) => {
                 const width = (parseInt(step.duration) / totalDays) * 100;
                 const isEven = index % 2 === 0;
@@ -117,9 +114,8 @@ const WorkflowSection = () => {
                     className={`group relative ${bgColor} transition-all duration-300 hover:scale-105 hover:shadow-lg`}
                     style={{ width: `${width}%` }}
                   >
-                    <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-2">
-                      <span className="font-bold text-sm md:text-base">{step.duration}</span>
-                      <span className="text-xs md:text-sm">{step.shortName}</span>
+                    <div className="absolute inset-0 flex items-center justify-center text-white p-2">
+                      <span className="font-bold text-sm">{step.duration}</span>
                     </div>
                     
                     {/* Tooltip */}
