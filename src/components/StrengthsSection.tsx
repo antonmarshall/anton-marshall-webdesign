@@ -15,31 +15,6 @@ const StrengthsSection = () => {
             {t('about.desc')}
           </p>
         </div>
-        
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-semibold mb-3 text-primary">Kreativität</h3>
-              <p className="text-gray-600">
-                {t('about.strengths.creativity')}
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-semibold mb-3 text-primary">Technische Expertise</h3>
-              <p className="text-gray-600">
-                {t('about.strengths.technical')}
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-semibold mb-3 text-primary">Kundenorientierung</h3>
-              <p className="text-gray-600">
-                {t('about.strengths.customer')}
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

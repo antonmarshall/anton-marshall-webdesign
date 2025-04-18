@@ -18,6 +18,7 @@ export const translations: Translations = {
     'contact': 'Kontakt',
     'navigation': 'Navigation',
     'brand.name': 'Anton Marshall WebDesign',
+    'about.menu': 'Über mich',
     
     // Hero
     'hero.title': 'Professionelle Webseiten für Ihr Unternehmen',
@@ -85,6 +86,9 @@ export const translations: Translations = {
     'contact.send': 'Nachricht senden',
     'contact.success': 'Vielen Dank für Ihre Nachricht! Ich werde mich in Kürze bei Ihnen melden.',
     'contact.error': 'Es gab ein Problem beim Senden Ihrer Nachricht. Bitte versuchen Sie es später erneut.',
+    'contact.whatsapp': 'WhatsApp',
+    'contact.schedule': 'Termin vereinbaren',
+    'contact.minutes': 'Minuten',
     
     // Footer
     'footer.rights': 'Alle Rechte vorbehalten',
@@ -123,6 +127,7 @@ export const translations: Translations = {
     'contact': 'Contact',
     'navigation': 'Navigation',
     'brand.name': 'Anton Marshall WebDesign',
+    'about.menu': 'About Me',
     
     // Hero
     'hero.title': 'Professional Websites for Your Business',

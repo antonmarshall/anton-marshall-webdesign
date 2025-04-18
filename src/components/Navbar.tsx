@@ -54,7 +54,7 @@ const Navbar = () => {
       lastScrollY.current = currentScrollY;
 
       // Update active section based on scroll position
-      const sections = ['home', 'portfolio', 'workflow', 'price', 'contact'];
+      const sections = ['home', 'workflow', 'about', 'portfolio', 'strengths', 'price', 'contact'];
       let foundActive = false;
       
       // Check sections in reverse order to prioritize the one most in view
@@ -165,16 +165,28 @@ const Navbar = () => {
             {t('home')}
           </button>
           <button 
+            onClick={() => navigateToSection('workflow')} 
+            className={getNavItemClass('workflow')}
+          >
+            {t('workflow')}
+          </button>
+          <button 
+            onClick={() => navigateToSection('about')} 
+            className={getNavItemClass('about')}
+          >
+            {t('about.menu')}
+          </button>
+          <button 
             onClick={() => navigateToSection('portfolio')} 
             className={getNavItemClass('portfolio')}
           >
             {t('portfolio')}
           </button>
           <button 
-            onClick={() => navigateToSection('workflow')} 
-            className={getNavItemClass('workflow')}
+            onClick={() => navigateToSection('strengths')} 
+            className={getNavItemClass('strengths')}
           >
-            {t('workflow')}
+            {t('about.title')}
           </button>
           <button 
             onClick={() => navigateToSection('price')} 
@@ -226,16 +238,28 @@ const Navbar = () => {
               {t('home')}
             </button>
             <button 
+              onClick={() => navigateToSection('workflow')} 
+              className={getNavItemClass('workflow')}
+            >
+              {t('workflow')}
+            </button>
+            <button 
+              onClick={() => navigateToSection('about')} 
+              className={getNavItemClass('about')}
+            >
+              {t('about.menu')}
+            </button>
+            <button 
               onClick={() => navigateToSection('portfolio')} 
               className={getNavItemClass('portfolio')}
             >
               {t('portfolio')}
             </button>
             <button 
-              onClick={() => navigateToSection('workflow')} 
-              className={getNavItemClass('workflow')}
+              onClick={() => navigateToSection('strengths')} 
+              className={getNavItemClass('strengths')}
             >
-              {t('workflow')}
+              {t('about.title')}
             </button>
             <button 
               onClick={() => navigateToSection('price')} 
