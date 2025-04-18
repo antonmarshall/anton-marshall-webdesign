@@ -160,32 +160,9 @@ const HeroSlider = () => {
         </div>
       </div>
 
-      {/* Navigation Arrows */}
-      <button
-        onClick={goToPrevious}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/30 hover:bg-black/50 p-2 rounded-full text-white transition-colors"
-      >
-        <ChevronLeft size={24} />
-      </button>
-      <button
-        onClick={goToNext}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/30 hover:bg-black/50 p-2 rounded-full text-white transition-colors"
-      >
-        <ChevronRight size={24} />
-      </button>
-
-      {/* Indicators */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex space-x-2">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all ${
-              index === currentIndex ? 'bg-white scale-125' : 'bg-white/50'
-            }`}
-          />
-        ))}
-      </div>
+      {/* Navigation Arrows - Removed */}
+      
+      {/* Indicators - Removed */}
     </div>
   );
 };
