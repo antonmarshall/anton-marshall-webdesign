@@ -11,33 +11,41 @@ const WorkflowSection = () => {
       icon: <PhoneCall size={24} />,
       title: "Kostenloses Erstgespräch",
       subtitle: "Bedarf klären",
-      duration: "2 Tage"
+      duration: "2 Tage",
+      shortName: "Erstgespräch"
     },
     {
       icon: <MessageSquare size={24} />,
       title: "Ideen-Gespräch",
       subtitle: "Gemeinsam 30 Min. brainstormen",
-      duration: "2 Tage"
+      duration: "2 Tage",
+      shortName: "Ideen"
     },
     {
       icon: <Code size={24} />,
       title: "Design & Umsetzung",
       subtitle: "Entwurf fertigstellen",
-      duration: "14 Tage"
+      duration: "14 Tage",
+      shortName: "Design"
     },
     {
       icon: <MonitorCheck size={24} />,
       title: "Review & Feedback",
       subtitle: "Live-Demo & Korrekturen",
-      duration: "3 Tage"
+      duration: "3 Tage",
+      shortName: "Review"
     },
     {
       icon: <CloudUpload size={24} />,
       title: "Fertigstellung & Upload",
       subtitle: "Online schalten",
-      duration: "3 Tage"
+      duration: "3 Tage",
+      shortName: "Upload"
     }
   ];
+
+  // Calculate total days for proportional widths
+  const totalDays = steps.reduce((sum, step) => sum + parseInt(step.duration), 0);
 
   return (
     <section id="workflow" className="py-20 bg-white">
@@ -92,16 +100,42 @@ const WorkflowSection = () => {
             </div>
           </div>
 
-          {/* Timeline Numbers */}
-          <div className="mt-8 flex justify-between px-4 md:px-0">
-            {steps.map((step, index) => (
-              <div key={index} className="flex flex-col items-center">
-                <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white mb-2">
-                  <span className="font-bold">{index + 1}</span>
-                </div>
-                <p className="text-xs text-gray-500">{step.duration}</p>
-              </div>
-            ))}
+          {/* Timeline Bar */}
+          <div className="mt-12 bg-white rounded-2xl shadow-md p-4 md:p-6">
+            <h3 className="text-xl font-semibold mb-6 text-center">Gesamtdauer: {totalDays} Tage</h3>
+            
+            {/* Timeline Segments */}
+            <div className="flex flex-col md:flex-row h-24 md:h-16 rounded-2xl overflow-hidden">
+              {steps.map((step, index) => {
+                const width = (parseInt(step.duration) / totalDays) * 100;
+                const isEven = index % 2 === 0;
+                const bgColor = isEven ? 'bg-blue-500' : 'bg-blue-600';
+                
+                return (
+                  <div 
+                    key={index} 
+                    className={`group relative ${bgColor} transition-all duration-300 hover:brightness-110`}
+                    style={{ width: `${width}%` }}
+                  >
+                    <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-2">
+                      <span className="font-bold text-sm md:text-base">{step.duration}</span>
+                      <span className="text-xs md:text-sm">{step.shortName}</span>
+                    </div>
+                    
+                    {/* Tooltip */}
+                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-48 bg-white rounded-lg shadow-lg p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 pointer-events-none">
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center text-white">
+                          {step.icon}
+                        </div>
+                        <span className="font-semibold text-sm">{step.title}</span>
+                      </div>
+                      <p className="text-xs text-gray-600">{step.subtitle}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
 
           <div className="mt-12 md:mt-16 bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg p-6 md:p-8">
