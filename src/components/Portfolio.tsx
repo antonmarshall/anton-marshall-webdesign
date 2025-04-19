@@ -23,7 +23,7 @@ const Portfolio = () => {
           <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
             <div className="aspect-video bg-gray-100 relative">
               <img
-                src="/images/bau_unternehmer.png"
+                src={`${import.meta.env.BASE_URL}images/bau_unternehmer.png`}
                 alt={t('portfolio.construction')}
                 className="w-full h-full object-cover"
               />
@@ -46,7 +46,7 @@ const Portfolio = () => {
           <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
             <div className="aspect-video bg-gray-100 relative">
               <img
-                src="/images/computer.png"
+                src={`${import.meta.env.BASE_URL}images/computer.png`}
                 alt={t('portfolio.computer')}
                 className="w-full h-full object-cover"
               />
@@ -69,7 +69,7 @@ const Portfolio = () => {
           <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
             <div className="aspect-video bg-gray-100 relative">
               <img
-                src="/images/gärtner.png"
+                src={`${import.meta.env.BASE_URL}images/gärtner.png`}
                 alt={t('portfolio.garden')}
                 className="w-full h-full object-cover"
               />
@@ -92,7 +92,7 @@ const Portfolio = () => {
           <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
             <div className="aspect-video bg-gray-100 relative">
               <img
-                src="/images/japanischer_teeladen.png"
+                src={`${import.meta.env.BASE_URL}images/japanischer_teeladen.png`}
                 alt={t('portfolio.tea')}
                 className="w-full h-full object-cover"
               />
@@ -115,7 +115,7 @@ const Portfolio = () => {
           <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
             <div className="aspect-video bg-gray-100 relative">
               <img
-                src="/images/psychotherapie.png"
+                src={`${import.meta.env.BASE_URL}images/psychotherapie.png`}
                 alt={t('portfolio.psycho')}
                 className="w-full h-full object-cover"
               />
@@ -138,7 +138,7 @@ const Portfolio = () => {
           <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
             <div className="aspect-video bg-gray-100 relative">
               <img
-                src="/images/yoga_knete.png"
+                src={`${import.meta.env.BASE_URL}images/yoga_knete.png`}
                 alt={t('portfolio.photo')}
                 className="w-full h-full object-cover"
               />
