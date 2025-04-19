@@ -93,6 +93,17 @@ const ContactSection = () => {
               </div>
               
               <div>
+                <label htmlFor="project" className="block text-sm font-medium text-gray-700 mb-1">
+                  {language === 'de' ? "Wie würden Sie Ihr Unternehmen oder Projekt beschreiben?" : "How would you describe your company or project?"}
+                </label>
+                <Textarea 
+                  id="project" 
+                  placeholder={language === 'de' ? "Kurze Beschreibung Ihres Unternehmens oder Projekts..." : "Brief description of your company or project..."} 
+                  rows={3}
+                />
+              </div>
+              
+              <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
                   {t('contact.message')}
                 </label>
