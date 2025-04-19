@@ -1,14 +1,14 @@
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Heart, Euro, Palette, Lightbulb } from 'lucide-react';
+import { ArrowRight, Target, Euro, Palette, Coffee } from 'lucide-react';
 
 const AboutMe = () => {
   const { t } = useLanguage();
 
   const strengths = [
     {
-      icon: <Heart className="h-8 w-8 text-primary" />,
+      icon: <Target className="h-8 w-8 text-primary" />,
       title: t('strengths.empathy.title'),
       subtitle: t('strengths.empathy.subtitle')
     },
@@ -23,7 +23,7 @@ const AboutMe = () => {
       subtitle: t('strengths.quality.subtitle')
     },
     {
-      icon: <Lightbulb className="h-8 w-8 text-primary" />,
+      icon: <Coffee className="h-8 w-8 text-primary" />,
       title: t('strengths.creativity.title'),
       subtitle: t('strengths.creativity.subtitle')
     }
