@@ -19,6 +19,7 @@ export const translations: Translations = {
     'navigation': 'Navigation',
     'brand.name': 'Anton Marshall WebDesign',
     'about.menu': 'Über mich',
+    'about.teaser': 'Ich erstelle professionelle Websites, die Ihr Unternehmen optimal präsentieren und Ihre Kunden begeistern.',
     
     // Hero
     'hero.title': 'Professionelle Webseiten für Ihr Unternehmen',
@@ -74,8 +75,17 @@ export const translations: Translations = {
     
     // About
     'about.title': 'Meine Stärken für Ihr Projekt',
-    'about.desc': 'Ihre Website sollte Ihr Unternehmen optimal präsentieren – klar, benutzerfreundlich und ohne unnötigen Schnickschnack. Ich erstelle Ihnen eine Website, die Ihre Kunden anspricht und zu Handlungen motiviert. Keine versteckten Kosten, keine technischen Hürden. Sie erhalten eine professionelle Website zu einem fairen Preis, die Sie selbst leicht pflegen können.',
-    'about.personal': 'Ich studiere Künstliche Intelligenz an der Universität Groningen. Dort habe ich angefangen mein Studium mit dem Programmieren von Webseiten zu finanzieren. Ich habe einen hohen Anspruch an meine Projekte und höre nicht auf, bevor Ihre Webseite visuell ansprechend, intuitiv und überzeugend ist.',
+    'about.desc': 'Als kleiner Unternehmer brauchen Sie eine Website, die Ihr Unternehmen optimal präsentiert – ohne unnötigen Schnickschnack. Ich erstelle Ihnen eine klare, benutzerfreundliche Website, die Ihre Kunden anspricht und zu Handlungen motiviert. Keine versteckten Kosten, keine technischen Hürden. Sie erhalten eine professionelle Website zu einem fairen Preis, die Sie selbst leicht pflegen können.',
+    'about.personal': 'Ich studiere Künstliche Intelligenz an der Universität Groningen und habe mich auf die Entwicklung benutzerfreundlicher Websites spezialisiert.',
+    'strengths.code.title': 'Moderne Technologien',
+    'strengths.code.subtitle': 'Aktuelle Frameworks und Tools',
+    'strengths.education.title': 'KI-Expertise',
+    'strengths.education.subtitle': 'Studium der Künstlichen Intelligenz',
+    'strengths.quality.title': 'Hohe Qualität',
+    'strengths.quality.subtitle': 'Perfektionismus in jedem Detail',
+    'strengths.creativity.title': 'Kreative Lösungen',
+    'strengths.creativity.subtitle': 'Einzigartige Designs für Ihr Unternehmen',
+    'contact.cta': 'Jetzt Kontakt aufnehmen',
     
     // Contact
     'contact.title': 'Kontakt',
@@ -128,6 +138,7 @@ export const translations: Translations = {
     'navigation': 'Navigation',
     'brand.name': 'Anton Marshall WebDesign',
     'about.menu': 'About Me',
+    'about.teaser': 'I create professional websites that optimally present your business and delight your customers.',
     
     // Hero
     'hero.title': 'Professional Websites for Your Business',
@@ -182,9 +193,18 @@ export const translations: Translations = {
     'workflow.effort': 'Your effort: Only 2-3 short calls',
     
     // About
-    'about.title': 'Why Choose Me?',
-    'about.desc': "Professional websites typically cost well over €800. With me, you get an authentic and structured website for this price. Whether you want a striking or a simple website. No clear vision? No problem! I'll guide you through the process with creative ideas, without overwhelming you with technical details. And if you already have specific ideas, I'll implement them precisely.",
-    'about.personal': "I'm studying Artificial Intelligence at the University of Groningen. That's where I started financing my studies by programming websites. I have high standards for my projects and don't stop until your website is visually appealing, intuitive, and convincing.",
+    'about.title': 'My Strengths for Your Project',
+    'about.desc': 'As a small business owner, you need a website that optimally presents your company – without unnecessary frills. I create a clear, user-friendly website that appeals to your customers and motivates them to take action. No hidden costs, no technical hurdles. You get a professional website at a fair price that you can easily maintain yourself.',
+    'about.personal': 'I study Artificial Intelligence at the University of Groningen and have specialized in developing user-friendly websites.',
+    'strengths.code.title': 'Modern Technologies',
+    'strengths.code.subtitle': 'Current frameworks and tools',
+    'strengths.education.title': 'AI Expertise',
+    'strengths.education.subtitle': 'Studying Artificial Intelligence',
+    'strengths.quality.title': 'High Quality',
+    'strengths.quality.subtitle': 'Perfectionism in every detail',
+    'strengths.creativity.title': 'Creative Solutions',
+    'strengths.creativity.subtitle': 'Unique designs for your business',
+    'contact.cta': 'Contact Me Now',
     
     // Contact
     'contact.title': 'Contact Me',
