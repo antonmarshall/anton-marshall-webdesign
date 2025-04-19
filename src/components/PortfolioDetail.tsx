@@ -10,14 +10,14 @@ const PortfolioDetail = () => {
 
   // This would typically come from a data source or API
   const portfolioItems = {
-    'carpentry': {
+    'construction': {
       title: {
-        de: 'Tischlerei Website',
-        en: 'Carpentry Website'
+        de: 'Bauunternehmen Website',
+        en: 'Construction Company Website'
       },
       description: {
-        de: 'Eine moderne Website für eine lokale Tischlerei mit Portfolio-Galerie und Kontaktformular.',
-        en: 'A modern website for a local carpentry business with portfolio gallery and contact form.'
+        de: 'Eine professionelle Website für ein Bauunternehmen mit Portfolio-Galerie und Kontaktformular.',
+        en: 'A professional website for a construction company with portfolio gallery and contact form.'
       },
       features: {
         de: [
@@ -35,7 +35,131 @@ const PortfolioDetail = () => {
       },
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite']
     },
-    // Add more portfolio items here
+    'computer': {
+      title: {
+        de: 'Computer Service Website',
+        en: 'Computer Service Website'
+      },
+      description: {
+        de: 'Eine moderne Website für PC-Dienstleistungen mit Service-Angeboten und Online-Buchung.',
+        en: 'A modern website for PC services with service offerings and online booking.'
+      },
+      features: {
+        de: [
+          'Responsive Design',
+          'Service-Angebote',
+          'Online-Buchung',
+          'Kundendashboard'
+        ],
+        en: [
+          'Responsive Design',
+          'Service Offerings',
+          'Online Booking',
+          'Customer Dashboard'
+        ]
+      },
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite']
+    },
+    'garden': {
+      title: {
+        de: 'Gärtnerei Website',
+        en: 'Garden Center Website'
+      },
+      description: {
+        de: 'Eine frische Website für eine Gärtnerei mit Produktkatalog und saisonalen Angeboten.',
+        en: 'A fresh website for a garden center with product catalog and seasonal offers.'
+      },
+      features: {
+        de: [
+          'Responsive Design',
+          'Produktkatalog',
+          'Saisonale Angebote',
+          'Newsletter-Anmeldung'
+        ],
+        en: [
+          'Responsive Design',
+          'Product Catalog',
+          'Seasonal Offers',
+          'Newsletter Signup'
+        ]
+      },
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite']
+    },
+    'tea': {
+      title: {
+        de: 'Japanischer Teeladen',
+        en: 'Japanese Tea Shop'
+      },
+      description: {
+        de: 'Ein eleganter Online-Shop für japanische Tees mit detaillierten Produktbeschreibungen.',
+        en: 'An elegant online shop for Japanese teas with detailed product descriptions.'
+      },
+      features: {
+        de: [
+          'Responsive Design',
+          'Produktkatalog',
+          'Warenkorb',
+          'Sicherer Checkout'
+        ],
+        en: [
+          'Responsive Design',
+          'Product Catalog',
+          'Shopping Cart',
+          'Secure Checkout'
+        ]
+      },
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite']
+    },
+    'psycho': {
+      title: {
+        de: 'Psychotherapie Website',
+        en: 'Psychotherapy Website'
+      },
+      description: {
+        de: 'Eine vertrauensvolle Online-Präsenz für Therapeuten mit Terminbuchung und Informationsseiten.',
+        en: 'A trustworthy online presence for therapists with appointment booking and information pages.'
+      },
+      features: {
+        de: [
+          'Responsive Design',
+          'Terminbuchung',
+          'Informationsseiten',
+          'Kontaktformular'
+        ],
+        en: [
+          'Responsive Design',
+          'Appointment Booking',
+          'Information Pages',
+          'Contact Form'
+        ]
+      },
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite']
+    },
+    'photo': {
+      title: {
+        de: 'Fotografie Studio Website',
+        en: 'Photography Studio Website'
+      },
+      description: {
+        de: 'Eine kreative Website für ein Fotografie Studio mit Galerie und Buchungsmöglichkeit.',
+        en: 'A creative website for a photography studio with gallery and booking option.'
+      },
+      features: {
+        de: [
+          'Responsive Design',
+          'Galerie',
+          'Terminbuchung',
+          'Kontaktformular'
+        ],
+        en: [
+          'Responsive Design',
+          'Gallery',
+          'Appointment Booking',
+          'Contact Form'
+        ]
+      },
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite']
+    }
   };
 
   const item = portfolioItems[id as keyof typeof portfolioItems];

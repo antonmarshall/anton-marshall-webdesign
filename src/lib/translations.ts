@@ -45,7 +45,7 @@ export const translations: Translations = {
     
     // Pricing
     'price.title': 'Preis',
-    'price.subtitle': 'Professionelle Website-Erstellung – Komplettpaket',
+    'price.subtitle': 'Als Student biete ich Ihnen professionelle Websites zu fairen Preisen',
     'price.fixedPrice': 'Einmaliger Festpreis',
     'price.includes': 'Leistungsumfang',
     'price.feature1': 'Individuelle Gestaltung und Entwicklung Ihrer Website',
@@ -154,7 +154,7 @@ export const translations: Translations = {
     
     // Pricing
     'price.title': 'Price',
-    'price.subtitle': 'Professional Website Creation – Complete Package',
+    'price.subtitle': 'As a student, I offer you professional websites at fair prices',
     'price.fixedPrice': 'One-time Fixed Price',
     'price.includes': 'Services Included',
     'price.feature1': 'Custom design and development of your website',
