@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Heart, Clock, Shield, Sparkles } from 'lucide-react';
+import { ArrowRight, Heart, Euro, Palette, Lightbulb } from 'lucide-react';
 
 const AboutMe = () => {
   const { t } = useLanguage();
@@ -13,17 +13,17 @@ const AboutMe = () => {
       subtitle: t('strengths.empathy.subtitle')
     },
     {
-      icon: <Clock className="h-8 w-8 text-primary" />,
+      icon: <Euro className="h-8 w-8 text-primary" />,
       title: t('strengths.speed.title'),
       subtitle: t('strengths.speed.subtitle')
     },
     {
-      icon: <Shield className="h-8 w-8 text-primary" />,
+      icon: <Palette className="h-8 w-8 text-primary" />,
       title: t('strengths.quality.title'),
       subtitle: t('strengths.quality.subtitle')
     },
     {
-      icon: <Sparkles className="h-8 w-8 text-primary" />,
+      icon: <Lightbulb className="h-8 w-8 text-primary" />,
       title: t('strengths.creativity.title'),
       subtitle: t('strengths.creativity.subtitle')
     }
@@ -44,13 +44,9 @@ const AboutMe = () => {
             <div className="flex flex-col items-center">
               <div className="w-64 h-64 rounded-full overflow-hidden shadow-lg mb-6 bg-gray-200">
                 <img
-                  src="/images/anton_marshall.png"
+                  src="https://via.placeholder.com/400x400?text=Anton+Marshall"
                   alt="Anton Marshall"
                   className="w-full h-full object-cover"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.src = "https://via.placeholder.com/400x400?text=Anton+Marshall";
-                  }}
                 />
               </div>
               <p className="text-lg text-gray-600 mt-4 text-center">
