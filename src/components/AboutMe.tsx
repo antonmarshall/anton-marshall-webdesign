@@ -44,7 +44,7 @@ const AboutMe = () => {
             <div className="flex flex-col items-center">
               <div className="w-64 h-64 rounded-full overflow-hidden shadow-lg mb-6 bg-gray-200">
                 <img
-                  src="https://via.placeholder.com/400x400?text=Anton+Marshall"
+                  src="/images/profil_bild.png"
                   alt="Anton Marshall"
                   className="w-full h-full object-cover"
                 />
