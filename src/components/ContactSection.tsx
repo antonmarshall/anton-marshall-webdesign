@@ -77,19 +77,21 @@ const ContactSection = () => {
 
           {/* Contact Form */}
           <div className="bg-white p-8 rounded-lg shadow-sm">
-            <form className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                  {t('contact.name')}
-                </label>
-                <Input id="name" type="text" placeholder={language === 'de' ? "Max Mustermann" : "John Doe"} />
-              </div>
-              
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                  {t('contact.email')}
-                </label>
-                <Input id="email" type="email" placeholder={language === 'de' ? "max@beispiel.de" : "john@example.com"} />
+            <form className="space-y-6 max-h-[600px] overflow-y-auto pr-2">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                    {t('contact.name')}
+                  </label>
+                  <Input id="name" type="text" placeholder={language === 'de' ? "Max Mustermann" : "John Doe"} />
+                </div>
+                
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                    {t('contact.email')}
+                  </label>
+                  <Input id="email" type="email" placeholder={language === 'de' ? "max@beispiel.de" : "john@example.com"} />
+                </div>
               </div>
               
               <div>
