@@ -55,7 +55,7 @@ export const translations: Translations = {
     'price.payment': 'Hinweis: Die Zahlung erfolgt erst nach Fertigstellung und Ihrer Freigabe zur Veröffentlichung der Website.',
     
     // Workflow
-    'workflow.title': '3 Wochen bis zur fertigen Website',
+    'workflow.title': '3 Wochen bis zur fertigen Website',
     'workflow.subtitle': 'Klarer Ablauf von der ersten Idee bis zur fertigen Website',
     'workflow.step1.title': 'Beratung',
     'workflow.step1.desc': 'Kostenlose Erstberatung zur Klärung Ihrer Wünsche und Ziele',
@@ -74,7 +74,7 @@ export const translations: Translations = {
     
     // About
     'about.title': 'Meine Stärken für Ihr Projekt',
-    'about.desc': 'Die einfachsten Unternehmenswebsites beginnen bei professionellen Agenturen oft erst ab 1.500 € und können je nach Umfang und Anforderungen schnell deutlich teurer werden. Bei mir erhalten Sie eine authentische und strukturierte Website zu einem fairen Preis. Ob Sie eine auffällige oder eine schlichte Website möchten – ich begleite Sie mit kreativen Ideen durch den gesamten Prozess, ohne Sie mit technischen Details zu überfordern. Falls Sie bereits konkrete Vorstellungen haben, setze ich diese präzise um.',
+    'about.desc': 'Als kleiner Unternehmer brauchen Sie eine Website, die Ihr Unternehmen optimal präsentiert – ohne unnötigen Schnickschnack. Ich erstelle Ihnen eine klare, benutzerfreundliche Website, die Ihre Kunden anspricht und zu Handlungen motiviert. Keine versteckten Kosten, keine technischen Hürden. Sie erhalten eine professionelle Website zu einem fairen Preis, die Sie selbst leicht pflegen können.',
     'about.personal': 'Ich studiere Künstliche Intelligenz an der Universität Groningen. Dort habe ich angefangen mein Studium mit dem Programmieren von Webseiten zu finanzieren. Ich habe einen hohen Anspruch an meine Projekte und höre nicht auf, bevor Ihre Webseite visuell ansprechend, intuitiv und überzeugend ist.',
     
     // Contact
