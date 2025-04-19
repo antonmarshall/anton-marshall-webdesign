@@ -2,9 +2,55 @@ import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Portfolio = () => {
   const { t } = useLanguage();
+
+  const portfolioItems = [
+    {
+      id: 'construction',
+      title: t('portfolio.construction'),
+      desc: t('portfolio.construction.desc'),
+      image: `${import.meta.env.BASE_URL}images/bau_unternehmer.png`,
+      alt: t('portfolio.construction')
+    },
+    {
+      id: 'computer',
+      title: t('portfolio.computer'),
+      desc: t('portfolio.computer.desc'),
+      image: `${import.meta.env.BASE_URL}images/computer.png`,
+      alt: t('portfolio.computer')
+    },
+    {
+      id: 'garden',
+      title: t('portfolio.garden'),
+      desc: t('portfolio.garden.desc'),
+      image: `${import.meta.env.BASE_URL}images/gärtner.png`,
+      alt: t('portfolio.garden')
+    },
+    {
+      id: 'tea',
+      title: t('portfolio.tea'),
+      desc: t('portfolio.tea.desc'),
+      image: `${import.meta.env.BASE_URL}images/japanischer_teeladen.png`,
+      alt: t('portfolio.tea')
+    },
+    {
+      id: 'psycho',
+      title: t('portfolio.psycho'),
+      desc: t('portfolio.psycho.desc'),
+      image: `${import.meta.env.BASE_URL}images/psychotherapie.png`,
+      alt: t('portfolio.psycho')
+    },
+    {
+      id: 'photo',
+      title: t('portfolio.photo'),
+      desc: t('portfolio.photo.desc'),
+      image: `${import.meta.env.BASE_URL}images/yoga_knete.png`,
+      alt: t('portfolio.photo')
+    }
+  ];
 
   return (
     <section id="portfolio" className="py-20 bg-gradient-to-b from-gray-50 to-white">
@@ -19,143 +65,34 @@ const Portfolio = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {/* Portfolio Item 1 - Bauunternehmen */}
-          <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-            <div className="aspect-video bg-gray-100 relative">
-              <img
-                src={`${import.meta.env.BASE_URL}images/bau_unternehmer.png`}
-                alt={t('portfolio.construction')}
-                className="w-full h-full object-cover"
-              />
+          {portfolioItems.map((item) => (
+            <div key={item.id} className="relative group overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <div className="aspect-video bg-gray-100 relative">
+                <img
+                  src={item.image}
+                  alt={item.alt}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-6 text-center">
+                  <h3 className="text-xl font-semibold mb-2 text-white">
+                    {item.title}
+                  </h3>
+                  <p className="text-white/90 mb-4 line-clamp-1">
+                    {item.desc}
+                  </p>
+                  <Link to={`/portfolio/${item.id}`}>
+                    <Button 
+                      variant="outline" 
+                      className="bg-white text-primary border-white hover:bg-green-500 hover:text-white hover:border-green-500 transition-colors"
+                    >
+                      {t('portfolio.view')}
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
+                </div>
+              </div>
             </div>
-            <div className="p-6">
-              <h3 className="text-xl font-semibold mb-2 text-gray-900">
-                {t('portfolio.construction')}
-              </h3>
-              <p className="text-gray-600 mb-4">
-                {t('portfolio.construction.desc')}
-              </p>
-              <Button variant="outline" className="w-full">
-                {t('portfolio.view')}
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
-          </div>
-
-          {/* Portfolio Item 2 - Computer Service */}
-          <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-            <div className="aspect-video bg-gray-100 relative">
-              <img
-                src={`${import.meta.env.BASE_URL}images/computer.png`}
-                alt={t('portfolio.computer')}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="p-6">
-              <h3 className="text-xl font-semibold mb-2 text-gray-900">
-                {t('portfolio.computer')}
-              </h3>
-              <p className="text-gray-600 mb-4">
-                {t('portfolio.computer.desc')}
-              </p>
-              <Button variant="outline" className="w-full">
-                {t('portfolio.view')}
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
-          </div>
-
-          {/* Portfolio Item 3 - Gärtnerei */}
-          <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-            <div className="aspect-video bg-gray-100 relative">
-              <img
-                src={`${import.meta.env.BASE_URL}images/gärtner.png`}
-                alt={t('portfolio.garden')}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="p-6">
-              <h3 className="text-xl font-semibold mb-2 text-gray-900">
-                {t('portfolio.garden')}
-              </h3>
-              <p className="text-gray-600 mb-4">
-                {t('portfolio.garden.desc')}
-              </p>
-              <Button variant="outline" className="w-full">
-                {t('portfolio.view')}
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
-          </div>
-
-          {/* Portfolio Item 4 - Japanischer Teeladen */}
-          <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-            <div className="aspect-video bg-gray-100 relative">
-              <img
-                src={`${import.meta.env.BASE_URL}images/japanischer_teeladen.png`}
-                alt={t('portfolio.tea')}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="p-6">
-              <h3 className="text-xl font-semibold mb-2 text-gray-900">
-                {t('portfolio.tea')}
-              </h3>
-              <p className="text-gray-600 mb-4">
-                {t('portfolio.tea.desc')}
-              </p>
-              <Button variant="outline" className="w-full">
-                {t('portfolio.view')}
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
-          </div>
-
-          {/* Portfolio Item 5 - Psychotherapie */}
-          <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-            <div className="aspect-video bg-gray-100 relative">
-              <img
-                src={`${import.meta.env.BASE_URL}images/psychotherapie.png`}
-                alt={t('portfolio.psycho')}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="p-6">
-              <h3 className="text-xl font-semibold mb-2 text-gray-900">
-                {t('portfolio.psycho')}
-              </h3>
-              <p className="text-gray-600 mb-4">
-                {t('portfolio.psycho.desc')}
-              </p>
-              <Button variant="outline" className="w-full">
-                {t('portfolio.view')}
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
-          </div>
-
-          {/* Portfolio Item 6 - Fotografie Studio */}
-          <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-            <div className="aspect-video bg-gray-100 relative">
-              <img
-                src={`${import.meta.env.BASE_URL}images/yoga_knete.png`}
-                alt={t('portfolio.photo')}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="p-6">
-              <h3 className="text-xl font-semibold mb-2 text-gray-900">
-                {t('portfolio.photo')}
-              </h3>
-              <p className="text-gray-600 mb-4">
-                {t('portfolio.photo.desc')}
-              </p>
-              <Button variant="outline" className="w-full">
-                {t('portfolio.view')}
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
