@@ -74,7 +74,7 @@ const Portfolio = () => {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-6 text-center">
-                  <h3 className="text-xl font-semibold mb-2 text-white line-clamp-1">
+                  <h3 className="text-xl font-semibold mb-2 text-white">
                     {item.title}
                   </h3>
                   <p className="text-white/90 mb-4 line-clamp-1">
