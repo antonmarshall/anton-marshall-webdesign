@@ -83,8 +83,8 @@ export const translations: Translations = {
     'strengths.speed.subtitle': 'Professionell ohne Agenturpreise',
     'strengths.quality.title': 'Ansprechendes Design',
     'strengths.quality.subtitle': 'Ohne unnötigen Schnickschnack',
-    'strengths.creativity.title': 'Entspannte Zusammenarbeit',
-    'strengths.creativity.subtitle': 'Ohne technische Überforderung',
+    'strengths.creativity.title': 'Stressfrei online',
+    'strengths.creativity.subtitle': 'Ich übernehme die Technik',
     'contact.cta': 'Jetzt Kontakt aufnehmen',
     
     // Contact
