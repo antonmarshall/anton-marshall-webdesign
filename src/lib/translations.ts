@@ -19,7 +19,7 @@ export const translations: Translations = {
     'navigation': 'Navigation',
     'brand.name': 'Anton Marshall WebDesign',
     'about.menu': 'Über mich',
-    'about.teaser': 'Ich erstelle professionelle Websites, die Ihr Unternehmen optimal präsentieren und Ihre Kunden begeistern.',
+    'about.teaser': 'Professionelle Websites für Ihr Unternehmen – Klare Struktur, benutzerfreundlich und ohne unnötigen Schnickschnack.',
     
     // Hero
     'hero.title': 'Professionelle Webseiten für Ihr Unternehmen',
@@ -77,14 +77,16 @@ export const translations: Translations = {
     'about.title': 'Meine Stärken für Ihr Projekt',
     'about.desc': 'Als kleiner Unternehmer brauchen Sie eine Website, die Ihr Unternehmen optimal präsentiert – ohne unnötigen Schnickschnack. Ich erstelle Ihnen eine klare, benutzerfreundliche Website, die Ihre Kunden anspricht und zu Handlungen motiviert. Keine versteckten Kosten, keine technischen Hürden. Sie erhalten eine professionelle Website zu einem fairen Preis, die Sie selbst leicht pflegen können.',
     'about.personal': 'Ich studiere Künstliche Intelligenz an der Universität Groningen und habe mich auf die Entwicklung benutzerfreundlicher Websites spezialisiert.',
-    'strengths.code.title': 'Moderne Technologien',
-    'strengths.code.subtitle': 'Aktuelle Frameworks und Tools',
-    'strengths.education.title': 'KI-Expertise',
-    'strengths.education.subtitle': 'Studium der Künstlichen Intelligenz',
+    'strengths.empathy.title': 'Zuhören & Verstehen',
+    'strengths.empathy.subtitle': 'Ihre Wünsche klar im Blick',
+    'strengths.speed.title': 'Schnelle Umsetzung',
+    'strengths.speed.subtitle': 'Go-Live ohne Stress',
     'strengths.quality.title': 'Hohe Qualität',
     'strengths.quality.subtitle': 'Perfektionismus in jedem Detail',
     'strengths.creativity.title': 'Kreative Lösungen',
     'strengths.creativity.subtitle': 'Einzigartige Designs für Ihr Unternehmen',
+    'strengths.support.title': 'Persönliche Betreuung',
+    'strengths.support.subtitle': 'Direkter Kontakt ohne Umwege',
     'contact.cta': 'Jetzt Kontakt aufnehmen',
     
     // Contact
@@ -138,7 +140,7 @@ export const translations: Translations = {
     'navigation': 'Navigation',
     'brand.name': 'Anton Marshall WebDesign',
     'about.menu': 'About Me',
-    'about.teaser': 'I create professional websites that optimally present your business and delight your customers.',
+    'about.teaser': 'Professional websites for your business – Clear structure, user-friendly and without unnecessary frills.',
     
     // Hero
     'hero.title': 'Professional Websites for Your Business',
@@ -196,14 +198,16 @@ export const translations: Translations = {
     'about.title': 'My Strengths for Your Project',
     'about.desc': 'As a small business owner, you need a website that optimally presents your company – without unnecessary frills. I create a clear, user-friendly website that appeals to your customers and motivates them to take action. No hidden costs, no technical hurdles. You get a professional website at a fair price that you can easily maintain yourself.',
     'about.personal': 'I study Artificial Intelligence at the University of Groningen and have specialized in developing user-friendly websites.',
-    'strengths.code.title': 'Modern Technologies',
-    'strengths.code.subtitle': 'Current frameworks and tools',
-    'strengths.education.title': 'AI Expertise',
-    'strengths.education.subtitle': 'Studying Artificial Intelligence',
+    'strengths.empathy.title': 'Listen & Understand',
+    'strengths.empathy.subtitle': 'Your wishes clearly in focus',
+    'strengths.speed.title': 'Fast Implementation',
+    'strengths.speed.subtitle': 'Go-live without stress',
     'strengths.quality.title': 'High Quality',
     'strengths.quality.subtitle': 'Perfectionism in every detail',
     'strengths.creativity.title': 'Creative Solutions',
     'strengths.creativity.subtitle': 'Unique designs for your business',
+    'strengths.support.title': 'Personal Support',
+    'strengths.support.subtitle': 'Direct contact without detours',
     'contact.cta': 'Contact Me Now',
     
     // Contact

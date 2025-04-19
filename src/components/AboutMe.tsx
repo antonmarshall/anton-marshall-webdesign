@@ -1,31 +1,36 @@
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Code, GraduationCap, CheckCircle, Lightbulb, Users } from 'lucide-react';
+import { ArrowRight, Code, GraduationCap, CheckCircle, Lightbulb, Users, Heart, Clock, Shield, Sparkles } from 'lucide-react';
 
 const AboutMe = () => {
   const { t } = useLanguage();
 
   const strengths = [
     {
-      icon: <Code className="h-8 w-8 text-primary" />,
-      title: t('strengths.code.title'),
-      subtitle: t('strengths.code.subtitle')
+      icon: <Heart className="h-8 w-8 text-primary" />,
+      title: t('strengths.empathy.title'),
+      subtitle: t('strengths.empathy.subtitle')
     },
     {
-      icon: <GraduationCap className="h-8 w-8 text-primary" />,
-      title: t('strengths.education.title'),
-      subtitle: t('strengths.education.subtitle')
+      icon: <Clock className="h-8 w-8 text-primary" />,
+      title: t('strengths.speed.title'),
+      subtitle: t('strengths.speed.subtitle')
     },
     {
-      icon: <CheckCircle className="h-8 w-8 text-primary" />,
+      icon: <Shield className="h-8 w-8 text-primary" />,
       title: t('strengths.quality.title'),
       subtitle: t('strengths.quality.subtitle')
     },
     {
-      icon: <Lightbulb className="h-8 w-8 text-primary" />,
+      icon: <Sparkles className="h-8 w-8 text-primary" />,
       title: t('strengths.creativity.title'),
       subtitle: t('strengths.creativity.subtitle')
+    },
+    {
+      icon: <Users className="h-8 w-8 text-primary" />,
+      title: t('strengths.support.title'),
+      subtitle: t('strengths.support.subtitle')
     }
   ];
 
@@ -49,9 +54,6 @@ const AboutMe = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-3xl font-bold text-primary text-center">
-                Anton Marshall
-              </h3>
               <p className="text-lg text-gray-600 mt-4 text-center">
                 {t('about.personal')}
               </p>
@@ -61,15 +63,16 @@ const AboutMe = () => {
               {strengths.map((strength, index) => (
                 <div 
                   key={index} 
-                  className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg hover:scale-105 transition-all duration-300"
+                  className="bg-white rounded-2xl shadow-md p-4 hover:shadow-lg hover:scale-105 transition-all duration-300"
+                  title={`${strength.title} - ${strength.subtitle}`}
                 >
-                  <div className="flex justify-center mb-4">
+                  <div className="flex justify-center mb-3">
                     {strength.icon}
                   </div>
                   <h4 className="text-xl font-bold text-primary text-center mb-2">
                     {strength.title}
                   </h4>
-                  <p className="text-gray-600 text-center">
+                  <p className="text-gray-600 text-center text-sm">
                     {strength.subtitle}
                   </p>
                 </div>
