@@ -75,18 +75,16 @@ export const translations: Translations = {
     
     // About
     'about.title': 'Meine Stärken für Ihr Projekt',
-    'about.desc': 'Als kleiner Unternehmer brauchen Sie eine Website, die Ihr Unternehmen optimal präsentiert – ohne unnötigen Schnickschnack. Ich erstelle Ihnen eine klare, benutzerfreundliche Website, die Ihre Kunden anspricht und zu Handlungen motiviert. Keine versteckten Kosten, keine technischen Hürden. Sie erhalten eine professionelle Website zu einem fairen Preis, die Sie selbst leicht pflegen können.',
+    'about.desc': 'Die einfachsten Unternehmenswebsites beginnen bei professionellen Agenturen oft erst ab 1.500 € und können schnell deutlich teurer werden. Bei mir erhalten Sie eine ansprechende und strukturierte Website zu einem fairen Preis. Ob Sie eine auffällige oder eine schlichte Website möchten – ich begleite Sie mit kreativen Ideen durch den gesamten Prozess, ohne Sie mit technischen Details zu überfordern. Falls Sie bereits konkrete Vorstellungen haben, setze ich diese präzise um.',
     'about.personal': 'Ich studiere Künstliche Intelligenz an der Universität Groningen und habe mich auf die Entwicklung benutzerfreundlicher Websites spezialisiert.',
     'strengths.empathy.title': 'Zuhören & Verstehen',
     'strengths.empathy.subtitle': 'Ihre Wünsche klar im Blick',
-    'strengths.speed.title': 'Schnelle Umsetzung',
-    'strengths.speed.subtitle': 'Go-Live ohne Stress',
-    'strengths.quality.title': 'Hohe Qualität',
-    'strengths.quality.subtitle': 'Perfektionismus in jedem Detail',
-    'strengths.creativity.title': 'Kreative Lösungen',
-    'strengths.creativity.subtitle': 'Einzigartige Designs für Ihr Unternehmen',
-    'strengths.support.title': 'Persönliche Betreuung',
-    'strengths.support.subtitle': 'Direkter Kontakt ohne Umwege',
+    'strengths.speed.title': 'Faire Preise',
+    'strengths.speed.subtitle': 'Professionell ohne Agenturpreise',
+    'strengths.quality.title': 'Ansprechendes Design',
+    'strengths.quality.subtitle': 'Ohne unnötigen Schnickschnack',
+    'strengths.creativity.title': 'Kreative Begleitung',
+    'strengths.creativity.subtitle': 'Ohne technische Überforderung',
     'contact.cta': 'Jetzt Kontakt aufnehmen',
     
     // Contact
@@ -196,18 +194,16 @@ export const translations: Translations = {
     
     // About
     'about.title': 'My Strengths for Your Project',
-    'about.desc': 'As a small business owner, you need a website that optimally presents your company – without unnecessary frills. I create a clear, user-friendly website that appeals to your customers and motivates them to take action. No hidden costs, no technical hurdles. You get a professional website at a fair price that you can easily maintain yourself.',
+    'about.desc': 'The simplest business websites often start at professional agencies from €1,500 and can quickly become much more expensive. With me, you get an appealing and structured website at a fair price. Whether you want a striking or a simple website – I accompany you with creative ideas throughout the entire process, without overwhelming you with technical details. If you already have specific ideas, I implement them precisely.',
     'about.personal': 'I study Artificial Intelligence at the University of Groningen and have specialized in developing user-friendly websites.',
     'strengths.empathy.title': 'Listen & Understand',
     'strengths.empathy.subtitle': 'Your wishes clearly in focus',
-    'strengths.speed.title': 'Fast Implementation',
-    'strengths.speed.subtitle': 'Go-live without stress',
-    'strengths.quality.title': 'High Quality',
-    'strengths.quality.subtitle': 'Perfectionism in every detail',
-    'strengths.creativity.title': 'Creative Solutions',
-    'strengths.creativity.subtitle': 'Unique designs for your business',
-    'strengths.support.title': 'Personal Support',
-    'strengths.support.subtitle': 'Direct contact without detours',
+    'strengths.speed.title': 'Fair Prices',
+    'strengths.speed.subtitle': 'Professional without agency prices',
+    'strengths.quality.title': 'Appealing Design',
+    'strengths.quality.subtitle': 'Without unnecessary frills',
+    'strengths.creativity.title': 'Creative Guidance',
+    'strengths.creativity.subtitle': 'Without technical overwhelm',
     'contact.cta': 'Contact Me Now',
     
     // Contact

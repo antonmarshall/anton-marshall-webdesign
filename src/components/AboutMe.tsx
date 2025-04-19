@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Code, GraduationCap, CheckCircle, Lightbulb, Users, Heart, Clock, Shield, Sparkles } from 'lucide-react';
+import { ArrowRight, Heart, Clock, Shield, Sparkles } from 'lucide-react';
 
 const AboutMe = () => {
   const { t } = useLanguage();
@@ -26,11 +26,6 @@ const AboutMe = () => {
       icon: <Sparkles className="h-8 w-8 text-primary" />,
       title: t('strengths.creativity.title'),
       subtitle: t('strengths.creativity.subtitle')
-    },
-    {
-      icon: <Users className="h-8 w-8 text-primary" />,
-      title: t('strengths.support.title'),
-      subtitle: t('strengths.support.subtitle')
     }
   ];
 
@@ -47,11 +42,15 @@ const AboutMe = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             <div className="flex flex-col items-center">
-              <div className="w-64 h-64 rounded-full overflow-hidden shadow-lg mb-6">
+              <div className="w-64 h-64 rounded-full overflow-hidden shadow-lg mb-6 bg-gray-200">
                 <img
-                  src={`${import.meta.env.BASE_URL}images/anton_marshall.png`}
+                  src="/images/anton_marshall.png"
                   alt="Anton Marshall"
                   className="w-full h-full object-cover"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = "https://via.placeholder.com/400x400?text=Anton+Marshall";
+                  }}
                 />
               </div>
               <p className="text-lg text-gray-600 mt-4 text-center">
