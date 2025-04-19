@@ -15,8 +15,8 @@ const WorkflowSection = () => {
     },
     {
       icon: <MessageSquare size={24} />,
-      title: "Ideen-Gespräch",
-      subtitle: "Gemeinsam 30 Min. brainstormen",
+      title: "Fokus-Gespräch",
+      subtitle: "30 Min. Vorstellungen klären",
       duration: "Tag 2",
       shortName: "Ideen"
     },
