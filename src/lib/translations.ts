@@ -74,7 +74,7 @@ export const translations: Translations = {
     
     // About
     'about.title': 'Meine Stärken für Ihr Projekt',
-    'about.desc': 'Als kleiner Unternehmer brauchen Sie eine Website, die Ihr Unternehmen optimal präsentiert – ohne unnötigen Schnickschnack. Ich erstelle Ihnen eine klare, benutzerfreundliche Website, die Ihre Kunden anspricht. Keine versteckten Kosten, keine technischen Hürden. Sie erhalten eine professionelle Website zu einem fairen Preis.',
+    'about.desc': 'Ihre Website sollte Ihr Unternehmen optimal präsentieren – klar, benutzerfreundlich und ohne unnötigen Schnickschnack. Ich erstelle Ihnen eine Website, die Ihre Kunden anspricht und zu Handlungen motiviert. Keine versteckten Kosten, keine technischen Hürden. Sie erhalten eine professionelle Website zu einem fairen Preis, die Sie selbst leicht pflegen können.',
     'about.personal': 'Ich studiere Künstliche Intelligenz an der Universität Groningen. Dort habe ich angefangen mein Studium mit dem Programmieren von Webseiten zu finanzieren. Ich habe einen hohen Anspruch an meine Projekte und höre nicht auf, bevor Ihre Webseite visuell ansprechend, intuitiv und überzeugend ist.',
     
     // Contact
