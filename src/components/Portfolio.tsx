@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
@@ -8,26 +8,28 @@ const Portfolio = () => {
   const { t } = useLanguage();
   const navigate = useNavigate();
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
-  const videoRefs = React.useRef<{ [key: string]: HTMLVideoElement | null }>({});
+  const videoRefs = useRef<{ [key: string]: HTMLVideoElement | null }>({});
+
+  const handleMouseEnter = (itemId: string) => {
+    setHoveredCard(itemId);
+    const video = videoRefs.current[itemId];
+    if (video) {
+      video.currentTime = 0;
+      video.play();
+    }
+  };
 
   const handleMouseLeave = (itemId: string) => {
     setHoveredCard(null);
     const video = videoRefs.current[itemId];
     if (video) {
-      const duration = video.duration;
-      const currentTime = video.currentTime;
-      const step = 0.05; // 50ms Schritte
-      const steps = Math.ceil(currentTime / step);
-      
-      let i = 0;
-      const interval = setInterval(() => {
-        if (i < steps) {
-          video.currentTime = currentTime - (step * i);
-          i++;
+      video.pause();
+      // Sanfter Übergang zum Anfang
+      const fadeOut = setInterval(() => {
+        if (video.currentTime > 0) {
+          video.currentTime = Math.max(0, video.currentTime - 0.1);
         } else {
-          video.currentTime = 0;
-          video.pause();
-          clearInterval(interval);
+          clearInterval(fadeOut);
         }
       }, 50);
     }
@@ -94,7 +96,7 @@ const Portfolio = () => {
             <div
               key={item.id}
               className="bg-white rounded-2xl shadow-lg overflow-hidden group relative"
-              onMouseEnter={() => setHoveredCard(item.id)}
+              onMouseEnter={() => handleMouseEnter(item.id)}
               onMouseLeave={() => handleMouseLeave(item.id)}
             >
               <div className="relative aspect-video overflow-hidden">
@@ -102,8 +104,6 @@ const Portfolio = () => {
                   ref={el => videoRefs.current[item.id] = el}
                   src={item.video}
                   poster={item.video}
-                  autoPlay={hoveredCard === item.id}
-                  loop={false}
                   muted
                   playsInline
                   onEnded={() => handleVideoEnded(item.id)}
