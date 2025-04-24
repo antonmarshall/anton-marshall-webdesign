@@ -9,6 +9,9 @@ import NotFound from "./pages/NotFound";
 import Legal from "./components/Legal";
 import PortfolioDetail from "./components/PortfolioDetail";
 import CookieConsent from "./components/CookieConsent";
+import Impressum from "./pages/Impressum";
+import Datenschutz from "./pages/Datenschutz";
+import AGB from "./pages/AGB";
 
 const queryClient = new QueryClient();
 
@@ -21,9 +24,9 @@ const App = () => (
         <BrowserRouter basename="/anton-marshall-webdesign">
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/impressum" element={<Legal />} />
-            <Route path="/datenschutz" element={<Legal />} />
-            <Route path="/agb" element={<Legal />} />
+            <Route path="/impressum" element={<Impressum />} />
+            <Route path="/datenschutz" element={<Datenschutz />} />
+            <Route path="/agb" element={<AGB />} />
             <Route path="/portfolio/:id" element={<PortfolioDetail />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

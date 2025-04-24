@@ -63,19 +63,19 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">{t('legal')}</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/impressum" className="text-gray-400 hover:text-white transition-colors">
+                <a href="/impressum" className="text-gray-400 hover:text-white transition-colors">
                   {t('legal.notice')}
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/datenschutz" className="text-gray-400 hover:text-white transition-colors">
+                <a href="/datenschutz" className="text-gray-400 hover:text-white transition-colors">
                   {t('legal.privacy')}
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/agb" className="text-gray-400 hover:text-white transition-colors">
+                <a href="/agb" className="text-gray-400 hover:text-white transition-colors">
                   {t('legal.terms')}
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
