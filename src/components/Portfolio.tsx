@@ -14,43 +14,37 @@ const Portfolio = () => {
       id: 'construction',
       title: t('portfolio.construction'),
       desc: t('portfolio.construction.desc'),
-      image: `${import.meta.env.BASE_URL}images/bau_unternehmer.png`,
-      video: `${import.meta.env.BASE_URL}videos/temp.mp4`
+      video: `${import.meta.env.BASE_URL}videos/recording_tischler_2025-04-24T19-59-38-096Z.mp4`
     },
     {
       id: 'computer',
       title: t('portfolio.computer'),
       desc: t('portfolio.computer.desc'),
-      image: `${import.meta.env.BASE_URL}images/computer.png`,
-      video: `${import.meta.env.BASE_URL}videos/temp.mp4`
+      video: `${import.meta.env.BASE_URL}videos/recording_tischler_2025-04-24T19-59-38-096Z.mp4`
     },
     {
       id: 'garden',
       title: t('portfolio.garden'),
       desc: t('portfolio.garden.desc'),
-      image: `${import.meta.env.BASE_URL}images/gärtner.png`,
-      video: `${import.meta.env.BASE_URL}videos/temp.mp4`
+      video: `${import.meta.env.BASE_URL}videos/recording_tischler_2025-04-24T19-59-38-096Z.mp4`
     },
     {
       id: 'tea',
       title: t('portfolio.tea'),
       desc: t('portfolio.tea.desc'),
-      image: `${import.meta.env.BASE_URL}images/japanischer_teeladen.png`,
-      video: `${import.meta.env.BASE_URL}videos/temp.mp4`
+      video: `${import.meta.env.BASE_URL}videos/recording_tischler_2025-04-24T19-59-38-096Z.mp4`
     },
     {
       id: 'psycho',
       title: t('portfolio.psycho'),
       desc: t('portfolio.psycho.desc'),
-      image: `${import.meta.env.BASE_URL}images/psychotherapie.png`,
-      video: `${import.meta.env.BASE_URL}videos/temp.mp4`
+      video: `${import.meta.env.BASE_URL}videos/recording_tischler_2025-04-24T19-59-38-096Z.mp4`
     },
     {
       id: 'photo',
       title: t('portfolio.photo'),
       desc: t('portfolio.photo.desc'),
-      image: `${import.meta.env.BASE_URL}images/yoga_knete.png`,
-      video: `${import.meta.env.BASE_URL}videos/temp.mp4`
+      video: `${import.meta.env.BASE_URL}videos/recording_tischler_2025-04-24T19-59-38-096Z.mp4`
     }
   ];
 
@@ -73,22 +67,14 @@ const Portfolio = () => {
               onMouseLeave={() => setHoveredCard(null)}
             >
               <div className="relative aspect-video overflow-hidden">
-                {hoveredCard === item.id ? (
-                  <video
-                    src={item.video}
-                    autoPlay
-                    loop
-                    muted
-                    className="w-full h-full object-cover transition-all duration-300"
-                  />
-                ) : (
-                  <video
-                    src={item.video}
-                    poster={item.video}
-                    muted
-                    className="w-full h-full object-cover transition-all duration-300"
-                  />
-                )}
+                <video
+                  src={item.video}
+                  poster={item.video}
+                  autoPlay={hoveredCard === item.id}
+                  loop={hoveredCard === item.id}
+                  muted
+                  className="w-full h-full object-cover transition-all duration-300"
+                />
                 <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <Button
                     size="lg"
