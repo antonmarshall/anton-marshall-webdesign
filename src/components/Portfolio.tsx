@@ -73,12 +73,13 @@ const Portfolio = () => {
                   autoPlay={hoveredCard === item.id}
                   loop={hoveredCard === item.id}
                   muted
+                  playsInline
                   className="w-full h-full object-cover transition-all duration-300"
                 />
-                <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 bg-black/30 flex items-end justify-center pb-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <Button
                     size="lg"
-                    className="bg-white text-gray-900 hover:bg-gray-100"
+                    className="bg-white/90 text-gray-900 hover:bg-white/80 backdrop-blur-sm"
                     onClick={() => navigate(`/portfolio/${item.id}`)}
                   >
                     {t('portfolio.view')} <ArrowRight className="ml-2 h-5 w-5" />
