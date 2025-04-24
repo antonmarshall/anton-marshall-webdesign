@@ -7,49 +7,49 @@ import { useNavigate } from 'react-router-dom';
 const Portfolio = () => {
   const { t } = useLanguage();
   const navigate = useNavigate();
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const [hoveredCard, setHoveredCard] = useState<string | null>(null);
 
-  const projects = [
+  const portfolioItems = [
     {
-      id: 1,
-      title: t('portfolio.project1.title'),
-      description: t('portfolio.project1.description'),
-      image: `${import.meta.env.BASE_URL}images/portfolio1.jpg`,
+      id: 'construction',
+      title: t('portfolio.construction'),
+      desc: t('portfolio.construction.desc'),
+      image: `${import.meta.env.BASE_URL}images/bau_unternehmer.png`,
       video: `${import.meta.env.BASE_URL}videos/temp.mp4`
     },
     {
-      id: 2,
-      title: t('portfolio.project2.title'),
-      description: t('portfolio.project2.description'),
-      image: `${import.meta.env.BASE_URL}images/portfolio2.jpg`,
+      id: 'computer',
+      title: t('portfolio.computer'),
+      desc: t('portfolio.computer.desc'),
+      image: `${import.meta.env.BASE_URL}images/computer.png`,
       video: `${import.meta.env.BASE_URL}videos/temp.mp4`
     },
     {
-      id: 3,
-      title: t('portfolio.project3.title'),
-      description: t('portfolio.project3.description'),
-      image: `${import.meta.env.BASE_URL}images/portfolio3.jpg`,
+      id: 'garden',
+      title: t('portfolio.garden'),
+      desc: t('portfolio.garden.desc'),
+      image: `${import.meta.env.BASE_URL}images/gärtner.png`,
       video: `${import.meta.env.BASE_URL}videos/temp.mp4`
     },
     {
-      id: 4,
-      title: t('portfolio.project4.title'),
-      description: t('portfolio.project4.description'),
-      image: `${import.meta.env.BASE_URL}images/portfolio4.jpg`,
+      id: 'tea',
+      title: t('portfolio.tea'),
+      desc: t('portfolio.tea.desc'),
+      image: `${import.meta.env.BASE_URL}images/japanischer_teeladen.png`,
       video: `${import.meta.env.BASE_URL}videos/temp.mp4`
     },
     {
-      id: 5,
-      title: t('portfolio.project5.title'),
-      description: t('portfolio.project5.description'),
-      image: `${import.meta.env.BASE_URL}images/portfolio5.jpg`,
+      id: 'psycho',
+      title: t('portfolio.psycho'),
+      desc: t('portfolio.psycho.desc'),
+      image: `${import.meta.env.BASE_URL}images/psychotherapie.png`,
       video: `${import.meta.env.BASE_URL}videos/temp.mp4`
     },
     {
-      id: 6,
-      title: t('portfolio.project6.title'),
-      description: t('portfolio.project6.description'),
-      image: `${import.meta.env.BASE_URL}images/portfolio6.jpg`,
+      id: 'photo',
+      title: t('portfolio.photo'),
+      desc: t('portfolio.photo.desc'),
+      image: `${import.meta.env.BASE_URL}images/yoga_knete.png`,
       video: `${import.meta.env.BASE_URL}videos/temp.mp4`
     }
   ];
@@ -65,26 +65,27 @@ const Portfolio = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
+          {portfolioItems.map((item) => (
             <div
-              key={project.id}
+              key={item.id}
               className="bg-white rounded-2xl shadow-lg overflow-hidden group relative"
-              onMouseEnter={() => setHoveredCard(project.id)}
+              onMouseEnter={() => setHoveredCard(item.id)}
               onMouseLeave={() => setHoveredCard(null)}
             >
               <div className="relative aspect-video overflow-hidden">
-                {hoveredCard === project.id ? (
+                {hoveredCard === item.id ? (
                   <video
-                    src={project.video}
+                    src={item.video}
                     autoPlay
                     loop
                     muted
                     className="w-full h-full object-cover transition-all duration-300"
                   />
                 ) : (
-                  <img
-                    src={project.image}
-                    alt={project.title}
+                  <video
+                    src={item.video}
+                    poster={item.video}
+                    muted
                     className="w-full h-full object-cover transition-all duration-300"
                   />
                 )}
@@ -92,15 +93,15 @@ const Portfolio = () => {
                   <Button
                     size="lg"
                     className="bg-white text-gray-900 hover:bg-gray-100"
-                    onClick={() => navigate(`/portfolio/${project.id}`)}
+                    onClick={() => navigate(`/portfolio/${item.id}`)}
                   >
                     {t('portfolio.view')} <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-gray-900">{project.title}</h3>
-                <p className="text-gray-600">{project.description}</p>
+                <h3 className="text-xl font-bold mb-2 text-gray-900">{item.title}</h3>
+                <p className="text-gray-600">{item.desc}</p>
               </div>
             </div>
           ))}
