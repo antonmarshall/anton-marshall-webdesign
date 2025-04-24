@@ -8,6 +8,37 @@ const Portfolio = () => {
   const { t } = useLanguage();
   const navigate = useNavigate();
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
+  const videoRefs = React.useRef<{ [key: string]: HTMLVideoElement | null }>({});
+
+  const handleMouseLeave = (itemId: string) => {
+    setHoveredCard(null);
+    const video = videoRefs.current[itemId];
+    if (video) {
+      const duration = video.duration;
+      const currentTime = video.currentTime;
+      const step = 0.05; // 50ms Schritte
+      const steps = Math.ceil(currentTime / step);
+      
+      let i = 0;
+      const interval = setInterval(() => {
+        if (i < steps) {
+          video.currentTime = currentTime - (step * i);
+          i++;
+        } else {
+          video.currentTime = 0;
+          video.pause();
+          clearInterval(interval);
+        }
+      }, 50);
+    }
+  };
+
+  const handleVideoEnded = (itemId: string) => {
+    const video = videoRefs.current[itemId];
+    if (video) {
+      video.currentTime = 0;
+    }
+  };
 
   const portfolioItems = [
     {
@@ -64,16 +95,18 @@ const Portfolio = () => {
               key={item.id}
               className="bg-white rounded-2xl shadow-lg overflow-hidden group relative"
               onMouseEnter={() => setHoveredCard(item.id)}
-              onMouseLeave={() => setHoveredCard(null)}
+              onMouseLeave={() => handleMouseLeave(item.id)}
             >
               <div className="relative aspect-video overflow-hidden">
                 <video
+                  ref={el => videoRefs.current[item.id] = el}
                   src={item.video}
                   poster={item.video}
                   autoPlay={hoveredCard === item.id}
-                  loop={hoveredCard === item.id}
+                  loop={false}
                   muted
                   playsInline
+                  onEnded={() => handleVideoEnded(item.id)}
                   className="w-full h-full object-cover transition-all duration-300"
                 />
                 <div className="absolute inset-0 bg-black/30 flex items-end justify-center pb-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
