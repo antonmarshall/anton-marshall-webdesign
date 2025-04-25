@@ -137,8 +137,8 @@ const PortfolioDetail = () => {
     },
     'photo': {
       title: {
-        de: 'Fotografie Studio Website',
-        en: 'Photography Studio Website'
+        de: 'Handwerker Website',
+        en: 'Craftsman Website'
       },
       description: {
         de: 'Eine kreative Website für ein Fotografie Studio mit Galerie und Buchungsmöglichkeit.',
