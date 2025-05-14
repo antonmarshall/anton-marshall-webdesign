@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
@@ -9,6 +9,20 @@ const Portfolio = () => {
   const navigate = useNavigate();
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
   const videoRefs = useRef<{ [key: string]: HTMLVideoElement | null }>({});
+
+  // Vorladen der Videos beim Mounten der Komponente
+  useEffect(() => {
+    portfolioItems.forEach(item => {
+      const video = videoRefs.current[item.id];
+      if (video) {
+        video.load();
+        // Setze die Startzeit auf 1 Sekunde
+        video.currentTime = 1;
+        // Pausiere das Video sofort
+        video.pause();
+      }
+    });
+  }, []);
 
   const handleMouseEnter = (itemId: string) => {
     setHoveredCard(itemId);
@@ -129,6 +143,7 @@ const Portfolio = () => {
                   poster={item.video}
                   muted
                   playsInline
+                  preload="auto"
                   onEnded={() => handleVideoEnded(item.id)}
                   className="w-full h-full object-cover transition-all duration-300"
                 />
