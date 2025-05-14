@@ -29,7 +29,7 @@ export const translations: Translations = {
     // Portfolio
     'portfolio.title': 'Meine Arbeiten',
     'portfolio.subtitle': 'Eine Auswahl meiner Webdesign-Projekte für verschiedene Unternehmen',
-    'portfolio.view': 'Ansehen',
+    'portfolio.view': 'Website besuchen',
     'portfolio.hover': 'Projekt anzeigen',
     'portfolio.tischler': 'Tischlerei Website',
     'portfolio.steuer': 'Steuerberatung Website',
@@ -142,13 +142,13 @@ export const translations: Translations = {
     
     // Hero
     'hero.title': 'Professional Websites for Your Business',
-    'hero.subtitle': 'Tailored websites that make your business shine',
+    'hero.subtitle': 'Custom-made websites for a confident online presence',
     'hero.cta': 'Free Consultation',
     
     // Portfolio
     'portfolio.title': 'My Work',
     'portfolio.subtitle': 'A selection of my web design projects for various businesses',
-    'portfolio.view': 'View',
+    'portfolio.view': 'Visit Website',
     'portfolio.hover': 'View Project',
     'portfolio.tischler': 'Carpentry Website',
     'portfolio.steuer': 'Tax Consulting Website',
