@@ -28,7 +28,7 @@ const Portfolio = () => {
     setHoveredCard(itemId);
     const video = videoRefs.current[itemId];
     if (video) {
-      video.currentTime = 1;
+      video.currentTime = 0;
       video.play().catch(error => {
         console.log('Video playback failed:', error);
       });
@@ -36,19 +36,16 @@ const Portfolio = () => {
   };
 
   const handleMouseLeave = (itemId: string) => {
-    setHoveredCard(null);
-    const video = videoRefs.current[itemId];
-    if (video) {
-      // Sanfterer Übergang zum Anfang mit längerem Fade-Effekt
-      video.style.transition = 'opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
-      video.style.opacity = '0';
-      
-      setTimeout(() => {
-        video.pause();
-        video.currentTime = 0;
-        video.style.opacity = '1';
-      }, 500);
-    }
+    setTimeout(() => {
+      if (hoveredCard === itemId) {
+        setHoveredCard(null);
+        const video = videoRefs.current[itemId];
+        if (video) {
+          video.pause();
+          video.currentTime = 0;
+        }
+      }
+    }, 50);
   };
 
   const handleVideoEnded = (itemId: string) => {
