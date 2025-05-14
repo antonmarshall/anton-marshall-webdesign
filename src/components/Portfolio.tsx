@@ -15,7 +15,9 @@ const Portfolio = () => {
     const video = videoRefs.current[itemId];
     if (video) {
       video.currentTime = 0;
-      video.play();
+      video.play().catch(error => {
+        console.log('Video playback failed:', error);
+      });
     }
   };
 
@@ -23,13 +25,13 @@ const Portfolio = () => {
     setHoveredCard(null);
     const video = videoRefs.current[itemId];
     if (video) {
-      video.pause();
       // Sanfter Übergang zum Anfang
       const fadeOut = setInterval(() => {
         if (video.currentTime > 0) {
           video.currentTime = Math.max(0, video.currentTime - 0.1);
         } else {
           clearInterval(fadeOut);
+          video.pause();
         }
       }, 50);
     }
@@ -38,7 +40,22 @@ const Portfolio = () => {
   const handleVideoEnded = (itemId: string) => {
     const video = videoRefs.current[itemId];
     if (video) {
-      video.currentTime = 0;
+      // Wenn das Video zu Ende ist und die Karte noch gehovered wird, starte es neu
+      if (hoveredCard === itemId) {
+        video.currentTime = 0;
+        video.play().catch(error => {
+          console.log('Video playback failed:', error);
+        });
+      } else {
+        // Ansonsten sanft zum Anfang zurückspulen
+        const fadeOut = setInterval(() => {
+          if (video.currentTime > 0) {
+            video.currentTime = Math.max(0, video.currentTime - 0.1);
+          } else {
+            clearInterval(fadeOut);
+          }
+        }, 50);
+      }
     }
   };
 
@@ -47,37 +64,43 @@ const Portfolio = () => {
       id: 'tischler',
       title: t('portfolio.tischler'),
       desc: t('portfolio.tischler.desc'),
-      video: `${import.meta.env.BASE_URL}videos/tischler.mp4`
+      video: `${import.meta.env.BASE_URL}videos/tischler.mp4`,
+      url: 'https://antonmarshall.github.io/luebeck-tischler-handwerk/'
     },
     {
       id: 'steuer',
       title: t('portfolio.steuer'),
       desc: t('portfolio.steuer.desc'),
-      video: `${import.meta.env.BASE_URL}videos/steuer.mp4`
+      video: `${import.meta.env.BASE_URL}videos/steuer.mp4`,
+      url: 'https://antonmarshall.github.io/luebeck-steuer-digital-klar/'
     },
     {
       id: 'garten',
       title: t('portfolio.garten'),
       desc: t('portfolio.garten.desc'),
-      video: `${import.meta.env.BASE_URL}videos/garten.mp4`
+      video: `${import.meta.env.BASE_URL}videos/garten.mp4`,
+      url: 'https://antonmarshall.github.io/altona-garten-zauber/'
     },
     {
       id: 'caffe',
       title: t('portfolio.caffe'),
       desc: t('portfolio.caffe.desc'),
-      video: `${import.meta.env.BASE_URL}videos/caffe.mp4`
+      video: `${import.meta.env.BASE_URL}videos/caffe.mp4`,
+      url: 'https://antonmarshall.github.io/altstadt-cafe-website/'
     },
     {
       id: 'kunsttherapie',
       title: t('portfolio.kunsttherapie'),
       desc: t('portfolio.kunsttherapie.desc'),
-      video: `${import.meta.env.BASE_URL}videos/kunsttherapie.mp4`
+      video: `${import.meta.env.BASE_URL}videos/kunsttherapie.mp4`,
+      url: 'https://antonmarshall.github.io/webseite-andrea-wennecke/'
     },
     {
       id: 'zahnarzt',
       title: t('portfolio.zahnarzt'),
       desc: t('portfolio.zahnarzt.desc'),
-      video: `${import.meta.env.BASE_URL}videos/zahnarzt.mp4`
+      video: `${import.meta.env.BASE_URL}videos/zahnarzt.mp4`,
+      url: 'https://antonmarshall.github.io/barmbek-smile-design/'
     }
   ];
 
@@ -113,7 +136,7 @@ const Portfolio = () => {
                   <Button
                     size="lg"
                     className="bg-white/90 text-gray-900 hover:bg-white/80 backdrop-blur-sm"
-                    onClick={() => navigate(`/portfolio/${item.id}`)}
+                    onClick={() => window.open(item.url, '_blank')}
                   >
                     {t('portfolio.view')} <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
