@@ -58,32 +58,26 @@ const HeroSlider = () => {
         if (i < textToType.length) {
           setTypedText(textToType.substring(0, i + 1));
           i++;
-          // Random typing speed between 20-80ms for irregular effect
-          const randomDelay = Math.floor(Math.random() * 60) + 20;
+          // Schnellere, aber unregelmäßigere Schreibgeschwindigkeit für menschlicheren Effekt
+          const randomDelay = Math.floor(Math.random() * 40) + 15; // 15-55ms statt 20-80ms
           typingTimeout = setTimeout(typeNextChar, randomDelay);
         } else {
-          // Typing complete, blink cursor twice before showing button
+          // Kürzere Wartezeit vor dem Button
           setTimeout(() => {
             setCursorVisible(false);
             cursorTimeout = setTimeout(() => {
               setCursorVisible(true);
               cursorTimeout = setTimeout(() => {
                 setCursorVisible(false);
-                cursorTimeout = setTimeout(() => {
-                  setCursorVisible(true);
-                  cursorTimeout = setTimeout(() => {
-                    setCursorVisible(false);
-                    setShowButton(true);
-                  }, 400);
-                }, 400);
-              }, 400);
-            }, 400);
-          }, 200);
+                setShowButton(true); // Button früher anzeigen
+              }, 200); // Kürzere Blink-Intervalle
+            }, 200);
+          }, 100); // Kürzere Wartezeit am Ende
         }
       };
       
-      // Start typing with a short delay
-      typingTimeout = setTimeout(typeNextChar, 500);
+      // Kürzere Startverzögerung
+      typingTimeout = setTimeout(typeNextChar, 300);
     };
     
     typeText();
@@ -92,7 +86,7 @@ const HeroSlider = () => {
       clearTimeout(typingTimeout);
       clearTimeout(cursorTimeout);
     };
-  }, [t, language]); // Restart animation when language changes
+  }, [t, language]);
 
   const goToSlide = (index) => {
     setCurrentIndex(index);
