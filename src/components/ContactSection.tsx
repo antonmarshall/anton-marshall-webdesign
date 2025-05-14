@@ -30,7 +30,7 @@ const ContactSection = () => {
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <button
                 onClick={handleCalendarClick}
-                className="flex items-center gap-4 w-full text-left"
+                className="flex items-center gap-4 w-full text-left hover:scale-[1.02] transition-transform cursor-pointer"
               >
                 <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white">
                   <Calendar size={24} />
@@ -47,7 +47,7 @@ const ContactSection = () => {
                 href="https://wa.me/4917641928237" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center gap-4"
+                className="flex items-center gap-4 hover:scale-[1.02] transition-transform cursor-pointer"
               >
                 <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white">
                   <MessageSquare size={24} />
@@ -62,7 +62,7 @@ const ContactSection = () => {
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <a 
                 href="mailto:a.marshall@webdesign.com" 
-                className="flex items-center gap-4"
+                className="flex items-center gap-4 hover:scale-[1.02] transition-transform cursor-pointer"
               >
                 <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white">
                   <Mail size={24} />
