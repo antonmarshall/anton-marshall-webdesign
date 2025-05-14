@@ -25,36 +25,36 @@ const Portfolio = () => {
     setHoveredCard(null);
     const video = videoRefs.current[itemId];
     if (video) {
-      // Sanfter Übergang zum Anfang
-      const fadeOut = setInterval(() => {
-        if (video.currentTime > 0) {
-          video.currentTime = Math.max(0, video.currentTime - 0.1);
-        } else {
-          clearInterval(fadeOut);
-          video.pause();
-        }
-      }, 50);
+      // Sanfter Übergang zum Anfang mit Fade-Effekt
+      video.style.transition = 'opacity 0.3s ease-out';
+      video.style.opacity = '0';
+      
+      setTimeout(() => {
+        video.pause();
+        video.currentTime = 0;
+        video.style.opacity = '1';
+      }, 300);
     }
   };
 
   const handleVideoEnded = (itemId: string) => {
     const video = videoRefs.current[itemId];
     if (video) {
-      // Wenn das Video zu Ende ist und die Karte noch gehovered wird, starte es neu
       if (hoveredCard === itemId) {
+        // Wenn noch gehovered wird, direkt neu starten
         video.currentTime = 0;
         video.play().catch(error => {
           console.log('Video playback failed:', error);
         });
       } else {
-        // Ansonsten sanft zum Anfang zurückspulen
-        const fadeOut = setInterval(() => {
-          if (video.currentTime > 0) {
-            video.currentTime = Math.max(0, video.currentTime - 0.1);
-          } else {
-            clearInterval(fadeOut);
-          }
-        }, 50);
+        // Ansonsten sanft zum Anfang springen
+        video.style.transition = 'opacity 0.3s ease-out';
+        video.style.opacity = '0';
+        
+        setTimeout(() => {
+          video.currentTime = 0;
+          video.style.opacity = '1';
+        }, 300);
       }
     }
   };
