@@ -142,7 +142,7 @@ export const translations: Translations = {
     
     // Hero
     'hero.title': 'Professional Websites for Your Business',
-    'hero.subtitle': 'Custom-made websites for a confident online presence',
+    'hero.subtitle': 'Custom-made websites for a professional online presence',
     'hero.cta': 'Free Consultation',
     
     // Portfolio
