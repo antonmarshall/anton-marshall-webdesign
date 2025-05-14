@@ -47,37 +47,37 @@ const Portfolio = () => {
       id: 'construction',
       title: t('portfolio.construction'),
       desc: t('portfolio.construction.desc'),
-      video: `${import.meta.env.BASE_URL}videos/recording_tischler_2025-04-24T19-59-38-096Z.mp4`
+      video: `${import.meta.env.BASE_URL}videos/tischler.mp4`
     },
     {
       id: 'computer',
       title: t('portfolio.computer'),
       desc: t('portfolio.computer.desc'),
-      video: `${import.meta.env.BASE_URL}videos/recording_tischler_2025-04-24T19-59-38-096Z.mp4`
+      video: `${import.meta.env.BASE_URL}videos/steuer.mp4`
     },
     {
       id: 'garden',
       title: t('portfolio.garden'),
       desc: t('portfolio.garden.desc'),
-      video: `${import.meta.env.BASE_URL}videos/recording_tischler_2025-04-24T19-59-38-096Z.mp4`
+      video: `${import.meta.env.BASE_URL}videos/garten.mp4`
     },
     {
       id: 'tea',
       title: t('portfolio.tea'),
       desc: t('portfolio.tea.desc'),
-      video: `${import.meta.env.BASE_URL}videos/recording_tischler_2025-04-24T19-59-38-096Z.mp4`
+      video: `${import.meta.env.BASE_URL}videos/caffe.mp4`
     },
     {
       id: 'psycho',
       title: t('portfolio.psycho'),
       desc: t('portfolio.psycho.desc'),
-      video: `${import.meta.env.BASE_URL}videos/recording_tischler_2025-04-24T19-59-38-096Z.mp4`
+      video: `${import.meta.env.BASE_URL}videos/mind_balance.mp4`
     },
     {
       id: 'photo',
       title: t('portfolio.photo'),
       desc: t('portfolio.photo.desc'),
-      video: `${import.meta.env.BASE_URL}videos/recording_tischler_2025-04-24T19-59-38-096Z.mp4`
+      video: `${import.meta.env.BASE_URL}videos/kunsttherapie.mp4`
     }
   ];
 
