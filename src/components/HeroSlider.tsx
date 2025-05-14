@@ -69,10 +69,16 @@ const HeroSlider = () => {
               setCursorVisible(true);
               cursorTimeout = setTimeout(() => {
                 setCursorVisible(false);
-                setShowButton(true); // Button früher anzeigen
-              }, 200); // Kürzere Blink-Intervalle
-            }, 200);
-          }, 100); // Kürzere Wartezeit am Ende
+                cursorTimeout = setTimeout(() => {
+                  setCursorVisible(true);
+                  cursorTimeout = setTimeout(() => {
+                    setCursorVisible(false);
+                    setShowButton(true); // Button früher anzeigen
+                  }, 400);
+                }, 400);
+              }, 400);
+            }, 400);
+          }, 200); // Kürzere Wartezeit am Ende
         }
       };
       
