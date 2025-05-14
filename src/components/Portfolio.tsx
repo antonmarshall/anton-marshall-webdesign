@@ -39,8 +39,16 @@ const Portfolio = () => {
     setHoveredCard(null);
     const video = videoRefs.current[itemId];
     if (video) {
+      // Sofort pausieren, aber mit sanftem Übergang zum Anfang
       video.pause();
-      video.currentTime = 0;
+      video.style.transition = 'opacity 0.2s ease-out';
+      video.style.opacity = '0.7';
+      
+      // Kurze Verzögerung für den Übergang
+      requestAnimationFrame(() => {
+        video.currentTime = 0;
+        video.style.opacity = '1';
+      });
     }
   };
 
