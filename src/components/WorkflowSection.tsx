@@ -8,36 +8,36 @@ const WorkflowSection = () => {
   const steps = [
     {
       icon: <PhoneCall size={24} />,
-      title: "Kostenloses Erstgespräch",
-      subtitle: "Bedarf klären",
+      title: t('steps.consultation.title'),
+      subtitle: t('steps.consultation.description'),
       duration: "Tag 1",
       shortName: "Erstgespräch"
     },
     {
       icon: <MessageSquare size={24} />,
-      title: "Fokus-Gespräch",
-      subtitle: "30 Min. Vorstellungen klären",
+      title: t('steps.concept.title'),
+      subtitle: t('steps.concept.description'),
       duration: "Tag 2",
       shortName: "Ideen"
     },
     {
       icon: <Code size={24} />,
-      title: "Design & Umsetzung",
-      subtitle: "Entwurf fertigstellen",
+      title: t('steps.development.title'),
+      subtitle: t('steps.development.description'),
       duration: "Tag 3-16",
       shortName: "Design"
     },
     {
       icon: <MonitorCheck size={24} />,
-      title: "Review & Feedback",
-      subtitle: "Live-Demo & Korrekturen",
+      title: t('steps.review.title'),
+      subtitle: t('steps.review.description'),
       duration: "Tag 17-19",
       shortName: "Review"
     },
     {
       icon: <CloudUpload size={24} />,
-      title: "Fertigstellung & Upload",
-      subtitle: "Online schalten",
+      title: t('steps.launch.title'),
+      subtitle: t('steps.launch.description'),
       duration: "Tag 20-21",
       shortName: "Upload"
     }
