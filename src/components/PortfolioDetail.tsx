@@ -10,14 +10,14 @@ const PortfolioDetail = () => {
 
   // This would typically come from a data source or API
   const portfolioItems = {
-    'construction': {
+    'tischler': {
       title: {
-        de: 'Bauunternehmen Website',
-        en: 'Construction Company Website'
+        de: 'Tischlerei Website',
+        en: 'Carpentry Website'
       },
       description: {
-        de: 'Eine professionelle Website für ein Bauunternehmen mit Portfolio-Galerie und Kontaktformular.',
-        en: 'A professional website for a construction company with portfolio gallery and contact form.'
+        de: 'Eine professionelle Website für eine Tischlerei mit Portfolio-Galerie und Kontaktformular.',
+        en: 'A professional website for a carpentry business with portfolio gallery and contact form.'
       },
       features: {
         de: [
@@ -35,14 +35,14 @@ const PortfolioDetail = () => {
       },
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite']
     },
-    'computer': {
+    'steuer': {
       title: {
-        de: 'Computer Service Website',
-        en: 'Computer Service Website'
+        de: 'Steuerberatung Website',
+        en: 'Tax Consulting Website'
       },
       description: {
-        de: 'Eine moderne Website für PC-Dienstleistungen mit Service-Angeboten und Online-Buchung.',
-        en: 'A modern website for PC services with service offerings and online booking.'
+        de: 'Eine moderne Website für Steuerberatung mit Service-Angeboten und Online-Buchung.',
+        en: 'A modern website for tax consulting with service offerings and online booking.'
       },
       features: {
         de: [
@@ -60,7 +60,7 @@ const PortfolioDetail = () => {
       },
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite']
     },
-    'garden': {
+    'garten': {
       title: {
         de: 'Gärtnerei Website',
         en: 'Garden Center Website'
@@ -85,64 +85,39 @@ const PortfolioDetail = () => {
       },
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite']
     },
-    'tea': {
+    'caffe': {
       title: {
-        de: 'Japanischer Teeladen',
-        en: 'Japanese Tea Shop'
+        de: 'Café Website',
+        en: 'Café Website'
       },
       description: {
-        de: 'Ein eleganter Online-Shop für japanische Tees mit detaillierten Produktbeschreibungen.',
-        en: 'An elegant online shop for Japanese teas with detailed product descriptions.'
+        de: 'Eine gemütliche Website für ein Café mit Speisekarte und Reservierungssystem.',
+        en: 'A cozy website for a café with menu and reservation system.'
       },
       features: {
         de: [
           'Responsive Design',
-          'Produktkatalog',
-          'Warenkorb',
-          'Sicherer Checkout'
+          'Speisekarte',
+          'Online-Reservierung',
+          'Galerie'
         ],
         en: [
           'Responsive Design',
-          'Product Catalog',
-          'Shopping Cart',
-          'Secure Checkout'
+          'Menu',
+          'Online Reservation',
+          'Gallery'
         ]
       },
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite']
     },
-    'psycho': {
+    'kunsttherapie': {
       title: {
-        de: 'Psychotherapie Website',
-        en: 'Psychotherapy Website'
+        de: 'Kunsttherapie Website',
+        en: 'Art Therapy Website'
       },
       description: {
-        de: 'Eine vertrauensvolle Online-Präsenz für Therapeuten mit Terminbuchung und Informationsseiten.',
-        en: 'A trustworthy online presence for therapists with appointment booking and information pages.'
-      },
-      features: {
-        de: [
-          'Responsive Design',
-          'Terminbuchung',
-          'Informationsseiten',
-          'Kontaktformular'
-        ],
-        en: [
-          'Responsive Design',
-          'Appointment Booking',
-          'Information Pages',
-          'Contact Form'
-        ]
-      },
-      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite']
-    },
-    'photo': {
-      title: {
-        de: 'Handwerker Website',
-        en: 'Craftsman Website'
-      },
-      description: {
-        de: 'Eine kreative Website für ein Fotografie Studio mit Galerie und Buchungsmöglichkeit.',
-        en: 'A creative website for a photography studio with gallery and booking option.'
+        de: 'Eine kreative Website für Kunsttherapie mit Galerie und Buchungsmöglichkeit.',
+        en: 'A creative website for art therapy with gallery and booking option.'
       },
       features: {
         de: [
@@ -155,6 +130,31 @@ const PortfolioDetail = () => {
           'Responsive Design',
           'Gallery',
           'Appointment Booking',
+          'Contact Form'
+        ]
+      },
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite']
+    },
+    'zahnarzt': {
+      title: {
+        de: 'Zahnarzt Website',
+        en: 'Dental Practice Website'
+      },
+      description: {
+        de: 'Eine professionelle Website für eine Zahnarztpraxis mit Terminbuchung und Informationsseiten.',
+        en: 'A professional website for a dental practice with appointment booking and information pages.'
+      },
+      features: {
+        de: [
+          'Responsive Design',
+          'Terminbuchung',
+          'Informationsseiten',
+          'Kontaktformular'
+        ],
+        en: [
+          'Responsive Design',
+          'Appointment Booking',
+          'Information Pages',
           'Contact Form'
         ]
       },

@@ -44,40 +44,40 @@ const Portfolio = () => {
 
   const portfolioItems = [
     {
-      id: 'construction',
-      title: t('portfolio.construction'),
-      desc: t('portfolio.construction.desc'),
+      id: 'tischler',
+      title: t('portfolio.tischler'),
+      desc: t('portfolio.tischler.desc'),
       video: `${import.meta.env.BASE_URL}videos/tischler.mp4`
     },
     {
-      id: 'computer',
-      title: t('portfolio.computer'),
-      desc: t('portfolio.computer.desc'),
+      id: 'steuer',
+      title: t('portfolio.steuer'),
+      desc: t('portfolio.steuer.desc'),
       video: `${import.meta.env.BASE_URL}videos/steuer.mp4`
     },
     {
-      id: 'garden',
-      title: t('portfolio.garden'),
-      desc: t('portfolio.garden.desc'),
+      id: 'garten',
+      title: t('portfolio.garten'),
+      desc: t('portfolio.garten.desc'),
       video: `${import.meta.env.BASE_URL}videos/garten.mp4`
     },
     {
-      id: 'tea',
-      title: t('portfolio.tea'),
-      desc: t('portfolio.tea.desc'),
+      id: 'caffe',
+      title: t('portfolio.caffe'),
+      desc: t('portfolio.caffe.desc'),
       video: `${import.meta.env.BASE_URL}videos/caffe.mp4`
     },
     {
-      id: 'psycho',
-      title: t('portfolio.psycho'),
-      desc: t('portfolio.psycho.desc'),
-      video: `${import.meta.env.BASE_URL}videos/mind_balance.mp4`
+      id: 'kunsttherapie',
+      title: t('portfolio.kunsttherapie'),
+      desc: t('portfolio.kunsttherapie.desc'),
+      video: `${import.meta.env.BASE_URL}videos/kunsttherapie.mp4`
     },
     {
-      id: 'photo',
-      title: t('portfolio.photo'),
-      desc: t('portfolio.photo.desc'),
-      video: `${import.meta.env.BASE_URL}videos/kunsttherapie.mp4`
+      id: 'zahnarzt',
+      title: t('portfolio.zahnarzt'),
+      desc: t('portfolio.zahnarzt.desc'),
+      video: `${import.meta.env.BASE_URL}videos/zahnarzt.mp4`
     }
   ];
 
