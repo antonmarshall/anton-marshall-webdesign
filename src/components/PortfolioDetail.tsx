@@ -2,6 +2,7 @@ import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useNavigate, useParams } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import VideoSection from './VideoSection';
 
 const PortfolioDetail = () => {
   const { language } = useLanguage();
@@ -202,6 +203,10 @@ const PortfolioDetail = () => {
           <p className="text-lg mb-8">
             {item.description[language as keyof typeof item.description]}
           </p>
+
+          <div className="mb-12">
+            <VideoSection />
+          </div>
 
           <h2 className="text-2xl font-semibold mb-4">
             {language === 'de' ? 'Funktionen' : 'Features'}
