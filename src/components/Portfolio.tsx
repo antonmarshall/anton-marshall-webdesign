@@ -28,7 +28,9 @@ const Portfolio = () => {
     setHoveredCard(itemId);
     const video = videoRefs.current[itemId];
     if (video) {
-      video.currentTime = 0;
+      // Starte von Sekunde 1
+      video.currentTime = 1;
+      video.style.opacity = '1';
       video.play().catch(error => {
         console.log('Video playback failed:', error);
       });
@@ -46,7 +48,7 @@ const Portfolio = () => {
       
       // Kurze Verzögerung für den Übergang
       requestAnimationFrame(() => {
-        video.currentTime = 0;
+        video.currentTime = 1; // Zurück zu Sekunde 1
         video.style.opacity = '1';
       });
     }
@@ -56,8 +58,8 @@ const Portfolio = () => {
     const video = videoRefs.current[itemId];
     if (video) {
       if (hoveredCard === itemId) {
-        // Wenn noch gehovered wird, direkt neu starten
-        video.currentTime = 0;
+        // Wenn noch gehovered wird, direkt neu starten von Sekunde 1
+        video.currentTime = 1;
         video.play().catch(error => {
           console.log('Video playback failed:', error);
         });
@@ -67,7 +69,7 @@ const Portfolio = () => {
         video.style.opacity = '0.3';
         
         setTimeout(() => {
-          video.currentTime = 0;
+          video.currentTime = 1; // Zurück zu Sekunde 1
           video.style.opacity = '1';
         }, 300);
       }
