@@ -48,7 +48,7 @@ const Footer = () => {
               <li className="text-lg font-semibold mb-2">{t('contact.schedule')}</li>
               <li className="flex items-center justify-center md:justify-start gap-2 text-gray-400">
                 <Phone size={20} />
-                <span>+49 123 456 7890</span>
+                <span>+49 176 41928237</span>
               </li>
               <li className="flex items-center justify-center md:justify-start gap-2 text-gray-400">
                 <Mail size={20} />

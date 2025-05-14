@@ -44,7 +44,7 @@ const ContactSection = () => {
 
             <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <a 
-                href="https://wa.me/491234567890" 
+                href="https://wa.me/4917641928237" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center gap-4"
@@ -54,7 +54,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900">{t('contact.whatsapp')}</h3>
-                  <p className="text-gray-600">+49 123 456 7890</p>
+                  <p className="text-gray-600">+49 176 41928237</p>
                 </div>
               </a>
             </div>

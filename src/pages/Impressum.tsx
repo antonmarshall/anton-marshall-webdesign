@@ -31,7 +31,7 @@ const Impressum = () => {
             </h3>
             <p className="mb-4 text-gray-600 dark:text-gray-300">
               E-Mail: a.marshall@webdesign.com<br />
-              Telefon: +49 123 456 7890
+              Telefon: +49 176 41928237
             </p>
 
             <h3 className="text-lg font-semibold mb-2 text-gray-800 dark:text-gray-200">
