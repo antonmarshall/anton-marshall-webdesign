@@ -36,23 +36,12 @@ const Portfolio = () => {
   };
 
   const handleMouseLeave = (itemId: string) => {
-    setTimeout(() => {
-      if (hoveredCard === itemId) {
-        setHoveredCard(null);
-        const video = videoRefs.current[itemId];
-        if (video) {
-          // Sanfter Übergang zum Anfang
-          video.style.transition = 'opacity 0.3s ease-in-out';
-          video.style.opacity = '0.3';
-          
-          setTimeout(() => {
-            video.currentTime = 0;
-            video.pause();
-            video.style.opacity = '1';
-          }, 300);
-        }
-      }
-    }, 50);
+    setHoveredCard(null);
+    const video = videoRefs.current[itemId];
+    if (video) {
+      video.pause();
+      video.currentTime = 0;
+    }
   };
 
   const handleVideoEnded = (itemId: string) => {
