@@ -41,8 +41,15 @@ const Portfolio = () => {
         setHoveredCard(null);
         const video = videoRefs.current[itemId];
         if (video) {
-          video.pause();
-          video.currentTime = 0;
+          // Sanfter Übergang zum Anfang
+          video.style.transition = 'opacity 0.3s ease-in-out';
+          video.style.opacity = '0.3';
+          
+          setTimeout(() => {
+            video.currentTime = 0;
+            video.pause();
+            video.style.opacity = '1';
+          }, 300);
         }
       }
     }, 50);
@@ -58,14 +65,14 @@ const Portfolio = () => {
           console.log('Video playback failed:', error);
         });
       } else {
-        // Ansonsten sanft zum Anfang springen
-        video.style.transition = 'opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
-        video.style.opacity = '0';
+        // Sanfter Übergang zum Anfang
+        video.style.transition = 'opacity 0.3s ease-in-out';
+        video.style.opacity = '0.3';
         
         setTimeout(() => {
           video.currentTime = 0;
           video.style.opacity = '1';
-        }, 500);
+        }, 300);
       }
     }
   };
